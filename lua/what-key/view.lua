@@ -20,40 +20,32 @@ function M.show()
   vim.api.nvim_win_set_option(M.win, 'foldmethod', 'manual')
 end
 
-function M.get_registered_mappings()
-  local mappings = {}
-  for _, mode in ipairs({ 'n', 'i' }) do
-    local mode_mappings = vim.api.nvim_get_keymap(mode)
-    for _, mapping in ipairs(mode_mappings) do
-      table.insert(mappings, { mode = mode, lhs = mapping.lhs, rhs = mapping.rhs })
-      -- -- ensure only telescope mappings
-      -- if mapping.rhs and string.find(mapping.rhs, [[require%('telescope.mappings'%).execute_keymap]]) then
-      --   local funcid = findnth(mapping.rhs, 2)
-      --   table.insert(ret, { mode = mode, keybind = mapping.lhs, func = __TelescopeKeymapStore[prompt_bufnr][funcid] })
-      -- end
-    end
-  end
-  return mappings
+function M.get_first_key(lhs)
+  return 'a'
 end
 
----Get Available Keys For Mode
+---Get user mappings for mode
 ---@param mode string
 ---@return table
-function M.get_available_keys_for_mode(mode)
+function M.get_user_mappings_for_mode(mode)
   local possible_keys = require('what-key.possible_keys').possible_keys()
   local registered_mappings = M.get_registered_mappings()
 
   local mode_mappings = vim.api.nvim_get_keymap(mode)
-  P(mode_mappings)
   for _, map in ipairs(mode_mappings) do
-    local first_char = string.sub(map.lhs, 1, 1)
-    if possible_keys[first_char] ~= nil then
-      possible_keys[first_char] = nil
+    local first_key = get_first_key(map.lhs)
+    -- if (first_char == '<' and string.sub(map.lhs, 2, 2) ~= 'P') then P(map.lhs) end
+    -- if (first_char == '>') then P(map) end
+    if possible_keys[first_key] then
+      possible_keys[first_key].user_mapping = true
     end
   end
+
   return possible_keys
 end
 
-P(M.get_available_keys_for_mode('n'))
+--TODO: get builtin vim mappings
+
+P(M.get_user_mappings_for_mode('v'))
 
 return M
