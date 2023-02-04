@@ -1,10 +1,6 @@
 local M = {}
 
-M.keys = ''
 M.mode = 'n'
-M.reg = nil
-M.auto = false
-M.count = 0
 M.buf = nil
 M.win = nil
 
@@ -40,6 +36,8 @@ function M.show()
 
   local layout = require('what-key.layout').create_layout(M.win)
   M.render(layout)
+
+  vim.api.nvim_buf_set_option(M.buf, 'modifiable', false)
 end
 
 function M.hide()
@@ -54,10 +52,12 @@ function M.hide()
   vim.cmd('redraw')
 end
 
-function M.render(text)
-  vim.api.nvim_buf_set_lines(M.buf, 0, -1, false, text)
+function M.render(layout)
+  vim.api.nvim_buf_set_lines(M.buf, 0, -1, false, layout.text)
 
-  vim.api.nvim_buf_set_option(M.buf, 'modifiable', false)
+  for _, highlights in ipairs(layout.highlights) do
+    vim.api.nvim_buf_add_highlight(M.buf, -1, highlights.group, highlights.line_num, highlights.from, highlights.to)
+  end
 end
 
 return M

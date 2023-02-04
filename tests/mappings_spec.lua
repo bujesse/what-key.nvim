@@ -10,6 +10,7 @@ local assert = require('luassert')
 
 describe('mappings', function()
   local module = require('what-key.mappings')
+  local Keys = require('what-key.keys')
 
   describe('get_next_key', function()
     it('returns first single characters', function()
@@ -36,7 +37,7 @@ describe('mappings', function()
       vim.keymap.set('n', test_key, '<nop>')
       local user_mappings = module.create_mapping_for_mode('n')
       assert.is_not_nil(user_mappings[test_key])
-      assert.are.equal('user', user_mappings[test_key].mapped_by)
+      assert.are.equal(Keys.USER_MAP, user_mappings[test_key].mapped)
     end)
 
     it('updates state by mode', function()
@@ -132,7 +133,7 @@ describe('mappings', function()
       }
 
       local keys = { 'g', 's' }
-      local expected = require('what-key.keys').init_key('user')
+      local expected = Keys.init_key(Keys.USER_MAP)
       local actual = module.get_nested_mapping(test_map, keys)
       assert.are.same(expected, actual)
     end)

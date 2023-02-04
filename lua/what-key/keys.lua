@@ -1,7 +1,13 @@
 local M = {}
 
-function M.init_key(mapped_by)
-  return { mapped_by = mapped_by, mappings = {} }
+M.USER_MAP = 'user'
+M.VIM_MAP = 'vim'
+M.NO_MAP = 'nomap'
+
+---@param mapped 'user' | 'vim' | 'nomap'
+---@return table
+function M.init_key(mapped)
+  return { mapped = mapped, mappings = {} }
 end
 
 function M.keys()

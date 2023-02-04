@@ -24,10 +24,6 @@ function M.split_keymap(lhs)
   while string.len(lhs) > 0 do
     local next = M.get_next_key(lhs)
     table.insert(result, next)
-    -- -- Escape %
-    -- next = next:gsub('%%', '%%%%', 1)
-    -- -- Escape hyphen
-    -- next = next:gsub('%-', '%%%-', 1)
     lhs = lhs:sub(string.len(next) + 1, string.len(lhs))
   end
   return result
@@ -42,7 +38,7 @@ function M.get_nested_mapping(mappings, keys)
     local next = keys[1]
 
     if mappings[next] == nil then
-      mappings[next] = Keys.init_key('user')
+      mappings[next] = Keys.init_key(Keys.USER_MAP)
     end
 
     local target_mapping = mappings[next]
@@ -56,6 +52,11 @@ function M.get_nested_mapping(mappings, keys)
   return mappings
 end
 
+local SKIP_LIST = {
+  '<Plug>',
+  '<c3>',
+}
+
 ---Get user mappings for mode
 ---@param mode string
 ---@return table
@@ -66,7 +67,7 @@ function M.create_mapping_for_mode(mode)
 
   local mode_mappings = vim.api.nvim_get_keymap(mode)
   for _, map in ipairs(mode_mappings) do
-    if M.get_next_key(map.lhs) ~= '<Plug>' then
+    if SKIP_LIST[M.get_next_key(map.lhs)] == nil then
       local split_keymap = M.split_keymap(map.lhs)
       local target_map = M.get_nested_mapping(result, split_keymap)
       -- target_map = vim.tbl_deep_extend('force', target_map, map)
@@ -99,7 +100,11 @@ end
 ---@return table
 function M.get_mapping_for_prefix(mapping, prefix)
   local split_prefix = M.split_keymap(prefix)
-  return M.get_nested_mapping(mapping, split_prefix)
+  local result = M.get_nested_mapping(mapping, split_prefix)
+  if prefix ~= '' then
+    result = result.mappings
+  end
+  return result
 end
 
 function M.transform_key_for_view(key)
@@ -116,16 +121,30 @@ local function filter_out_control(key)
   return string.sub(key, 1, 3) ~= '<C-'
 end
 
+local function filter_control(key)
+  return string.sub(key, 1, 3) == '<C-'
+end
+
 local function filter_out_shift(key)
   local target = string.sub(key, 1, 3)
   return not vim.tbl_contains(Keys.shift_keys, target)
 end
 
+local function filter_shift(key)
+  local target = string.sub(key, 1, 3)
+  return vim.tbl_contains(Keys.shift_keys, target)
+end
+
 local function filter_mapping(mapping, control, shift)
-  if not control then
+  if control then
+    mapping = Utils.filter_tbl(filter_control, mapping)
+  else
     mapping = Utils.filter_tbl(filter_out_control, mapping)
   end
-  if not shift then
+
+  if shift then
+    mapping = Utils.filter_tbl(filter_shift, mapping)
+  else
     mapping = Utils.filter_tbl(filter_out_shift, mapping)
   end
   return mapping
@@ -135,7 +154,7 @@ end
 local function fill_empty_mappings(mapping)
   local new_keys = {}
   for _, key in ipairs(Keys.keys()) do
-    new_keys[key] = Keys.init_key('unmapped')
+    new_keys[key] = Keys.init_key(Keys.NO_MAP)
   end
   return vim.tbl_deep_extend('keep', mapping, new_keys)
 end
@@ -148,6 +167,8 @@ function M.get_filled_filtered_mapping(mode, control, shift, prefix)
   result = filter_mapping(result, control, shift)
   return result
 end
+
+-- print(M.get_filled_filtered_mapping('n', false, false, ','))
 
 --TODO: get builtin vim mappings
 
