@@ -1,12 +1,12 @@
-local mappings = require('what-key.mappings')
+local Mappings = require('what-key.mappings')
+local Utils = require('what-key.utils')
 
 local M = {}
 
 ---Create the string layout
 ---@return table<string>
 function M.create_layout(win)
-  local mode = 'n'
-  local mappings = mappings.get_or_create_full_mapping()[mode]
+  local mappings = Mappings.get_filled_filtered_mapping('n', false, false, '')
 
   local padding = 10
   local window_width = vim.api.nvim_win_get_width(win)
@@ -20,17 +20,16 @@ function M.create_layout(win)
   local pad_top = 10
   local pad_left = 10
 
-  local result = {
-    'window_width: ' .. vim.api.nvim_win_get_width(win),
-    'window_width with padding: ' .. window_width,
-    'columns ' .. num_columns,
-  }
+  local result = {}
 
+  local sorted_keys = Utils.get_sorted_keys(mappings)
   local line = ''
-  for key, map in pairs(mappings) do
+  for _, key in ipairs(sorted_keys) do
     if col == 1 then
       line = line .. string.rep(' ', pad_left)
     end
+
+    key = Mappings.transform_key_for_view(key)
 
     line = line .. key .. string.rep(' ', column_width - string.len(key))
 
@@ -42,6 +41,7 @@ function M.create_layout(win)
     end
   end
 
+  table.insert(result, line)
   return result
 end
 

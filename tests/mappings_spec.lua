@@ -6,14 +6,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   end,
 })
 
-local function find_map(maps, lhs)
-  for _, map in ipairs(maps) do
-    if map.lhs == lhs then
-      return map
-    end
-  end
-end
-
 local assert = require('luassert')
 
 describe('mappings', function()
@@ -33,7 +25,7 @@ describe('mappings', function()
     end)
   end)
 
-  describe('create_mapping', function()
+  describe('create_mapping_for_mode', function()
     local test_key = '<C-J>'
 
     before_each(function()
@@ -42,14 +34,14 @@ describe('mappings', function()
 
     it('updates state of user_mappings', function()
       vim.keymap.set('n', test_key, '<nop>')
-      local user_mappings = module.create_mapping('n')
+      local user_mappings = module.create_mapping_for_mode('n')
       assert.is_not_nil(user_mappings[test_key])
       assert.are.equal('user', user_mappings[test_key].mapped_by)
     end)
 
     it('updates state by mode', function()
       vim.keymap.set('n', test_key, '<nop>')
-      local user_mappings = module.create_mapping('v')
+      local user_mappings = module.create_mapping_for_mode('v')
       assert.is_nil(user_mappings[test_key])
     end)
   end)
@@ -140,7 +132,7 @@ describe('mappings', function()
       }
 
       local keys = { 'g', 's' }
-      local expected = require('what-key.possible_keys').init_key('user')
+      local expected = require('what-key.keys').init_key('user')
       local actual = module.get_nested_mapping(test_map, keys)
       assert.are.same(expected, actual)
     end)
@@ -149,7 +141,7 @@ describe('mappings', function()
   describe('get_mapping_for_prefix', function()
     it('works with single prefix', function()
       vim.keymap.set('n', 'g', 'foo')
-      local mapping = module.create_mapping('n')
+      local mapping = module.create_mapping_for_mode('n')
       local result = module.get_mapping_for_prefix(mapping, 'g')
 
       assert.are.same('foo', result.rhs)
@@ -157,7 +149,7 @@ describe('mappings', function()
 
     it('works with multiple prefix', function()
       vim.keymap.set('n', 'gsa', 'foo')
-      local mapping = module.create_mapping('n')
+      local mapping = module.create_mapping_for_mode('n')
       local result = module.get_mapping_for_prefix(mapping, 'gsa')
 
       assert.are.same('foo', result.rhs)
@@ -165,7 +157,7 @@ describe('mappings', function()
 
     it('works with middle prefix', function()
       vim.keymap.set('n', 'gsa', 'foo')
-      local mapping = module.create_mapping('n')
+      local mapping = module.create_mapping_for_mode('n')
       local result = module.get_mapping_for_prefix(mapping, 'gs')
 
       assert.is_nil(result.rhs)
