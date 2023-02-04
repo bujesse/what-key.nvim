@@ -2,6 +2,8 @@ local M = {}
 
 local possible_keys = require('what-key.possible_keys')
 
+M.cached_mapping = nil
+
 ---Get first non-plug keymap
 ---@param lhs string
 ---@return string
@@ -73,6 +75,18 @@ function M.create_mapping(mode)
   end
 
   return result
+end
+
+function M.get_or_create_full_mapping()
+  if M.cached_mapping == nil then
+    local modes = { 'n', 'v', 's', 'x', 'o', '!', 'i', 'l', 'c', 't' }
+    local full_mapping = {}
+    for _, mode in ipairs(modes) do
+      full_mapping[mode] = M.create_mapping(mode)
+    end
+    M.cached_mapping = full_mapping
+  end
+  return M.cached_mapping
 end
 
 ---Get nested reference to a mapping by string prefix
