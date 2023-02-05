@@ -83,8 +83,17 @@ end
 
 function M.get_or_create_full_mapping()
   if M.cached_mapping == nil then
-    -- local modes = { 'n', 'v', 's', 'x', 'o', '!', 'i', 'l', 'c', 't' } FIXME:
-    local modes = { 'n', 'v' }
+    local modes = {
+      'n',
+      'v',
+      's',
+      'x',
+      'i',
+      'l',
+      'c',
+      't',--[[ 'o', '!',  ]]
+    }
+    -- local modes = { 'n', 'v' }
     local full_mapping = {}
     for _, mode in ipairs(modes) do
       full_mapping[mode] = M.create_mapping_for_mode(mode)
