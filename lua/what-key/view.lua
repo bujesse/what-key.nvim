@@ -16,10 +16,7 @@ function M.setup()
 end
 
 function M.show()
-  -- local width = round(ui.width * 0.5)
-  -- local height = round(ui.height * 0.5)
-
-  if M.buf == nil then
+  if M.buf == nil or not vim.api.nvim_buf_is_valid(M.buf) then
     local bufnr = M.setup()
     require('what-key.autocommands').setup(bufnr)
   end
@@ -40,7 +37,6 @@ function M.show()
   }
 
   M.win = vim.api.nvim_open_win(M.buf, true, opts)
-  -- M.win = vim.api.nvim_open_win(M.buf, false, opts) -- FIXME: use for dev only
 
   vim.api.nvim_win_set_option(M.win, 'foldmethod', 'manual')
   vim.api.nvim_win_set_option(M.win, 'winblend', 0)

@@ -49,6 +49,7 @@ function M._global_keys()
     ['='] = { shift = '+', control = '<C-=>', meta = nil },
     ['`'] = { shift = '~', control = '<C-`>', meta = nil },
     ['\\'] = { shift = '|', control = '<C-Bslash>', meta = nil },
+    ['/'] = { shift = '?', control = '<C-/>', meta = nil },
     ['0'] = { shift = '!', control = '<C-0>', meta = nil },
     ['1'] = { shift = '@', control = '<C-1>', meta = nil },
     ['2'] = { shift = '#', control = '<C-2>', meta = nil },
@@ -79,8 +80,25 @@ function M._global_keys()
     ['<F10>'] = { shift = '<S-F10>', control = '<C-F10>', meta = nil },
     ['<F11>'] = { shift = '<S-F11>', control = '<C-F11>', meta = nil },
     ['<F12>'] = { shift = '<S-F12>', control = '<C-F12>', meta = nil },
-    -- TODO: add numpad
+    -- TODO: add numpad, other nav cluster keys
   }
+end
+
+---Looks up by the global key ID and returns the key for the target mod. Returns nil if not found
+---@param key string
+---@param mod_target 'shift' | 'control' | 'meta'
+---@return string | nil
+function M.get_modded_key(key, mod_target)
+  if not mod_target then
+    return key
+  end
+
+  local globals = M._global_keys()
+  if globals[key] ~= nil then
+    return globals[key][mod_target]
+  end
+
+  return nil
 end
 
 M.MOD_TARGET_SHIFT = 'shift'

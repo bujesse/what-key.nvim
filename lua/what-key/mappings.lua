@@ -116,16 +116,6 @@ function M.get_mapping_for_prefix(mapping, prefix)
   return result
 end
 
-function M.transform_key_for_view(key)
-  if key == ' ' then
-    return '<Space>'
-  end
-  if key == '<lt>' then
-    return '<'
-  end
-  return key
-end
-
 ---Only applies for the first layer (does not fill nested mappings)
 local function fill_empty_mappings(mapping, mod_target, should_filter)
   local global_keys = Keys.get_global_keys(mod_target, true)
@@ -138,7 +128,7 @@ local function fill_empty_mappings(mapping, mod_target, should_filter)
     end
     mapping = new_mapping
   end
-  return vim.tbl_deep_extend('keep', mapping, global_keys)
+  return vim.tbl_deep_extend('force', global_keys, mapping)
 end
 
 ---A filled mapping includes all mappings _with_ keys that are not mapped
