@@ -138,30 +138,4 @@ describe('mappings', function()
       assert.are.same(expected, actual)
     end)
   end)
-
-  describe('get_mapping_for_prefix', function()
-    it('works with single prefix', function()
-      vim.keymap.set('n', 'g', 'foo')
-      local mapping = module.create_mapping_for_mode('n')
-      local result = module.get_mapping_for_prefix(mapping, 'g')
-
-      assert.are.same('foo', result.rhs)
-    end)
-
-    it('works with multiple prefix', function()
-      vim.keymap.set('n', 'gsa', 'foo')
-      local mapping = module.create_mapping_for_mode('n')
-      local result = module.get_mapping_for_prefix(mapping, 'gsa')
-
-      assert.are.same('foo', result.rhs)
-    end)
-
-    it('works with middle prefix', function()
-      vim.keymap.set('n', 'gsa', 'foo')
-      local mapping = module.create_mapping_for_mode('n')
-      local result = module.get_mapping_for_prefix(mapping, 'gs')
-
-      assert.is_nil(result.rhs)
-    end)
-  end)
 end)

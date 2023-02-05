@@ -126,54 +126,26 @@ function M.transform_key_for_view(key)
   return key
 end
 
-local function filter_out_control(key)
-  return string.sub(key, 1, 3) ~= '<C-'
-end
-
-local function filter_control(key)
-  return string.sub(key, 1, 3) == '<C-'
-end
-
-local function filter_out_shift(key)
-  local target = string.sub(key, 1, 3)
-  return not vim.tbl_contains(Keys.shift_keys, target)
-end
-
-local function filter_shift(key)
-  local target = string.sub(key, 1, 3)
-  return vim.tbl_contains(Keys.shift_keys, target)
-end
-
-local function filter_mapping(mapping, control, shift)
-  if control then
-    mapping = Utils.filter_tbl(filter_control, mapping)
-  else
-    mapping = Utils.filter_tbl(filter_out_control, mapping)
-  end
-
-  if shift then
-    mapping = Utils.filter_tbl(filter_shift, mapping)
-  else
-    mapping = Utils.filter_tbl(filter_out_shift, mapping)
-  end
-  return mapping
-end
-
 ---Only applies for the first layer (does not fill nested mappings)
-local function fill_empty_mappings(mapping)
-  local new_keys = {}
-  for _, key in ipairs(Keys.keys()) do
-    new_keys[key] = Keys.init_key(Keys.NO_MAP)
+local function fill_empty_mappings(mapping, mod_target, should_filter)
+  local global_keys = Keys.get_global_keys(mod_target, true)
+  if should_filter then
+    local new_mapping = {}
+    for key, map in pairs(mapping) do
+      if global_keys[key] ~= nil then
+        new_mapping[key] = map
+      end
+    end
+    mapping = new_mapping
   end
-  return vim.tbl_deep_extend('keep', mapping, new_keys)
+  return vim.tbl_deep_extend('keep', mapping, global_keys)
 end
 
 ---A filled mapping includes all mappings _with_ keys that are not mapped
-function M.get_filled_filtered_mapping(mode, control, shift, prefix)
+function M.get_filled_filtered_mapping(mode, mod_target, prefix)
   local result = M.get_or_create_full_mapping()[mode]
   result = M.get_mapping_for_prefix(result, prefix)
-  result = fill_empty_mappings(result)
-  result = filter_mapping(result, control, shift)
+  result = fill_empty_mappings(result, mod_target, true)
   return result
 end
 

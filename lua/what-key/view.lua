@@ -1,8 +1,7 @@
 local M = {}
 
 M.mode = 'n'
-M.shift_on = false
-M.control_on = false
+M.mod_target = nil
 M.prefix = ''
 
 M.buf = nil
@@ -72,7 +71,7 @@ end
 function M.render()
   vim.api.nvim_buf_set_option(M.buf, 'modifiable', true)
 
-  local layout = require('what-key.layout').create_layout(M.win, M.mode, M.control_on, M.shift_on, M.prefix)
+  local layout = require('what-key.layout').create_layout(M.win, M.mode, M.mod_target, M.prefix)
 
   vim.api.nvim_buf_set_lines(M.buf, 0, -1, false, layout.text)
 

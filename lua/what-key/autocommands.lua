@@ -1,4 +1,5 @@
 local View = require('what-key.view')
+local Keys = require('what-key.keys')
 
 local M = {}
 
@@ -11,7 +12,11 @@ function M.setup(bufnr)
     buffer = bufnr,
     callback = function()
       vim.keymap.set('n', what_key_leader .. 's', function()
-        View.shift_on = not View.shift_on
+        if View.mod_target == Keys.MOD_TARGET_SHIFT then
+          View.mod_target = nil
+        else
+          View.mod_target = Keys.MOD_TARGET_SHIFT
+        end
         View.render()
       end, { buffer = bufnr })
 
@@ -31,7 +36,11 @@ function M.setup(bufnr)
       end, { buffer = bufnr })
 
       vim.keymap.set('n', what_key_leader .. 'c', function()
-        View.control_on = not View.control_on
+        if View.mod_target == Keys.MOD_TARGET_CONTROL then
+          View.mod_target = nil
+        else
+          View.mod_target = Keys.MOD_TARGET_CONTROL
+        end
         View.render()
       end, { buffer = bufnr })
 

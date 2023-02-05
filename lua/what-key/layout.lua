@@ -13,7 +13,7 @@ local HL_GROUPS_FOR_MAP_TYPE = {
 
 ---Create the string layout
 ---@return table<string>
-function M.create_layout(win, mode, control, shift, prefix)
+function M.create_layout(win, mode, mod_target, prefix)
   local result = {}
 
   -- Set top padding
@@ -37,7 +37,7 @@ function M.create_layout(win, mode, control, shift, prefix)
   local start = 0
   local ending = start + column_width
 
-  local mappings = Mappings.get_filled_filtered_mapping(mode, control, shift, prefix)
+  local mappings = Mappings.get_filled_filtered_mapping(mode, mod_target, prefix)
   local sorted_keys = Utils.get_sorted_keys(mappings)
   local line = ''
   for _, key in ipairs(sorted_keys) do
@@ -80,5 +80,7 @@ function M.create_layout(win, mode, control, shift, prefix)
     highlights = highlights,
   }
 end
+
+function M.get_keyboard_layout() end
 
 return M
