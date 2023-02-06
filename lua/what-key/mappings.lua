@@ -139,10 +139,73 @@ function M.get_filled_filtered_mapping(mode, mod_target, prefix)
   return result
 end
 
--- print(M.get_filled_filtered_mapping('n', false, false, ','))
+-- see if the file exists
+function file_exists(file)
+  local f = io.open(file, 'rb')
+  if f then
+    f:close()
+  end
+  return f ~= nil
+end
 
---TODO: get builtin vim mappings
+-- get all lines from a file, returns an empty
+-- list/table if the file does not exist
+function lines_from(file)
+  if not file_exists(file) then
+    return {}
+  end
+  local lines = {}
+  for line in io.lines(file) do
+    lines[#lines + 1] = line
+  end
+  return lines
+end
 
--- P(M.create_mappings('v'))
+function M.parse_vim_index()
+  local file = 'vim_mappings.txt'
+  local lines = lines_from(file)
+  for _, v in pairs(lines) do
+    local inside_bar = string.match(v, '^|.*|')
+    if inside_bar == nil then
+      goto continue
+    end
+
+    inside_bar = string.gsub(inside_bar, '|', '')
+    local help_str = inside_bar
+    print(help_str)
+
+    local mode = string.match(inside_bar, '%a_')
+    if mode ~= nil then
+      mode = string.sub(mode, 1, 1)
+    else
+      mode = 'n'
+    end
+    print(mode)
+
+    local first_t = string.find(v, '%s')
+    local keys = v:sub(first_t + 1, #v)
+    local next = string.find(keys, '%s%w%l')
+    local text = keys:sub(next + 1, #v)
+    print(text)
+
+    keys = keys:sub(1, next - 1)
+    if string.match(keys, 'CTRL%-SHIFT') then
+      -- Don't support CTRL-SHIFT for now
+      keys = keys:gsub('%-SHIFT', '')
+    end
+
+    if string.match(keys, 'CTRL') then
+      keys = keys:gsub('CTRL', '<C')
+      keys = keys:gsub('([%-][^<])', '%1>')
+      keys = keys:gsub('-<(%u[%l]*)>', '-%1>') -- Handle <C-Tab> or <C-Space> etc
+    end
+    keys = keys:gsub('%s', '')
+    print(keys)
+
+    ::continue::
+  end
+end
+
+M.parse_vim_index()
 
 return M

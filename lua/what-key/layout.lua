@@ -87,7 +87,8 @@ function M.render_keyboard(layout, highlights, mode, mod_target, prefix, pad_lef
       local target_key = Keys.get_modded_key(global_key_id, mod_target)
       -- FIXME:error handling needed here in case a key isn't on the global map, or a mod doesn't exist
       if mappings[target_key] ~= nil then
-        local group = HL_GROUPS_FOR_MAP_TYPE[mappings[target_key].mapped]
+        local map_type = mappings[target_key].mapped
+        local group = HL_GROUPS_FOR_MAP_TYPE[map_type]
         if next(mappings[target_key].mappings) ~= nil then
           group = Colors.links.NestedMapping
         end

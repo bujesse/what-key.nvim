@@ -3,6 +3,7 @@ local M = {}
 M.links = {
   -- NoMapping = 'CurSearch',
   -- UserMapping = 'CursorLine',
+  -- NestedMapping = 'IncSearch',
   NoMapping = 'String',
   UserMapping = 'PreProc',
   VimMapping = 'Type',
