@@ -10,8 +10,12 @@ M.cached_mapping = nil
 ---@return string
 function M.get_next_key(lhs)
   local first_key = string.sub(lhs, 1, 1)
-  if first_key == '<' then
+  if lhs == '<' or lhs:find('<[^%u]') then
+    first_key = lhs:gsub('<', '<lt>')
+  elseif first_key == '<' then
     first_key = string.match(lhs, '<.->')
+  elseif lhs:find('{.+}') then
+    first_key = string.match(lhs, '{.+}')
   end
   return first_key
 end
@@ -33,12 +37,12 @@ end
 ---@param mappings table
 ---@param keys Array
 ---@return table
-function M.get_nested_mapping(mappings, keys)
+function M.get_nested_mapping(mappings, keys, init_as)
   if #keys > 0 then
     local next = keys[1]
 
     if mappings[next] == nil then
-      mappings[next] = Keys.init_key(Keys.USER_MAP)
+      mappings[next] = Keys.init_key(init_as)
     end
 
     local target_mapping = mappings[next]
@@ -55,25 +59,50 @@ end
 local SKIP_LIST = {
   '<Plug>',
   '<c3>',
+  '{motion}',
+  '{char}',
+  '{char1}',
+  '{char2}',
+  '{mark}',
+  '{mode}',
+  '{number}',
+  '{register}',
+  '{filter}',
+  '{a-zA-Z0-9}',
+  '{pattern}',
+  '{a-z}',
+  '{count}',
+  '{height}',
+  '{regname}',
 }
 
 ---Get user mappings for mode
----@param mode string
 ---@return table
-function M.create_mapping_for_mode(mode)
-  -- TODO: only accept possible keys?
-  -- local possible_keys = require('what-key.possible_keys').possible_keys()
+function M.create_mapping(mappings, init_as)
+  if not mappings then
+    return {}
+  end
+
   local result = {}
 
-  local mode_mappings = vim.api.nvim_get_keymap(mode)
-  for _, map in ipairs(mode_mappings) do
-    if SKIP_LIST[M.get_next_key(map.lhs)] == nil then
+  for _, map in ipairs(mappings) do
+    local skip = false
+    for _, skip_str in ipairs(SKIP_LIST) do
+      if string.find(map.lhs, skip_str) then
+        skip = true
+      end
+    end
+    if not skip then
       local split_keymap = M.split_keymap(map.lhs)
-      local target_map = M.get_nested_mapping(result, split_keymap)
+      local target_map = M.get_nested_mapping(result, split_keymap, init_as)
       -- target_map = vim.tbl_deep_extend('force', target_map, map)
       target_map.lhs = map.lhs
       target_map.rhs = map.rhs
       target_map.desc = map.desc
+      target_map.mapped = init_as
+      if init_as == Keys.VIM_MAP then
+        target_map.help_str = map.help_str
+      end
       -- result = vim.tbl_deep_extend('force', result, target_map)
     end
   end
@@ -93,11 +122,20 @@ function M.get_or_create_full_mapping()
       'c',
       't',--[[ 'o', '!',  ]]
     }
-    -- local modes = { 'n', 'v' }
     local full_mapping = {}
+
+    local vim_index = M.get_vim_index_from_json()
+
     for _, mode in ipairs(modes) do
-      full_mapping[mode] = M.create_mapping_for_mode(mode)
+      -- User mappings
+      local mode_mappings = vim.api.nvim_get_keymap(mode)
+      full_mapping[mode] = M.create_mapping(mode_mappings, Keys.USER_MAP)
+
+      -- Vim mappings
+      local vim_mappings = M.create_mapping(vim_index[mode], Keys.VIM_MAP)
+      full_mapping[mode] = vim.tbl_deep_extend('keep', full_mapping[mode], vim_mappings)
     end
+
     M.cached_mapping = full_mapping
   end
   return M.cached_mapping
@@ -139,73 +177,12 @@ function M.get_filled_filtered_mapping(mode, mod_target, prefix)
   return result
 end
 
--- see if the file exists
-function file_exists(file)
-  local f = io.open(file, 'rb')
-  if f then
-    f:close()
+function M.get_vim_index_from_json()
+  local file = io.open('vim_index_pp.json', 'rb')
+  if file ~= nil then
+    return vim.json.decode(file:read('*all'))
   end
-  return f ~= nil
+  return nil
 end
-
--- get all lines from a file, returns an empty
--- list/table if the file does not exist
-function lines_from(file)
-  if not file_exists(file) then
-    return {}
-  end
-  local lines = {}
-  for line in io.lines(file) do
-    lines[#lines + 1] = line
-  end
-  return lines
-end
-
-function M.parse_vim_index()
-  local file = 'vim_mappings.txt'
-  local lines = lines_from(file)
-  for _, v in pairs(lines) do
-    local inside_bar = string.match(v, '^|.*|')
-    if inside_bar == nil then
-      goto continue
-    end
-
-    inside_bar = string.gsub(inside_bar, '|', '')
-    local help_str = inside_bar
-    print(help_str)
-
-    local mode = string.match(inside_bar, '%a_')
-    if mode ~= nil then
-      mode = string.sub(mode, 1, 1)
-    else
-      mode = 'n'
-    end
-    print(mode)
-
-    local first_t = string.find(v, '%s')
-    local keys = v:sub(first_t + 1, #v)
-    local next = string.find(keys, '%s%w%l')
-    local text = keys:sub(next + 1, #v)
-    print(text)
-
-    keys = keys:sub(1, next - 1)
-    if string.match(keys, 'CTRL%-SHIFT') then
-      -- Don't support CTRL-SHIFT for now
-      keys = keys:gsub('%-SHIFT', '')
-    end
-
-    if string.match(keys, 'CTRL') then
-      keys = keys:gsub('CTRL', '<C')
-      keys = keys:gsub('([%-][^<])', '%1>')
-      keys = keys:gsub('-<(%u[%l]*)>', '-%1>') -- Handle <C-Tab> or <C-Space> etc
-    end
-    keys = keys:gsub('%s', '')
-    print(keys)
-
-    ::continue::
-  end
-end
-
-M.parse_vim_index()
 
 return M

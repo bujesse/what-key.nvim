@@ -1,3 +1,26 @@
+|c_CTRL-R_CTRL-R| CTRL-R CTRL-R {regname}
+|i_CTRL-X_s|		CTRL-X s	spelling suggestions
+|i_CTRL-X_CTRL-D|	CTRL-X CTRL-D	complete defined identifiers
+|i_CTRL-X_CTRL-E|	CTRL-X CTRL-E	scroll up
+|i_CTRL-X_CTRL-F|	CTRL-X CTRL-F	complete file names
+|i_CTRL-X_CTRL-I|	CTRL-X CTRL-I	complete identifiers
+|i_CTRL-X_CTRL-K|	CTRL-X CTRL-K	complete identifiers from dictionary
+|i_CTRL-X_CTRL-L|	CTRL-X CTRL-L	complete whole lines
+|i_CTRL-X_CTRL-N|	CTRL-X CTRL-N	next completion
+|i_CTRL-X_CTRL-O|	CTRL-X CTRL-O	omni completion
+|i_CTRL-X_CTRL-P|	CTRL-X CTRL-P	previous completion
+|i_CTRL-X_CTRL-S|	CTRL-X CTRL-S	spelling suggestions
+|i_CTRL-X_CTRL-T|	CTRL-X CTRL-T	complete identifiers from thesaurus
+|i_CTRL-X_CTRL-Y|	CTRL-X CTRL-Y	scroll down
+|i_CTRL-X_CTRL-U|	CTRL-X CTRL-U	complete with 'completefunc'
+|i_CTRL-X_CTRL-V|	CTRL-X CTRL-V	complete like in : command line
+|i_CTRL-X_CTRL-Z|	CTRL-X CTRL-Z	stop completion, keeping the text as-is
+|i_CTRL-X_CTRL-]|	CTRL-X CTRL-]	complete tags
+
+|i_CTRL-X|	CTRL-X {mode}	enter CTRL-X sub mode, see |i_CTRL-X_index|
+|CTRL-<Tab>|	CTRL-<Tab>	   same as `g<Tab>` : go to last accessed tab page
+|i_digraph|	{char1}<BS>{char2} enter digraph (only when 'digraph' option set)
+|i_CTRL-SHIFT-Q|  CTRL-SHIFT-Q {char} like CTRL-Q unless |tui-modifyOtherKeys| is active
 |i_CTRL-@|	CTRL-@		insert previously inserted text and stop insert
 |i_CTRL-A|	CTRL-A		insert previously inserted text
 |i_CTRL-C|	CTRL-C		quit insert mode, without checking for abbreviation
@@ -11,8 +34,44 @@
 |i_CTRL-G_k|	CTRL-G <Up>	line up, to column where inserting started
 |i_CTRL-G_u|	CTRL-G u	start new undoable edit
 |i_CTRL-G_U|	CTRL-G U	don't break undo with next cursor movement
+|v_ab|		ab		   "a block" from "[(" to "])" (with braces)
+|v_ap|		ap		   "a paragraph" (with white space)
+|v_as|		as		   "a sentence" (with white space)
+|v_at|		at		   "a tag block" (with white space)
+|v_aw|		aw		   "a word" (with white space)
+|v_a{|		a{		   same as aB
+|v_a}|		a}		   same as aB
+|v_iquote|	i"		   double quoted string without the quotes
+|v_i'|		i'		   single quoted string without the quotes
+|v_i(|		i(		   same as ib
+|v_i)|		i)		   same as ib
+|v_i<|		i<		   "inner <>" from '<' to the matching '>'
+|v_i>|		i>		   same as i<
+|v_iB|		iB		   "inner Block" from "[{" and "]}"
+|v_iW|		iW		   "inner WORD"
+|v_i[|		i[		   "inner []" from '[' to the matching ']'
+|v_i]|		i]		   same as i[
+|v_i`|		i`		   string in backticks without the backticks
+|v_ib|		ib		   "inner block" from "[(" to "])"
+|v_ip|		ip		   "inner paragraph"
+|v_is|		is		   "inner sentence"
+|v_it|		it		   "inner tag block"
+|v_iw|		iw		   "inner word"
+|v_i{|		i{		   same as iB
+|v_i}|		i}		   same as iB
+|v_aquote|	a"		   double quoted string
+|v_a'|		a'		   single quoted string
+|v_a(|		a(		   same as ab
+|v_a)|		a)		   same as ab
+|v_a<|		a<		   "a <>" from '<' to the matching '>'
+|v_a>|		a>		   same as a<
+|v_aB|		aB		   "a Block" from "[{" to "]}" (with brackets)
+|v_aW|		aW		   "a WORD" (with white space)
+|v_a[|		a[		   "a []" from '[' to the matching ']'
+|v_a]|		a]		   same as a[
+|v_a`|		a`		   string in backticks
+
 |i_<BS>|	<BS>		delete character before the cursor
-|i_digraph|	{char1}<BS>{char2} enter digraph (only when 'digraph' option set)
 |i_CTRL-H|	CTRL-H		same as <BS>
 |i_<Tab>|	<Tab>		insert a <Tab> character
 |i_CTRL-I|	CTRL-I		same as <Tab>
@@ -36,7 +95,6 @@
 |i_CTRL-SHIFT-V|  CTRL-SHIFT-V {char} like CTRL-V unless |tui-modifyOtherKeys| is active
 |i_CTRL-V_digit| CTRL-V {number} insert three digit decimal number as a single byte.
 |i_CTRL-W|	CTRL-W		delete word before the cursor
-|i_CTRL-X|	CTRL-X {mode}	enter CTRL-X sub mode, see |i_CTRL-X_index|
 |i_CTRL-Y|	CTRL-Y		insert the character which is above the cursor
 |i_<Esc>|	<Esc>		end insert mode
 |i_CTRL-[|	CTRL-[		same as <Esc>
@@ -79,24 +137,6 @@
 |i_<S-ScrollWheelLeft>|	<S-ScrollWheelLeft>	move window one page left
 |i_<ScrollWheelRight>|	<ScrollWheelRight>	move window six columns right
 |i_<S-ScrollWheelRight>| <S-ScrollWheelRight>	move window one page right
-
-|i_CTRL-X_CTRL-D|	CTRL-X CTRL-D	complete defined identifiers
-|i_CTRL-X_CTRL-E|	CTRL-X CTRL-E	scroll up
-|i_CTRL-X_CTRL-F|	CTRL-X CTRL-F	complete file names
-|i_CTRL-X_CTRL-I|	CTRL-X CTRL-I	complete identifiers
-|i_CTRL-X_CTRL-K|	CTRL-X CTRL-K	complete identifiers from dictionary
-|i_CTRL-X_CTRL-L|	CTRL-X CTRL-L	complete whole lines
-|i_CTRL-X_CTRL-N|	CTRL-X CTRL-N	next completion
-|i_CTRL-X_CTRL-O|	CTRL-X CTRL-O	omni completion
-|i_CTRL-X_CTRL-P|	CTRL-X CTRL-P	previous completion
-|i_CTRL-X_CTRL-S|	CTRL-X CTRL-S	spelling suggestions
-|i_CTRL-X_CTRL-T|	CTRL-X CTRL-T	complete identifiers from thesaurus
-|i_CTRL-X_CTRL-Y|	CTRL-X CTRL-Y	scroll down
-|i_CTRL-X_CTRL-U|	CTRL-X CTRL-U	complete with 'completefunc'
-|i_CTRL-X_CTRL-V|	CTRL-X CTRL-V	complete like in : command line
-|i_CTRL-X_CTRL-Z|	CTRL-X CTRL-Z	stop completion, keeping the text as-is
-|i_CTRL-X_CTRL-]|	CTRL-X CTRL-]	complete tags
-|i_CTRL-X_s|		CTRL-X s	spelling suggestions
 
 |CTRL-A|	CTRL-A		   add N to number at/after cursor
 |CTRL-B|	CTRL-B		   scroll N screens Backwards
@@ -285,43 +325,6 @@
 |<S-Up>|	<S-Up>		   same as CTRL-B
 |<Undo>|	<Undo>		   same as "u"
 |<Up>|		<Up>		   same as "k" *<ScrollWheelDown>*	<ScrollWheelDown>	move window three lines down *<S-ScrollWheelDown>*	<S-ScrollWheelDown>	move window one page down *<ScrollWheelUp>*	<ScrollWheelUp>		move window three lines up *<S-ScrollWheelUp>*	<S-ScrollWheelUp>	move window one page up *<ScrollWheelLeft>*	<ScrollWheelLeft>	move window six columns left *<S-ScrollWheelLeft>*	<S-ScrollWheelLeft>	move window one page left *<ScrollWheelRight>*	<ScrollWheelRight>	move window six columns right *<S-ScrollWheelRight>*	<S-ScrollWheelRight>	move window one page right
-
-|v_aquote|	a"		   double quoted string
-|v_a'|		a'		   single quoted string
-|v_a(|		a(		   same as ab
-|v_a)|		a)		   same as ab
-|v_a<|		a<		   "a <>" from '<' to the matching '>'
-|v_a>|		a>		   same as a<
-|v_aB|		aB		   "a Block" from "[{" to "]}" (with brackets)
-|v_aW|		aW		   "a WORD" (with white space)
-|v_a[|		a[		   "a []" from '[' to the matching ']'
-|v_a]|		a]		   same as a[
-|v_a`|		a`		   string in backticks
-|v_ab|		ab		   "a block" from "[(" to "])" (with braces)
-|v_ap|		ap		   "a paragraph" (with white space)
-|v_as|		as		   "a sentence" (with white space)
-|v_at|		at		   "a tag block" (with white space)
-|v_aw|		aw		   "a word" (with white space)
-|v_a{|		a{		   same as aB
-|v_a}|		a}		   same as aB
-|v_iquote|	i"		   double quoted string without the quotes
-|v_i'|		i'		   single quoted string without the quotes
-|v_i(|		i(		   same as ib
-|v_i)|		i)		   same as ib
-|v_i<|		i<		   "inner <>" from '<' to the matching '>'
-|v_i>|		i>		   same as i<
-|v_iB|		iB		   "inner Block" from "[{" and "]}"
-|v_iW|		iW		   "inner WORD"
-|v_i[|		i[		   "inner []" from '[' to the matching ']'
-|v_i]|		i]		   same as i[
-|v_i`|		i`		   string in backticks without the backticks
-|v_ib|		ib		   "inner block" from "[(" to "])"
-|v_ip|		ip		   "inner paragraph"
-|v_is|		is		   "inner sentence"
-|v_it|		it		   "inner tag block"
-|v_iw|		iw		   "inner word"
-|v_i{|		i{		   same as iB
-|v_i}|		i}		   same as iB
 
 |CTRL-W_CTRL-B|	CTRL-W CTRL-B	   same as "CTRL-W b"
 |CTRL-W_CTRL-C|	CTRL-W CTRL-C	   same as "CTRL-W c"
@@ -679,7 +682,6 @@
 |c_CTRL-P|	CTRL-P		after using 'wildchar' with multiple matches: go to previous match, otherwise: recall older command-line from history.
 |c_CTRL-Q|	CTRL-Q		same as CTRL-V, unless it's used for terminal control flow
 |c_CTRL-R|	CTRL-R {regname} insert the contents of a register or object under the cursor as if typed
-|c_CTRL-R_CTRL-R| CTRL-R CTRL-R {regname}
 |c_CTRL-R_CTRL-O| CTRL-R CTRL-O {regname} insert the contents of a register or object under the cursor literally
 |c_CTRL-T|	CTRL-T		previous match when 'incsearch' is active
 |c_CTRL-U|	CTRL-U		remove all characters

@@ -1,11 +1,3 @@
-vim.api.nvim_create_autocmd('BufWritePost', {
-  group = vim.api.nvim_create_augroup('AutoTest', { clear = true }),
-  pattern = 'mappings.lua',
-  callback = function()
-    require('neotest').run.run('tests/mappings_spec.lua')
-  end,
-})
-
 local assert = require('luassert')
 
 describe('mappings', function()
@@ -35,14 +27,16 @@ describe('mappings', function()
 
     it('updates state of user_mappings', function()
       vim.keymap.set('n', test_key, '<nop>')
-      local user_mappings = module.create_mapping_for_mode('n')
+      local mode_mappings = vim.api.nvim_get_keymap('n')
+      local user_mappings = module.create_mapping(mode_mappings, Keys.USER_MAP)
       assert.is_not_nil(user_mappings[test_key])
       assert.are.equal(Keys.USER_MAP, user_mappings[test_key].mapped)
     end)
 
     it('updates state by mode', function()
       vim.keymap.set('n', test_key, '<nop>')
-      local user_mappings = module.create_mapping_for_mode('v')
+      local mode_mappings = vim.api.nvim_get_keymap('v')
+      local user_mappings = module.create_mapping(mode_mappings, Keys.USER_MAP)
       assert.is_nil(user_mappings[test_key])
     end)
   end)
@@ -119,23 +113,6 @@ describe('mappings', function()
 
       local keys = { 'g' }
       assert.is_true(module.get_nested_mapping(test_map, keys).target_reached)
-    end)
-
-    it('handles initializing new key', function()
-      local test_map = {
-        g = {
-          mappings = {
-            foo = {
-              mappings = {},
-            },
-          },
-        },
-      }
-
-      local keys = { 'g', 's' }
-      local expected = Keys.init_key(Keys.USER_MAP)
-      local actual = module.get_nested_mapping(test_map, keys)
-      assert.are.same(expected, actual)
     end)
   end)
 end)
