@@ -5,9 +5,9 @@ M.links = {
   -- UserMapping = 'CursorLine',
   -- NestedMapping = 'IncSearch',
   NoMapping = 'String',
-  UserMapping = 'PreProc',
-  VimMapping = 'Type',
-  NestedMapping = 'Identifier',
+  UserMapping = 'Constant',
+  VimMapping = 'Identifier',
+  NestedMapping = 'Conditional',
 }
 
 function M.setup()

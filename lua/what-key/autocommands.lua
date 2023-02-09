@@ -20,14 +20,21 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', what_key_leader .. 'v', function()
-        View.mode = 'v'
-        View.render()
-      end, { buffer = bufnr })
-
-      vim.keymap.set('n', what_key_leader .. 'n', function()
-        View.mode = 'n'
-        View.render()
+      vim.keymap.set('n', what_key_leader .. 'm', function()
+        vim.ui.select({ '[n]ormal', '[v]isual', '[i]nsert', '[c]ommand' }, {
+          prompt = 'Select mode:',
+        }, function(choice, idx)
+          if idx == 1 then
+            View.mode = 'n'
+          elseif idx == 2 then
+            View.mode = 'v'
+          elseif idx == 3 then
+            View.mode = 'i'
+          elseif idx == 4 then
+            View.mode = 'c'
+          end
+          View.render()
+        end)
       end, { buffer = bufnr })
 
       vim.keymap.set('n', what_key_leader .. 'i', function()

@@ -16,14 +16,16 @@ function M.create_layout(win, mode, mod_target, prefix)
   local layout = {}
   local highlights = {}
 
-  -- Set top padding
-  M.render_vertical_padding(layout, 4)
+  local top_padding = 4
 
-  local total_lr_padding = 30
+  -- Set top padding
+  M.render_vertical_padding(layout, top_padding)
+
+  local total_lr_padding = 16
   local window_width = vim.api.nvim_win_get_width(win)
   local width = window_width - total_lr_padding
 
-  local column_width = 15
+  local column_width = 14
   local num_columns = math.floor(width / column_width)
   local actual_lr_padding = window_width - (num_columns * column_width)
   local pad_left = math.floor(actual_lr_padding / 2)
@@ -37,6 +39,7 @@ function M.create_layout(win, mode, mod_target, prefix)
   return {
     text = layout,
     highlights = highlights,
+    cursor_pos = { top_padding + 1, pad_left },
   }
 end
 
@@ -84,21 +87,36 @@ function M.render_keyboard(layout, highlights, mode, mod_target, prefix, pad_lef
         line = line .. string.rep(' ', pad_left)
       end
 
+      local group
+      local preview_text = ''
       local target_key = Keys.get_modded_key(global_key_id, mod_target)
       -- FIXME:error handling needed here in case a key isn't on the global map, or a mod doesn't exist
-      if mappings[target_key] ~= nil then
+      if mappings[target_key] == nil then
+        group = Colors.links.NoMapping
+      else
         local map_type = mappings[target_key].mapped
-        local group = HL_GROUPS_FOR_MAP_TYPE[map_type]
-        if next(mappings[target_key].mappings) ~= nil then
+        if next(mappings[target_key].mappings) == nil then
+          group = HL_GROUPS_FOR_MAP_TYPE[map_type]
+          if map_type ~= 'nomap' then
+            preview_text = ' ' .. map_type
+          end
+        else
           group = Colors.links.NestedMapping
+          preview_text = ' (' .. Mappings.count_nested_mappings(mappings[target_key].mappings) .. ')'
         end
-        -- Each cell gets its own highlighting
-        table.insert(highlights, { group = group, line_num = kl_row_i + starting_line_num, from = start, to = ending })
       end
+
+      -- Each cell gets its own highlighting
+      table.insert(highlights, { group = group, line_num = kl_row_i + starting_line_num, from = start, to = ending })
 
       local view_key = M.transform_key_for_view(target_key)
 
-      line = line .. view_key .. string.rep(' ', column_width - string.len(view_key))
+      line = line
+        .. '|'
+        .. view_key
+        .. '|'
+        .. preview_text
+        .. string.rep(' ', column_width - string.len(view_key) - 2 - string.len(preview_text))
 
       if kl_col_i == #kl_row then
         table.insert(layout, line)
@@ -119,9 +137,10 @@ end
 function M.transform_key_for_view(key)
   if key == ' ' then
     return '<Space>'
-  end
-  if key == '<lt>' then
+  elseif key == '<lt>' then
     return '<'
+  elseif key == '|' then
+    return '<Bar>'
   end
   return key
 end

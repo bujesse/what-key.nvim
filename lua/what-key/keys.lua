@@ -60,7 +60,7 @@ function M._global_keys()
     ['7'] = { shift = '*', control = '<C-7>', meta = nil },
     ['8'] = { shift = '(', control = '<C-8>', meta = nil },
     ['9'] = { shift = ')', control = '<C-9>', meta = nil },
-    ['<BS>'] = { shift = '<,-BS>', control = '<C-BS>', meta = '<M-BS>' },
+    ['<BS>'] = { shift = '<S-BS>', control = '<C-BS>', meta = '<M-BS>' },
     ['<Del>'] = { shift = '<S-Del>', control = '<C-Del>', meta = '<M-Del>' },
     ['<CR>'] = { shift = '<S-CR>', control = '<C-CR>', meta = '<M-CR>' },
     ['<Tab>'] = { shift = '<S-Tab>', control = '<C-Tab>', meta = nil },

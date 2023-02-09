@@ -75,6 +75,8 @@ function M.render()
     vim.api.nvim_buf_add_highlight(M.buf, -1, highlights.group, highlights.line_num, highlights.from, highlights.to)
   end
 
+  vim.api.nvim_win_set_cursor(M.win, layout.cursor_pos)
+
   vim.api.nvim_buf_set_option(M.buf, 'modifiable', false)
 end
 

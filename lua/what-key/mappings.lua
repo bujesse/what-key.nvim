@@ -115,8 +115,8 @@ function M.get_or_create_full_mapping()
     local modes = {
       'n',
       'v',
-      's',
-      'x',
+      -- 's',
+      -- 'x',
       'i',
       'l',
       'c',
@@ -177,6 +177,23 @@ function M.get_filled_filtered_mapping(mode, mod_target, prefix)
   return result
 end
 
+---Takes a list of mappings and returns the recursive count of "lhs" values
+function M.count_nested_mappings(mapping)
+  if mapping == nil or vim.tbl_isempty(mapping) then
+    return 0
+  end
+
+  local count = 0
+  for _, map in pairs(mapping) do
+    if map.lhs ~= nil then
+      count = count + 1
+    end
+    count = count + M.count_nested_mappings(map.mappings)
+  end
+
+  return count
+end
+
 function M.get_vim_index_from_json()
   local file = io.open('vim_index_pp.json', 'rb')
   if file ~= nil then
@@ -184,5 +201,8 @@ function M.get_vim_index_from_json()
   end
   return nil
 end
+
+-- FIXME: this is just for testing
+-- print(M.count_nested_mappings(M.get_filled_filtered_mapping('v', nil, '')['g'].mappings))
 
 return M
