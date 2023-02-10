@@ -12,7 +12,7 @@ local HL_GROUPS_FOR_MAP_TYPE = {
 
 ---Create the string layout
 ---@return table<string>
-function M.create_layout(win, mode, mod_target, prefix)
+function M.create_main_layout(win, mode, mod_target, prefix)
   local layout = {}
   local highlights = {}
 
@@ -51,7 +51,7 @@ function M.render_status_line(layout, highlights, mode, mod_target, prefix, wind
   else
     local split_prefix = Mappings.split_keymap(prefix)
     for _, c in ipairs(split_prefix) do
-      view_prefix = view_prefix .. M.transform_key_for_view(c)
+      view_prefix = view_prefix .. M.transform_view_key(c)
     end
     view_prefix = '"' .. view_prefix .. '"'
   end
@@ -109,7 +109,7 @@ function M.render_keyboard(layout, highlights, mode, mod_target, prefix, pad_lef
       -- Each cell gets its own highlighting
       table.insert(highlights, { group = group, line_num = kl_row_i + starting_line_num, from = start, to = ending })
 
-      local view_key = M.transform_key_for_view(target_key)
+      local view_key = M.transform_view_key(target_key)
 
       line = line
         .. '|'
@@ -134,13 +134,15 @@ function M.render_keyboard(layout, highlights, mode, mod_target, prefix, pad_lef
   return layout
 end
 
-function M.transform_key_for_view(key)
-  if key == ' ' then
-    return '<Space>'
-  elseif key == '<lt>' then
-    return '<'
-  elseif key == '|' then
-    return '<Bar>'
+---Transform either to or from the "view" key and the internal rep
+function M.transform_view_key(key)
+  local lookup = vim.tbl_add_reverse_lookup({
+    [' '] = '<Space>',
+    ['<'] = '<lt>',
+    ['|'] = '<Bar>',
+  })
+  if lookup[key] ~= nil then
+    return lookup[key]
   end
   return key
 end
@@ -161,6 +163,52 @@ function M.render_vertical_padding(layout, padding_amount)
     table.insert(layout, '')
   end
   return layout
+end
+
+---Create the help layout
+---@return table<string>
+function M.create_help_layout(win, mode, mod_target, prefix, target_key)
+  local layout = {}
+  local highlights = {}
+
+  local top_padding = 3
+  M.render_vertical_padding(layout, top_padding)
+
+  local lr_padding = 8
+
+  local target_mapping = Mappings.get_filled_filtered_mapping(mode, mod_target, prefix)[target_key]
+
+  local split_prefix = Mappings.split_keymap(prefix)
+  local line = string.rep(' ', lr_padding) .. 'Keymap: '
+  for _, p in ipairs(split_prefix) do
+    line = line .. M.transform_view_key(p)
+  end
+  line = line .. M.transform_view_key(target_key)
+  table.insert(layout, line)
+
+  local map_type = target_mapping.mapped
+  if map_type == Keys.NO_MAP then
+    table.insert(layout, string.rep(' ', lr_padding) .. 'No Mapping!')
+  end
+
+  if target_mapping.desc ~= nil then
+    table.insert(layout, string.rep(' ', lr_padding) .. 'Desc: ' .. target_mapping.desc)
+  end
+
+  if target_mapping.rhs ~= nil then
+    table.insert(layout, string.rep(' ', lr_padding) .. 'Mapping: ' .. target_mapping.rhs)
+  end
+
+  if not vim.tbl_isempty(target_mapping.mappings) then
+    table.insert(
+      layout,
+      string.rep(' ', lr_padding) .. 'Nested Mappings: ' .. Mappings.count_nested_mappings(target_mapping.mappings)
+    )
+  end
+
+  return {
+    text = layout,
+  }
 end
 
 -- Useful for debugging layout:

@@ -1,3 +1,5 @@
+local Layout = require('what-key.layout')
+
 local M = {}
 
 M.mode = 'n'
@@ -6,6 +8,9 @@ M.prefix = ''
 
 M.buf = nil
 M.win = nil
+
+M.help_buf = nil
+M.help_win = nil
 
 function M.setup()
   M.buf = vim.api.nvim_create_buf(false, true)
@@ -32,8 +37,6 @@ function M.show()
     border = 'none',
     style = 'minimal',
     noautocmd = false,
-    title = 'What Key',
-    title_pos = 'center',
   }
 
   M.win = vim.api.nvim_open_win(M.buf, true, opts)
@@ -42,6 +45,42 @@ function M.show()
   vim.api.nvim_win_set_option(M.win, 'winblend', 0)
 
   M.render()
+end
+
+function M.show_help(key)
+  if M.help_buf == nil or not vim.api.nvim_buf_is_valid(M.help_buf) then
+    M.help_buf = vim.api.nvim_create_buf(false, true)
+  end
+
+  local win_opts = {
+    relative = 'editor',
+    row = math.floor(vim.o.lines / 4),
+    col = math.floor(vim.o.columns / 4),
+    width = math.floor(vim.o.columns / 2),
+    height = 10,
+    focusable = false,
+    anchor = 'NW',
+    border = 'none',
+    style = 'minimal',
+    noautocmd = true,
+  }
+  M.help_win = vim.api.nvim_open_win(M.help_buf, false, win_opts)
+
+  local layout = Layout.create_help_layout(M.help_win, M.mode, M.mod_target, M.prefix, key)
+
+  vim.api.nvim_buf_set_lines(M.help_buf, 0, -1, false, layout.text)
+end
+
+function M.hide_help()
+  if M.help_buf and vim.api.nvim_buf_is_valid(M.help_buf) then
+    vim.api.nvim_buf_delete(M.help_buf, { force = true })
+    M.help_buf = nil
+  end
+  if M.help_win and vim.api.nvim_win_is_valid(M.help_win) then
+    vim.api.nvim_win_close(M.help_win, true)
+    M.help_win = nil
+  end
+  vim.cmd('redraw')
 end
 
 function M.hide()
@@ -67,7 +106,7 @@ end
 function M.render()
   vim.api.nvim_buf_set_option(M.buf, 'modifiable', true)
 
-  local layout = require('what-key.layout').create_layout(M.win, M.mode, M.mod_target, M.prefix)
+  local layout = Layout.create_main_layout(M.win, M.mode, M.mod_target, M.prefix)
 
   vim.api.nvim_buf_set_lines(M.buf, 0, -1, false, layout.text)
 

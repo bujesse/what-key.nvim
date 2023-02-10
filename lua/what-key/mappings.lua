@@ -145,7 +145,7 @@ end
 ---@param mapping table
 ---@param prefix string
 ---@return table
-function M.get_mapping_for_prefix(mapping, prefix)
+local function _get_mapping_for_prefix(mapping, prefix)
   local split_prefix = M.split_keymap(prefix)
   local result = M.get_nested_mapping(mapping, split_prefix)
   if prefix ~= '' then
@@ -155,7 +155,7 @@ function M.get_mapping_for_prefix(mapping, prefix)
 end
 
 ---Only applies for the first layer (does not fill nested mappings)
-local function fill_empty_mappings(mapping, mod_target, should_filter)
+local function _fill_empty_mappings(mapping, mod_target, should_filter)
   local global_keys = Keys.get_global_keys(mod_target, true)
   if should_filter then
     local new_mapping = {}
@@ -172,8 +172,8 @@ end
 ---A filled mapping includes all mappings _with_ keys that are not mapped
 function M.get_filled_filtered_mapping(mode, mod_target, prefix)
   local result = M.get_or_create_full_mapping()[mode]
-  result = M.get_mapping_for_prefix(result, prefix)
-  result = fill_empty_mappings(result, mod_target, true)
+  result = _get_mapping_for_prefix(result, prefix)
+  result = _fill_empty_mappings(result, mod_target, true)
   return result
 end
 

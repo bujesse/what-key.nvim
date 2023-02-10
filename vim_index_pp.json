@@ -1385,12 +1385,12 @@
         {
             "help_str": "C",
             "desc": "change from the cursor position to the end of the line, and N-1 more lines [into register x]; synonym for \"c$\"",
-            "lhs": "[\"x]C"
+            "lhs": "C"
         },
         {
             "help_str": "D",
             "desc": "delete the characters under the cursor until the end of the line and N-1 more lines [into register x]; synonym for \"d$\"",
-            "lhs": "[\"x]D"
+            "lhs": "D"
         },
         {
             "help_str": "E",
@@ -1450,7 +1450,7 @@
         {
             "help_str": "P",
             "desc": "put the text [from register x] before the cursor N times",
-            "lhs": "[\"x]P"
+            "lhs": "P"
         },
         {
             "help_str": "R",
@@ -1460,7 +1460,7 @@
         {
             "help_str": "S",
             "desc": "delete N lines [into register x] and start insert; synonym for \"cc\".",
-            "lhs": "[\"x]S"
+            "lhs": "S"
         },
         {
             "help_str": "T",
@@ -1485,12 +1485,12 @@
         {
             "help_str": "X",
             "desc": "delete N characters before the cursor [into register x]",
-            "lhs": "[\"x]X"
+            "lhs": "X"
         },
         {
             "help_str": "Y\t\t[\"x]Y\t\t   yank N lines [into register x]; synonym for \"yy\" Note: Mapped to \"y$\" by default. default-mappings",
             "desc": "yank N lines [into register x]; synonym for \"yy\" Note: Mapped to \"y$\" by default. |default-mappings|",
-            "lhs": "[\"x]Y"
+            "lhs": "Y"
         },
         {
             "help_str": "ZZ",
@@ -1585,22 +1585,22 @@
         {
             "help_str": "c",
             "desc": "delete Nmove text [into register x] and start insert",
-            "lhs": "[\"x]c{motion}"
+            "lhs": "c{motion}"
         },
         {
             "help_str": "cc",
             "desc": "delete N lines [into register x] and start insert",
-            "lhs": "[\"x]cc"
+            "lhs": "cc"
         },
         {
             "help_str": "d",
             "desc": "delete Nmove text [into register x]",
-            "lhs": "[\"x]d{motion}"
+            "lhs": "d{motion}"
         },
         {
             "help_str": "dd",
             "desc": "delete N lines [into register x]",
-            "lhs": "[\"x]dd"
+            "lhs": "dd"
         },
         {
             "help_str": "do",
@@ -1670,7 +1670,7 @@
         {
             "help_str": "p",
             "desc": "put the text [from register x] after the cursor N times",
-            "lhs": "[\"x]p"
+            "lhs": "p"
         },
         {
             "help_str": "q",
@@ -1710,7 +1710,7 @@
         {
             "help_str": "s",
             "desc": "(substitute) delete N characters [into register x] and start insert",
-            "lhs": "[\"x]s"
+            "lhs": "s"
         },
         {
             "help_str": "t",
@@ -1735,17 +1735,17 @@
         {
             "help_str": "x",
             "desc": "delete N characters under and after the cursor [into register x]",
-            "lhs": "[\"x]x"
+            "lhs": "x"
         },
         {
             "help_str": "y",
             "desc": "yank Nmove text [into register x]",
-            "lhs": "[\"x]y{motion}"
+            "lhs": "y{motion}"
         },
         {
             "help_str": "yy",
             "desc": "yank N lines [into register x]",
-            "lhs": "[\"x]yy"
+            "lhs": "yy"
         },
         {
             "help_str": "z\t\tz{char}\t\t   commands starting with 'z', see z",
@@ -1815,7 +1815,7 @@
         {
             "help_str": "<Del>",
             "desc": "same as \"x\"",
-            "lhs": "[\"x]<Del>"
+            "lhs": "<Del>"
         },
         {
             "help_str": "N<Del>",
@@ -2270,7 +2270,7 @@
         {
             "help_str": "gP",
             "desc": "put the text [from register x] before the cursor N times, leave the cursor after it",
-            "lhs": "[\"x]gP"
+            "lhs": "gP"
         },
         {
             "help_str": "gQ",
@@ -2380,7 +2380,7 @@
         {
             "help_str": "gp",
             "desc": "put the text [from register x] after the cursor N times, leave the cursor after it",
-            "lhs": "[\"x]gp"
+            "lhs": "gp"
         },
         {
             "help_str": "gq",
