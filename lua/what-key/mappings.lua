@@ -102,6 +102,7 @@ function M.create_mapping(mappings, init_as)
       target_map.mapped = init_as
       if init_as == Keys.VIM_MAP then
         target_map.help_str = map.help_str
+        target_map.vim_desc = map.vim_desc
       end
       -- result = vim.tbl_deep_extend('force', result, target_map)
     end
@@ -201,8 +202,5 @@ function M.get_vim_index_from_json()
   end
   return nil
 end
-
--- FIXME: this is just for testing
--- print(M.count_nested_mappings(M.get_filled_filtered_mapping('v', nil, '')['g'].mappings))
 
 return M

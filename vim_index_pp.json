@@ -2,3488 +2,3488 @@
     "v": [
         {
             "help_str": "v_ab",
-            "desc": "\"a block\" from \"[(\" to \"])\" (with braces)",
+            "vim_desc": "\"a block\" from \"[(\" to \"])\" (with braces)",
             "lhs": "ab"
         },
         {
             "help_str": "v_ap",
-            "desc": "\"a paragraph\" (with white space)",
+            "vim_desc": "\"a paragraph\" (with white space)",
             "lhs": "ap"
         },
         {
             "help_str": "v_as",
-            "desc": "\"a sentence\" (with white space)",
+            "vim_desc": "\"a sentence\" (with white space)",
             "lhs": "as"
         },
         {
             "help_str": "v_at",
-            "desc": "\"a tag block\" (with white space)",
+            "vim_desc": "\"a tag block\" (with white space)",
             "lhs": "at"
         },
         {
             "help_str": "v_aw",
-            "desc": "\"a word\" (with white space)",
+            "vim_desc": "\"a word\" (with white space)",
             "lhs": "aw"
         },
         {
             "help_str": "v_a{",
-            "desc": "same as aB",
+            "vim_desc": "same as aB",
             "lhs": "a{"
         },
         {
             "help_str": "v_a}",
-            "desc": "same as aB",
+            "vim_desc": "same as aB",
             "lhs": "a}"
         },
         {
             "help_str": "v_iquote",
-            "desc": "double quoted string without the quotes",
+            "vim_desc": "double quoted string without the quotes",
             "lhs": "i\""
         },
         {
             "help_str": "v_i'",
-            "desc": "single quoted string without the quotes",
+            "vim_desc": "single quoted string without the quotes",
             "lhs": "i'"
         },
         {
             "help_str": "v_i(",
-            "desc": "same as ib",
+            "vim_desc": "same as ib",
             "lhs": "i("
         },
         {
             "help_str": "v_i)",
-            "desc": "same as ib",
+            "vim_desc": "same as ib",
             "lhs": "i)"
         },
         {
             "help_str": "v_i<",
-            "desc": "\"inner <>\" from '<' to the matching '>'",
+            "vim_desc": "\"inner <>\" from '<' to the matching '>'",
             "lhs": "i<"
         },
         {
             "help_str": "v_i>",
-            "desc": "same as i<",
+            "vim_desc": "same as i<",
             "lhs": "i>"
         },
         {
             "help_str": "v_iB",
-            "desc": "\"inner Block\" from \"[{\" and \"]}\"",
+            "vim_desc": "\"inner Block\" from \"[{\" and \"]}\"",
             "lhs": "iB"
         },
         {
             "help_str": "v_iW",
-            "desc": "\"inner WORD\"",
+            "vim_desc": "\"inner WORD\"",
             "lhs": "iW"
         },
         {
             "help_str": "v_i[",
-            "desc": "\"inner []\" from '[' to the matching ']'",
+            "vim_desc": "\"inner []\" from '[' to the matching ']'",
             "lhs": "i["
         },
         {
             "help_str": "v_i]",
-            "desc": "same as i[",
+            "vim_desc": "same as i[",
             "lhs": "i]"
         },
         {
             "help_str": "v_i`",
-            "desc": "string in backticks without the backticks",
+            "vim_desc": "string in backticks without the backticks",
             "lhs": "i`"
         },
         {
             "help_str": "v_ib",
-            "desc": "\"inner block\" from \"[(\" to \"])\"",
+            "vim_desc": "\"inner block\" from \"[(\" to \"])\"",
             "lhs": "ib"
         },
         {
             "help_str": "v_ip",
-            "desc": "\"inner paragraph\"",
+            "vim_desc": "\"inner paragraph\"",
             "lhs": "ip"
         },
         {
             "help_str": "v_is",
-            "desc": "\"inner sentence\"",
+            "vim_desc": "\"inner sentence\"",
             "lhs": "is"
         },
         {
             "help_str": "v_it",
-            "desc": "\"inner tag block\"",
+            "vim_desc": "\"inner tag block\"",
             "lhs": "it"
         },
         {
             "help_str": "v_iw",
-            "desc": "\"inner word\"",
+            "vim_desc": "\"inner word\"",
             "lhs": "iw"
         },
         {
             "help_str": "v_i{",
-            "desc": "same as iB",
+            "vim_desc": "same as iB",
             "lhs": "i{"
         },
         {
             "help_str": "v_i}",
-            "desc": "same as iB",
+            "vim_desc": "same as iB",
             "lhs": "i}"
         },
         {
             "help_str": "v_aquote",
-            "desc": "double quoted string",
+            "vim_desc": "double quoted string",
             "lhs": "a\""
         },
         {
             "help_str": "v_a'",
-            "desc": "single quoted string",
+            "vim_desc": "single quoted string",
             "lhs": "a'"
         },
         {
             "help_str": "v_a(",
-            "desc": "same as ab",
+            "vim_desc": "same as ab",
             "lhs": "a("
         },
         {
             "help_str": "v_a)",
-            "desc": "same as ab",
+            "vim_desc": "same as ab",
             "lhs": "a)"
         },
         {
             "help_str": "v_a<",
-            "desc": "\"a <>\" from '<' to the matching '>'",
+            "vim_desc": "\"a <>\" from '<' to the matching '>'",
             "lhs": "a<"
         },
         {
             "help_str": "v_a>",
-            "desc": "same as a<",
+            "vim_desc": "same as a<",
             "lhs": "a>"
         },
         {
             "help_str": "v_aB",
-            "desc": "\"a Block\" from \"[{\" to \"]}\" (with brackets)",
+            "vim_desc": "\"a Block\" from \"[{\" to \"]}\" (with brackets)",
             "lhs": "aB"
         },
         {
             "help_str": "v_aW",
-            "desc": "\"a WORD\" (with white space)",
+            "vim_desc": "\"a WORD\" (with white space)",
             "lhs": "aW"
         },
         {
             "help_str": "v_a[",
-            "desc": "\"a []\" from '[' to the matching ']'",
+            "vim_desc": "\"a []\" from '[' to the matching ']'",
             "lhs": "a["
         },
         {
             "help_str": "v_a]",
-            "desc": "same as a[",
+            "vim_desc": "same as a[",
             "lhs": "a]"
         },
         {
             "help_str": "v_a`",
-            "desc": "string in backticks",
+            "vim_desc": "string in backticks",
             "lhs": "a`"
         },
         {
             "help_str": "v_CTRL-\\_CTRL-N",
-            "desc": "stop Visual mode",
+            "vim_desc": "stop Visual mode",
             "lhs": "<C-\\><C-N>"
         },
         {
             "help_str": "v_CTRL-\\_CTRL-G",
-            "desc": "go to Normal mode",
+            "vim_desc": "go to Normal mode",
             "lhs": "<C-\\><C-G>"
         },
         {
             "help_str": "v_CTRL-A",
-            "desc": "add N to number in highlighted text",
+            "vim_desc": "add N to number in highlighted text",
             "lhs": "<C-A>"
         },
         {
             "help_str": "v_CTRL-C",
-            "desc": "stop Visual mode",
+            "vim_desc": "stop Visual mode",
             "lhs": "<C-C>"
         },
         {
             "help_str": "v_CTRL-G",
-            "desc": "toggle between Visual mode and Select mode",
+            "vim_desc": "toggle between Visual mode and Select mode",
             "lhs": "<C-G>"
         },
         {
             "help_str": "v_<BS>",
-            "desc": "Select mode: delete highlighted area",
+            "vim_desc": "Select mode: delete highlighted area",
             "lhs": "<BS>"
         },
         {
             "help_str": "v_CTRL-H",
-            "desc": "same as <BS>",
+            "vim_desc": "same as <BS>",
             "lhs": "<C-H>"
         },
         {
             "help_str": "v_CTRL-O",
-            "desc": "switch from Select to Visual mode for one command",
+            "vim_desc": "switch from Select to Visual mode for one command",
             "lhs": "<C-O>"
         },
         {
             "help_str": "v_CTRL-V",
-            "desc": "make Visual mode blockwise or stop Visual mode",
+            "vim_desc": "make Visual mode blockwise or stop Visual mode",
             "lhs": "<C-V>"
         },
         {
             "help_str": "v_CTRL-X",
-            "desc": "subtract N from number in highlighted text",
+            "vim_desc": "subtract N from number in highlighted text",
             "lhs": "<C-X>"
         },
         {
             "help_str": "v_<Esc>",
-            "desc": "stop Visual mode",
+            "vim_desc": "stop Visual mode",
             "lhs": "<Esc>"
         },
         {
             "help_str": "v_CTRL-]",
-            "desc": "jump to highlighted tag",
+            "vim_desc": "jump to highlighted tag",
             "lhs": "<C-]>"
         },
         {
             "help_str": "v_!",
-            "desc": "filter the highlighted lines through the external command {filter}",
+            "vim_desc": "filter the highlighted lines through the external command {filter}",
             "lhs": "!{filter}"
         },
         {
             "help_str": "v_:",
-            "desc": "start a command-line with the highlighted lines as a range",
+            "vim_desc": "start a command-line with the highlighted lines as a range",
             "lhs": ":"
         },
         {
             "help_str": "v_<",
-            "desc": "shift the highlighted lines one 'shiftwidth' left",
+            "vim_desc": "shift the highlighted lines one 'shiftwidth' left",
             "lhs": "<"
         },
         {
             "help_str": "v_=",
-            "desc": "filter the highlighted lines through the external program given with the 'equalprg' option",
+            "vim_desc": "filter the highlighted lines through the external program given with the 'equalprg' option",
             "lhs": "="
         },
         {
             "help_str": "v_>",
-            "desc": "shift the highlighted lines one 'shiftwidth' right",
+            "vim_desc": "shift the highlighted lines one 'shiftwidth' right",
             "lhs": ">"
         },
         {
             "help_str": "v_b_A",
-            "desc": "block mode: append same text in all lines, after the highlighted area",
+            "vim_desc": "block mode: append same text in all lines, after the highlighted area",
             "lhs": "A"
         },
         {
             "help_str": "v_C",
-            "desc": "delete the highlighted lines and start insert",
+            "vim_desc": "delete the highlighted lines and start insert",
             "lhs": "C"
         },
         {
             "help_str": "v_D",
-            "desc": "delete the highlighted lines",
+            "vim_desc": "delete the highlighted lines",
             "lhs": "D"
         },
         {
             "help_str": "v_b_I",
-            "desc": "block mode: insert same text in all lines, before the highlighted area",
+            "vim_desc": "block mode: insert same text in all lines, before the highlighted area",
             "lhs": "I"
         },
         {
             "help_str": "v_J",
-            "desc": "join the highlighted lines",
+            "vim_desc": "join the highlighted lines",
             "lhs": "J"
         },
         {
             "help_str": "v_K",
-            "desc": "run 'keywordprg' on the highlighted area",
+            "vim_desc": "run 'keywordprg' on the highlighted area",
             "lhs": "K"
         },
         {
             "help_str": "v_O",
-            "desc": "move horizontally to other corner of area",
+            "vim_desc": "move horizontally to other corner of area",
             "lhs": "O"
         },
         {
             "help_str": "v_P",
-            "desc": "replace highlighted area with register contents; registers are unchanged Q\t\t   does not start Ex mode",
+            "vim_desc": "replace highlighted area with register contents; registers are unchanged Q\t\t   does not start Ex mode",
             "lhs": "P"
         },
         {
             "help_str": "v_R",
-            "desc": "delete the highlighted lines and start insert",
+            "vim_desc": "delete the highlighted lines and start insert",
             "lhs": "R"
         },
         {
             "help_str": "v_S",
-            "desc": "delete the highlighted lines and start insert",
+            "vim_desc": "delete the highlighted lines and start insert",
             "lhs": "S"
         },
         {
             "help_str": "v_U",
-            "desc": "make highlighted area uppercase",
+            "vim_desc": "make highlighted area uppercase",
             "lhs": "U"
         },
         {
             "help_str": "v_V",
-            "desc": "make Visual mode linewise or stop Visual mode",
+            "vim_desc": "make Visual mode linewise or stop Visual mode",
             "lhs": "V"
         },
         {
             "help_str": "v_X",
-            "desc": "delete the highlighted lines",
+            "vim_desc": "delete the highlighted lines",
             "lhs": "X"
         },
         {
             "help_str": "v_Y",
-            "desc": "yank the highlighted lines",
+            "vim_desc": "yank the highlighted lines",
             "lhs": "Y"
         },
         {
             "help_str": "v_aquote",
-            "desc": "extend highlighted area with a double quoted string",
+            "vim_desc": "extend highlighted area with a double quoted string",
             "lhs": "a\""
         },
         {
             "help_str": "v_a'",
-            "desc": "extend highlighted area with a single quoted string",
+            "vim_desc": "extend highlighted area with a single quoted string",
             "lhs": "a'"
         },
         {
             "help_str": "v_a(",
-            "desc": "same as ab",
+            "vim_desc": "same as ab",
             "lhs": "a("
         },
         {
             "help_str": "v_a)",
-            "desc": "same as ab",
+            "vim_desc": "same as ab",
             "lhs": "a)"
         },
         {
             "help_str": "v_a<",
-            "desc": "extend highlighted area with a <> block",
+            "vim_desc": "extend highlighted area with a <> block",
             "lhs": "a<"
         },
         {
             "help_str": "v_a>",
-            "desc": "same as a<",
+            "vim_desc": "same as a<",
             "lhs": "a>"
         },
         {
             "help_str": "v_aB",
-            "desc": "extend highlighted area with a {} block",
+            "vim_desc": "extend highlighted area with a {} block",
             "lhs": "aB"
         },
         {
             "help_str": "v_aW",
-            "desc": "extend highlighted area with \"a WORD\"",
+            "vim_desc": "extend highlighted area with \"a WORD\"",
             "lhs": "aW"
         },
         {
             "help_str": "v_a[",
-            "desc": "extend highlighted area with a [] block",
+            "vim_desc": "extend highlighted area with a [] block",
             "lhs": "a["
         },
         {
             "help_str": "v_a]",
-            "desc": "same as a[",
+            "vim_desc": "same as a[",
             "lhs": "a]"
         },
         {
             "help_str": "v_a`",
-            "desc": "extend highlighted area with a backtick quoted string",
+            "vim_desc": "extend highlighted area with a backtick quoted string",
             "lhs": "a`"
         },
         {
             "help_str": "v_ab",
-            "desc": "extend highlighted area with a () block",
+            "vim_desc": "extend highlighted area with a () block",
             "lhs": "ab"
         },
         {
             "help_str": "v_ap",
-            "desc": "extend highlighted area with a paragraph",
+            "vim_desc": "extend highlighted area with a paragraph",
             "lhs": "ap"
         },
         {
             "help_str": "v_as",
-            "desc": "extend highlighted area with a sentence",
+            "vim_desc": "extend highlighted area with a sentence",
             "lhs": "as"
         },
         {
             "help_str": "v_at",
-            "desc": "extend highlighted area with a tag block",
+            "vim_desc": "extend highlighted area with a tag block",
             "lhs": "at"
         },
         {
             "help_str": "v_aw",
-            "desc": "extend highlighted area with \"a word\"",
+            "vim_desc": "extend highlighted area with \"a word\"",
             "lhs": "aw"
         },
         {
             "help_str": "v_a{",
-            "desc": "same as aB",
+            "vim_desc": "same as aB",
             "lhs": "a{"
         },
         {
             "help_str": "v_a}",
-            "desc": "same as aB",
+            "vim_desc": "same as aB",
             "lhs": "a}"
         },
         {
             "help_str": "v_c",
-            "desc": "delete highlighted area and start insert",
+            "vim_desc": "delete highlighted area and start insert",
             "lhs": "c"
         },
         {
             "help_str": "v_d",
-            "desc": "delete highlighted area",
+            "vim_desc": "delete highlighted area",
             "lhs": "d"
         },
         {
             "help_str": "v_g_CTRL-A",
-            "desc": "add N to number in highlighted text",
+            "vim_desc": "add N to number in highlighted text",
             "lhs": "g<C-A>"
         },
         {
             "help_str": "v_g_CTRL-X",
-            "desc": "subtract N from number in highlighted text",
+            "vim_desc": "subtract N from number in highlighted text",
             "lhs": "g<C-X>"
         },
         {
             "help_str": "v_gJ",
-            "desc": "join the highlighted lines without inserting spaces",
+            "vim_desc": "join the highlighted lines without inserting spaces",
             "lhs": "gJ"
         },
         {
             "help_str": "v_gq",
-            "desc": "format the highlighted lines",
+            "vim_desc": "format the highlighted lines",
             "lhs": "gq"
         },
         {
             "help_str": "v_gv",
-            "desc": "exchange current and previous highlighted area",
+            "vim_desc": "exchange current and previous highlighted area",
             "lhs": "gv"
         },
         {
             "help_str": "v_iquote",
-            "desc": "extend highlighted area with a double quoted string (without quotes)",
+            "vim_desc": "extend highlighted area with a double quoted string (without quotes)",
             "lhs": "i\""
         },
         {
             "help_str": "v_i'",
-            "desc": "extend highlighted area with a single quoted string (without quotes)",
+            "vim_desc": "extend highlighted area with a single quoted string (without quotes)",
             "lhs": "i'"
         },
         {
             "help_str": "v_i(",
-            "desc": "same as ib",
+            "vim_desc": "same as ib",
             "lhs": "i("
         },
         {
             "help_str": "v_i)",
-            "desc": "same as ib",
+            "vim_desc": "same as ib",
             "lhs": "i)"
         },
         {
             "help_str": "v_i<",
-            "desc": "extend highlighted area with inner <> block",
+            "vim_desc": "extend highlighted area with inner <> block",
             "lhs": "i<"
         },
         {
             "help_str": "v_i>",
-            "desc": "same as i<",
+            "vim_desc": "same as i<",
             "lhs": "i>"
         },
         {
             "help_str": "v_iB",
-            "desc": "extend highlighted area with inner {} block",
+            "vim_desc": "extend highlighted area with inner {} block",
             "lhs": "iB"
         },
         {
             "help_str": "v_iW",
-            "desc": "extend highlighted area with \"inner WORD\"",
+            "vim_desc": "extend highlighted area with \"inner WORD\"",
             "lhs": "iW"
         },
         {
             "help_str": "v_i[",
-            "desc": "extend highlighted area with inner [] block",
+            "vim_desc": "extend highlighted area with inner [] block",
             "lhs": "i["
         },
         {
             "help_str": "v_i]",
-            "desc": "same as i[",
+            "vim_desc": "same as i[",
             "lhs": "i]"
         },
         {
             "help_str": "v_i`",
-            "desc": "extend highlighted area with a backtick quoted string (without the backticks)",
+            "vim_desc": "extend highlighted area with a backtick quoted string (without the backticks)",
             "lhs": "i`"
         },
         {
             "help_str": "v_ib",
-            "desc": "extend highlighted area with inner () block",
+            "vim_desc": "extend highlighted area with inner () block",
             "lhs": "ib"
         },
         {
             "help_str": "v_ip",
-            "desc": "extend highlighted area with inner paragraph",
+            "vim_desc": "extend highlighted area with inner paragraph",
             "lhs": "ip"
         },
         {
             "help_str": "v_is",
-            "desc": "extend highlighted area with inner sentence",
+            "vim_desc": "extend highlighted area with inner sentence",
             "lhs": "is"
         },
         {
             "help_str": "v_it",
-            "desc": "extend highlighted area with inner tag block",
+            "vim_desc": "extend highlighted area with inner tag block",
             "lhs": "it"
         },
         {
             "help_str": "v_iw",
-            "desc": "extend highlighted area with \"inner word\"",
+            "vim_desc": "extend highlighted area with \"inner word\"",
             "lhs": "iw"
         },
         {
             "help_str": "v_i{",
-            "desc": "same as iB",
+            "vim_desc": "same as iB",
             "lhs": "i{"
         },
         {
             "help_str": "v_i}",
-            "desc": "same as iB",
+            "vim_desc": "same as iB",
             "lhs": "i}"
         },
         {
             "help_str": "v_o",
-            "desc": "move cursor to other corner of area",
+            "vim_desc": "move cursor to other corner of area",
             "lhs": "o"
         },
         {
             "help_str": "v_p",
-            "desc": "replace highlighted area with register contents; deleted text in unnamed register",
+            "vim_desc": "replace highlighted area with register contents; deleted text in unnamed register",
             "lhs": "p"
         },
         {
             "help_str": "v_r",
-            "desc": "replace highlighted area with a character",
+            "vim_desc": "replace highlighted area with a character",
             "lhs": "r"
         },
         {
             "help_str": "v_s",
-            "desc": "delete highlighted area and start insert",
+            "vim_desc": "delete highlighted area and start insert",
             "lhs": "s"
         },
         {
             "help_str": "v_u",
-            "desc": "make highlighted area lowercase",
+            "vim_desc": "make highlighted area lowercase",
             "lhs": "u"
         },
         {
             "help_str": "v_v",
-            "desc": "make Visual mode charwise or stop Visual mode",
+            "vim_desc": "make Visual mode charwise or stop Visual mode",
             "lhs": "v"
         },
         {
             "help_str": "v_x",
-            "desc": "delete the highlighted area",
+            "vim_desc": "delete the highlighted area",
             "lhs": "x"
         },
         {
             "help_str": "v_y",
-            "desc": "yank the highlighted area",
+            "vim_desc": "yank the highlighted area",
             "lhs": "y"
         },
         {
             "help_str": "v_~",
-            "desc": "swap case for the highlighted area",
+            "vim_desc": "swap case for the highlighted area",
             "lhs": "~"
         }
     ],
     "n": [
         {
             "help_str": "CTRL-W_CTRL-B",
-            "desc": "same as \"CTRL-W b\"",
+            "vim_desc": "same as \"CTRL-W b\"",
             "lhs": "<C-W><C-B>"
         },
         {
             "help_str": "CTRL-W_CTRL-C",
-            "desc": "same as \"CTRL-W c\"",
+            "vim_desc": "same as \"CTRL-W c\"",
             "lhs": "<C-W><C-C>"
         },
         {
             "help_str": "CTRL-W_CTRL-D",
-            "desc": "same as \"CTRL-W d\"",
+            "vim_desc": "same as \"CTRL-W d\"",
             "lhs": "<C-W><C-D>"
         },
         {
             "help_str": "CTRL-W_CTRL-F",
-            "desc": "same as \"CTRL-W f\" CTRL-W CTRL-G\t   same as \"CTRL-W g ..\"",
+            "vim_desc": "same as \"CTRL-W f\" CTRL-W CTRL-G\t   same as \"CTRL-W g ..\"",
             "lhs": "<C-W><C-F>"
         },
         {
             "help_str": "CTRL-W_CTRL-H",
-            "desc": "same as \"CTRL-W h\"",
+            "vim_desc": "same as \"CTRL-W h\"",
             "lhs": "<C-W><C-H>"
         },
         {
             "help_str": "CTRL-W_CTRL-I",
-            "desc": "same as \"CTRL-W i\"",
+            "vim_desc": "same as \"CTRL-W i\"",
             "lhs": "<C-W><C-I>"
         },
         {
             "help_str": "CTRL-W_CTRL-J",
-            "desc": "same as \"CTRL-W j\"",
+            "vim_desc": "same as \"CTRL-W j\"",
             "lhs": "<C-W><C-J>"
         },
         {
             "help_str": "CTRL-W_CTRL-K",
-            "desc": "same as \"CTRL-W k\"",
+            "vim_desc": "same as \"CTRL-W k\"",
             "lhs": "<C-W><C-K>"
         },
         {
             "help_str": "CTRL-W_CTRL-L",
-            "desc": "same as \"CTRL-W l\"",
+            "vim_desc": "same as \"CTRL-W l\"",
             "lhs": "<C-W><C-L>"
         },
         {
             "help_str": "CTRL-W_CTRL-N",
-            "desc": "same as \"CTRL-W n\"",
+            "vim_desc": "same as \"CTRL-W n\"",
             "lhs": "<C-W><C-N>"
         },
         {
             "help_str": "CTRL-W_CTRL-O",
-            "desc": "same as \"CTRL-W o\"",
+            "vim_desc": "same as \"CTRL-W o\"",
             "lhs": "<C-W><C-O>"
         },
         {
             "help_str": "CTRL-W_CTRL-P",
-            "desc": "same as \"CTRL-W p\"",
+            "vim_desc": "same as \"CTRL-W p\"",
             "lhs": "<C-W><C-P>"
         },
         {
             "help_str": "CTRL-W_CTRL-Q",
-            "desc": "same as \"CTRL-W q\"",
+            "vim_desc": "same as \"CTRL-W q\"",
             "lhs": "<C-W><C-Q>"
         },
         {
             "help_str": "CTRL-W_CTRL-R",
-            "desc": "same as \"CTRL-W r\"",
+            "vim_desc": "same as \"CTRL-W r\"",
             "lhs": "<C-W><C-R>"
         },
         {
             "help_str": "CTRL-W_CTRL-S",
-            "desc": "same as \"CTRL-W s\"",
+            "vim_desc": "same as \"CTRL-W s\"",
             "lhs": "<C-W><C-S>"
         },
         {
             "help_str": "CTRL-W_CTRL-T",
-            "desc": "same as \"CTRL-W t\"",
+            "vim_desc": "same as \"CTRL-W t\"",
             "lhs": "<C-W><C-T>"
         },
         {
             "help_str": "CTRL-W_CTRL-V",
-            "desc": "same as \"CTRL-W v\"",
+            "vim_desc": "same as \"CTRL-W v\"",
             "lhs": "<C-W><C-V>"
         },
         {
             "help_str": "CTRL-W_CTRL-W",
-            "desc": "same as \"CTRL-W w\"",
+            "vim_desc": "same as \"CTRL-W w\"",
             "lhs": "<C-W><C-W>"
         },
         {
             "help_str": "CTRL-W_CTRL-X",
-            "desc": "same as \"CTRL-W x\"",
+            "vim_desc": "same as \"CTRL-W x\"",
             "lhs": "<C-W><C-X>"
         },
         {
             "help_str": "CTRL-W_CTRL-Z",
-            "desc": "same as \"CTRL-W z\"",
+            "vim_desc": "same as \"CTRL-W z\"",
             "lhs": "<C-W><C-Z>"
         },
         {
             "help_str": "CTRL-W_CTRL-]",
-            "desc": "same as \"CTRL-W ]\"",
+            "vim_desc": "same as \"CTRL-W ]\"",
             "lhs": "<C-W><C-]>"
         },
         {
             "help_str": "CTRL-W_CTRL-^",
-            "desc": "same as \"CTRL-W ^\"",
+            "vim_desc": "same as \"CTRL-W ^\"",
             "lhs": "<C-W><C-^>"
         },
         {
             "help_str": "CTRL-W_CTRL-_",
-            "desc": "same as \"CTRL-W _\"",
+            "vim_desc": "same as \"CTRL-W _\"",
             "lhs": "<C-W><C-_>"
         },
         {
             "help_str": "CTRL-W_+",
-            "desc": "increase current window height N lines",
+            "vim_desc": "increase current window height N lines",
             "lhs": "<C-W>+"
         },
         {
             "help_str": "CTRL-W_-",
-            "desc": "decrease current window height N lines",
+            "vim_desc": "decrease current window height N lines",
             "lhs": "<C-W>->"
         },
         {
             "help_str": "CTRL-W_<",
-            "desc": "decrease current window width N columns",
+            "vim_desc": "decrease current window width N columns",
             "lhs": "<C-W><"
         },
         {
             "help_str": "CTRL-W_=",
-            "desc": "make all windows the same height & width",
+            "vim_desc": "make all windows the same height & width",
             "lhs": "<C-W>="
         },
         {
             "help_str": "CTRL-W_>",
-            "desc": "increase current window width N columns",
+            "vim_desc": "increase current window width N columns",
             "lhs": "<C-W>>"
         },
         {
             "help_str": "CTRL-W_H",
-            "desc": "move current window to the far left",
+            "vim_desc": "move current window to the far left",
             "lhs": "<C-W>H"
         },
         {
             "help_str": "CTRL-W_J",
-            "desc": "move current window to the very bottom",
+            "vim_desc": "move current window to the very bottom",
             "lhs": "<C-W>J"
         },
         {
             "help_str": "CTRL-W_K",
-            "desc": "move current window to the very top",
+            "vim_desc": "move current window to the very top",
             "lhs": "<C-W>K"
         },
         {
             "help_str": "CTRL-W_L",
-            "desc": "move current window to the far right",
+            "vim_desc": "move current window to the far right",
             "lhs": "<C-W>L"
         },
         {
             "help_str": "CTRL-W_P",
-            "desc": "go to preview window",
+            "vim_desc": "go to preview window",
             "lhs": "<C-W>P"
         },
         {
             "help_str": "CTRL-W_R",
-            "desc": "rotate windows upwards N times",
+            "vim_desc": "rotate windows upwards N times",
             "lhs": "<C-W>R"
         },
         {
             "help_str": "CTRL-W_S",
-            "desc": "same as \"CTRL-W s\"",
+            "vim_desc": "same as \"CTRL-W s\"",
             "lhs": "<C-W>S"
         },
         {
             "help_str": "CTRL-W_T",
-            "desc": "move current window to a new tab page",
+            "vim_desc": "move current window to a new tab page",
             "lhs": "<C-W>T"
         },
         {
             "help_str": "CTRL-W_W",
-            "desc": "go to N previous window (wrap around)",
+            "vim_desc": "go to N previous window (wrap around)",
             "lhs": "<C-W>W"
         },
         {
             "help_str": "CTRL-W_]",
-            "desc": "split window and jump to tag under cursor",
+            "vim_desc": "split window and jump to tag under cursor",
             "lhs": "<C-W>]"
         },
         {
             "help_str": "CTRL-W_^",
-            "desc": "split current window and edit alternate file N",
+            "vim_desc": "split current window and edit alternate file N",
             "lhs": "<C-W>^"
         },
         {
             "help_str": "CTRL-W__",
-            "desc": "set current window height to N (default: very high)",
+            "vim_desc": "set current window height to N (default: very high)",
             "lhs": "<C-W>_"
         },
         {
             "help_str": "CTRL-W_b",
-            "desc": "go to bottom window",
+            "vim_desc": "go to bottom window",
             "lhs": "<C-W>b"
         },
         {
             "help_str": "CTRL-W_c\tCTRL-W c\t   close current window (like :close",
-            "desc": "close current window (like |:close|)",
+            "vim_desc": "close current window (like |:close|)",
             "lhs": "<C-W>c"
         },
         {
             "help_str": "CTRL-W_d",
-            "desc": "split window and jump to definition under the cursor",
+            "vim_desc": "split window and jump to definition under the cursor",
             "lhs": "<C-W>d"
         },
         {
             "help_str": "CTRL-W_f",
-            "desc": "split window and edit file name under the cursor",
+            "vim_desc": "split window and edit file name under the cursor",
             "lhs": "<C-W>f"
         },
         {
             "help_str": "CTRL-W_F",
-            "desc": "split window and edit file name under the cursor and jump to the line number following the file name.",
+            "vim_desc": "split window and edit file name under the cursor and jump to the line number following the file name.",
             "lhs": "<C-W>F"
         },
         {
             "help_str": "CTRL-W_g_CTRL-] CTRL-W g CTRL-]  split window and do :tjump",
-            "desc": "split window and do |:tjump| to tag under cursor",
+            "vim_desc": "split window and do |:tjump| to tag under cursor",
             "lhs": "<C-W>g<C-]>"
         },
         {
             "help_str": "CTRL-W_g]\tCTRL-W g ]\t   split window and do :tselect",
-            "desc": "split window and do |:tselect| for tag under cursor",
+            "vim_desc": "split window and do |:tselect| for tag under cursor",
             "lhs": "<C-W>g]"
         },
         {
             "help_str": "CTRL-W_g}\tCTRL-W g }\t   do a :ptjump",
-            "desc": "do a |:ptjump| to the tag under the cursor",
+            "vim_desc": "do a |:ptjump| to the tag under the cursor",
             "lhs": "<C-W>g}"
         },
         {
             "help_str": "CTRL-W_gf",
-            "desc": "edit file name under the cursor in a new tab page",
+            "vim_desc": "edit file name under the cursor in a new tab page",
             "lhs": "<C-W>gf"
         },
         {
             "help_str": "CTRL-W_gF",
-            "desc": "edit file name under the cursor in a new tab page and jump to the line number following the file name.",
+            "vim_desc": "edit file name under the cursor in a new tab page and jump to the line number following the file name.",
             "lhs": "<C-W>gF"
         },
         {
             "help_str": "CTRL-W_gt",
-            "desc": "same as `gt`: go to next tab page",
+            "vim_desc": "same as `gt`: go to next tab page",
             "lhs": "<C-W>gt"
         },
         {
             "help_str": "CTRL-W_gT",
-            "desc": "same as `gT`: go to previous tab page",
+            "vim_desc": "same as `gT`: go to previous tab page",
             "lhs": "<C-W>gT"
         },
         {
             "help_str": "CTRL-W_g<Tab>\tCTRL-W g <Tab>\t   same as g<Tab>",
-            "desc": "same as |g<Tab>|: go to last accessed tab page",
+            "vim_desc": "same as |g<Tab>|: go to last accessed tab page",
             "lhs": "<C-W>g<Tab>"
         },
         {
             "help_str": "CTRL-W_h",
-            "desc": "go to Nth left window (stop at first window)",
+            "vim_desc": "go to Nth left window (stop at first window)",
             "lhs": "<C-W>h"
         },
         {
             "help_str": "CTRL-W_i",
-            "desc": "split window and jump to declaration of identifier under the cursor",
+            "vim_desc": "split window and jump to declaration of identifier under the cursor",
             "lhs": "<C-W>i"
         },
         {
             "help_str": "CTRL-W_j",
-            "desc": "go N windows down (stop at last window)",
+            "vim_desc": "go N windows down (stop at last window)",
             "lhs": "<C-W>j"
         },
         {
             "help_str": "CTRL-W_k",
-            "desc": "go N windows up (stop at first window)",
+            "vim_desc": "go N windows up (stop at first window)",
             "lhs": "<C-W>k"
         },
         {
             "help_str": "CTRL-W_l",
-            "desc": "go to Nth right window (stop at last window)",
+            "vim_desc": "go to Nth right window (stop at last window)",
             "lhs": "<C-W>l"
         },
         {
             "help_str": "CTRL-W_n",
-            "desc": "open new window, N lines high",
+            "vim_desc": "open new window, N lines high",
             "lhs": "<C-W>n"
         },
         {
             "help_str": "CTRL-W_o\tCTRL-W o\t   close all but current window (like :only",
-            "desc": "close all but current window (like |:only|)",
+            "vim_desc": "close all but current window (like |:only|)",
             "lhs": "<C-W>o"
         },
         {
             "help_str": "CTRL-W_p",
-            "desc": "go to previous (last accessed) window",
+            "vim_desc": "go to previous (last accessed) window",
             "lhs": "<C-W>p"
         },
         {
             "help_str": "CTRL-W_q\tCTRL-W q\t   quit current window (like :quit",
-            "desc": "quit current window (like |:quit|)",
+            "vim_desc": "quit current window (like |:quit|)",
             "lhs": "<C-W>q"
         },
         {
             "help_str": "CTRL-W_r",
-            "desc": "rotate windows downwards N times",
+            "vim_desc": "rotate windows downwards N times",
             "lhs": "<C-W>r"
         },
         {
             "help_str": "CTRL-W_s",
-            "desc": "split current window in two parts, new window N lines high",
+            "vim_desc": "split current window in two parts, new window N lines high",
             "lhs": "<C-W>s"
         },
         {
             "help_str": "CTRL-W_t",
-            "desc": "go to top window",
+            "vim_desc": "go to top window",
             "lhs": "<C-W>t"
         },
         {
             "help_str": "CTRL-W_v",
-            "desc": "split current window vertically, new window N columns wide",
+            "vim_desc": "split current window vertically, new window N columns wide",
             "lhs": "<C-W>v"
         },
         {
             "help_str": "CTRL-W_w",
-            "desc": "go to N next window (wrap around)",
+            "vim_desc": "go to N next window (wrap around)",
             "lhs": "<C-W>w"
         },
         {
             "help_str": "CTRL-W_x",
-            "desc": "exchange current window with window N (default: next window)",
+            "vim_desc": "exchange current window with window N (default: next window)",
             "lhs": "<C-W>x"
         },
         {
             "help_str": "CTRL-W_z",
-            "desc": "close preview window",
+            "vim_desc": "close preview window",
             "lhs": "<C-W>z"
         },
         {
             "help_str": "CTRL-W_bar\tCTRL-W ",
-            "desc": "set window width to N columns",
+            "vim_desc": "set window width to N columns",
             "lhs": "<C-W>|"
         },
         {
             "help_str": "CTRL-W_}",
-            "desc": "show tag under cursor in preview window",
+            "vim_desc": "show tag under cursor in preview window",
             "lhs": "<C-W>}"
         },
         {
             "help_str": "CTRL-W_<Down>",
-            "desc": "same as \"CTRL-W j\"",
+            "vim_desc": "same as \"CTRL-W j\"",
             "lhs": "<C-W><Down>"
         },
         {
             "help_str": "CTRL-W_<Up>",
-            "desc": "same as \"CTRL-W k\"",
+            "vim_desc": "same as \"CTRL-W k\"",
             "lhs": "<C-W><Up>"
         },
         {
             "help_str": "CTRL-W_<Left>",
-            "desc": "same as \"CTRL-W h\"",
+            "vim_desc": "same as \"CTRL-W h\"",
             "lhs": "<C-W><Left>"
         },
         {
             "help_str": "CTRL-W_<Right>",
-            "desc": "same as \"CTRL-W l\"",
+            "vim_desc": "same as \"CTRL-W l\"",
             "lhs": "<C-W><Right>"
         },
         {
             "help_str": "g_CTRL-G",
-            "desc": "show information about current cursor position",
+            "vim_desc": "show information about current cursor position",
             "lhs": "g<C-G>"
         },
         {
             "help_str": "g_CTRL-H",
-            "desc": "start Select block mode",
+            "vim_desc": "start Select block mode",
             "lhs": "g<C-H>"
         },
         {
             "help_str": "g_CTRL-]\tg CTRL-]\t   :tjump",
-            "desc": "|:tjump| to the tag under the cursor",
+            "vim_desc": "|:tjump| to the tag under the cursor",
             "lhs": "g<C-]>"
         },
         {
             "help_str": "g_",
-            "desc": "cursor to the last CHAR N - 1 lines lower",
+            "vim_desc": "cursor to the last CHAR N - 1 lines lower",
             "lhs": "g_"
         },
         {
             "help_str": "CTRL-<Tab>",
-            "desc": "same as `g<Tab>` : go to last accessed tab page",
+            "vim_desc": "same as `g<Tab>` : go to last accessed tab page",
             "lhs": "<C-Tab>"
         },
         {
             "help_str": "CTRL-A",
-            "desc": "add N to number at/after cursor",
+            "vim_desc": "add N to number at/after cursor",
             "lhs": "<C-A>"
         },
         {
             "help_str": "CTRL-B",
-            "desc": "scroll N screens Backwards",
+            "vim_desc": "scroll N screens Backwards",
             "lhs": "<C-B>"
         },
         {
             "help_str": "CTRL-C",
-            "desc": "interrupt current (search) command",
+            "vim_desc": "interrupt current (search) command",
             "lhs": "<C-C>"
         },
         {
             "help_str": "CTRL-D",
-            "desc": "scroll Down N lines (default: half a screen)",
+            "vim_desc": "scroll Down N lines (default: half a screen)",
             "lhs": "<C-D>"
         },
         {
             "help_str": "CTRL-E",
-            "desc": "scroll N lines upwards (N lines Extra)",
+            "vim_desc": "scroll N lines upwards (N lines Extra)",
             "lhs": "<C-E>"
         },
         {
             "help_str": "CTRL-F",
-            "desc": "scroll N screens Forward",
+            "vim_desc": "scroll N screens Forward",
             "lhs": "<C-F>"
         },
         {
             "help_str": "CTRL-G",
-            "desc": "display current file name and position",
+            "vim_desc": "display current file name and position",
             "lhs": "<C-G>"
         },
         {
             "help_str": "<BS>",
-            "desc": "same as \"h\"",
+            "vim_desc": "same as \"h\"",
             "lhs": "<BS>"
         },
         {
             "help_str": "CTRL-H",
-            "desc": "same as \"h\"",
+            "vim_desc": "same as \"h\"",
             "lhs": "<C-H>"
         },
         {
             "help_str": "<Tab>",
-            "desc": "go to N newer entry in jump list",
+            "vim_desc": "go to N newer entry in jump list",
             "lhs": "<Tab>"
         },
         {
             "help_str": "CTRL-I",
-            "desc": "same as <Tab>",
+            "vim_desc": "same as <Tab>",
             "lhs": "<C-I>"
         },
         {
             "help_str": "<NL>",
-            "desc": "same as \"j\"",
+            "vim_desc": "same as \"j\"",
             "lhs": "<NL>"
         },
         {
             "help_str": "CTRL-J",
-            "desc": "same as \"j\"",
+            "vim_desc": "same as \"j\"",
             "lhs": "<C-J>"
         },
         {
             "help_str": "CTRL-L",
-            "desc": "redraw screen",
+            "vim_desc": "redraw screen",
             "lhs": "<C-L>"
         },
         {
             "help_str": "<CR>",
-            "desc": "cursor to the first CHAR N lines lower",
+            "vim_desc": "cursor to the first CHAR N lines lower",
             "lhs": "<CR>"
         },
         {
             "help_str": "CTRL-M",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<C-M>"
         },
         {
             "help_str": "CTRL-N",
-            "desc": "same as \"j\"",
+            "vim_desc": "same as \"j\"",
             "lhs": "<C-N>"
         },
         {
             "help_str": "CTRL-O",
-            "desc": "go to N older entry in jump list",
+            "vim_desc": "go to N older entry in jump list",
             "lhs": "<C-O>"
         },
         {
             "help_str": "CTRL-P",
-            "desc": "same as \"k\"",
+            "vim_desc": "same as \"k\"",
             "lhs": "<C-P>"
         },
         {
             "help_str": "CTRL-R",
-            "desc": "redo changes which were undone with 'u'",
+            "vim_desc": "redo changes which were undone with 'u'",
             "lhs": "<C-R>"
         },
         {
             "help_str": "CTRL-T",
-            "desc": "jump to N older Tag in tag list",
+            "vim_desc": "jump to N older Tag in tag list",
             "lhs": "<C-T>"
         },
         {
             "help_str": "CTRL-U",
-            "desc": "scroll N lines Upwards (default: half a screen)",
+            "vim_desc": "scroll N lines Upwards (default: half a screen)",
             "lhs": "<C-U>"
         },
         {
             "help_str": "CTRL-V",
-            "desc": "start blockwise Visual mode",
+            "vim_desc": "start blockwise Visual mode",
             "lhs": "<C-V>"
         },
         {
             "help_str": "CTRL-W\tCTRL-W {char}\t   window commands, see CTRL-W",
-            "desc": "window commands, see |CTRL-W|",
+            "vim_desc": "window commands, see |CTRL-W|",
             "lhs": "<C-W>{char}"
         },
         {
             "help_str": "CTRL-X",
-            "desc": "subtract N from number at/after cursor",
+            "vim_desc": "subtract N from number at/after cursor",
             "lhs": "<C-X>"
         },
         {
             "help_str": "CTRL-Y",
-            "desc": "scroll N lines downwards",
+            "vim_desc": "scroll N lines downwards",
             "lhs": "<C-Y>"
         },
         {
             "help_str": "CTRL-Z",
-            "desc": "suspend program (or start new shell)",
+            "vim_desc": "suspend program (or start new shell)",
             "lhs": "<C-Z>"
         },
         {
             "help_str": "CTRL-\\_CTRL-N",
-            "desc": "go to Normal mode (no-op)",
+            "vim_desc": "go to Normal mode (no-op)",
             "lhs": "<C-\\><C-N>"
         },
         {
             "help_str": "CTRL-\\_CTRL-G",
-            "desc": "go to Normal mode (no-op) CTRL-\\ a - z\t   reserved for extensions",
+            "vim_desc": "go to Normal mode (no-op) CTRL-\\ a - z\t   reserved for extensions",
             "lhs": "<C-\\><C-G>"
         },
         {
             "help_str": "CTRL-]",
-            "desc": ":ta to ident under cursor",
+            "vim_desc": ":ta to ident under cursor",
             "lhs": "<C-]>"
         },
         {
             "help_str": "CTRL-^",
-            "desc": "edit Nth alternate file (equivalent to \":e #N\")",
+            "vim_desc": "edit Nth alternate file (equivalent to \":e #N\")",
             "lhs": "<C-^>"
         },
         {
             "help_str": "CTRL-<Tab>",
-            "desc": "same as `g<Tab>` : go to last accessed tab page",
+            "vim_desc": "same as `g<Tab>` : go to last accessed tab page",
             "lhs": "<C-Tab>"
         },
         {
             "help_str": "<Space>",
-            "desc": "same as \"l\"",
+            "vim_desc": "same as \"l\"",
             "lhs": "<Space>"
         },
         {
             "help_str": "!",
-            "desc": "filter Nmove text through the {filter} command",
+            "vim_desc": "filter Nmove text through the {filter} command",
             "lhs": "!{motion}{filter}"
         },
         {
             "help_str": "!!",
-            "desc": "filter N lines through the {filter} command",
+            "vim_desc": "filter N lines through the {filter} command",
             "lhs": "!!{filter}"
         },
         {
             "help_str": "quote",
-            "desc": "use {register} for next delete, yank or put ({.%#:} only work with put)",
+            "vim_desc": "use {register} for next delete, yank or put ({.%#:} only work with put)",
             "lhs": "\"{register}"
         },
         {
             "help_str": "#",
-            "desc": "search backward for the Nth occurrence of the ident under the cursor",
+            "vim_desc": "search backward for the Nth occurrence of the ident under the cursor",
             "lhs": "#"
         },
         {
             "help_str": "$",
-            "desc": "cursor to the end of Nth next line",
+            "vim_desc": "cursor to the end of Nth next line",
             "lhs": "$"
         },
         {
             "help_str": "%",
-            "desc": "find the next (curly/square) bracket on this line and go to its match, or go to matching comment bracket, or go to matching preprocessor directive.",
+            "vim_desc": "find the next (curly/square) bracket on this line and go to its match, or go to matching comment bracket, or go to matching preprocessor directive.",
             "lhs": "%"
         },
         {
             "help_str": "N%",
-            "desc": "go to N percentage in the file",
+            "vim_desc": "go to N percentage in the file",
             "lhs": "{count}%"
         },
         {
             "help_str": "&",
-            "desc": "repeat last :s",
+            "vim_desc": "repeat last :s",
             "lhs": "&"
         },
         {
             "help_str": "'",
-            "desc": "cursor to the first CHAR on the line with mark {a-zA-Z0-9}",
+            "vim_desc": "cursor to the first CHAR on the line with mark {a-zA-Z0-9}",
             "lhs": "'{a-zA-Z0-9}"
         },
         {
             "help_str": "''",
-            "desc": "cursor to the first CHAR of the line where the cursor was before the latest jump.",
+            "vim_desc": "cursor to the first CHAR of the line where the cursor was before the latest jump.",
             "lhs": "''"
         },
         {
             "help_str": "'(",
-            "desc": "cursor to the first CHAR on the line of the start of the current sentence",
+            "vim_desc": "cursor to the first CHAR on the line of the start of the current sentence",
             "lhs": "'("
         },
         {
             "help_str": "')",
-            "desc": "cursor to the first CHAR on the line of the end of the current sentence",
+            "vim_desc": "cursor to the first CHAR on the line of the end of the current sentence",
             "lhs": "')"
         },
         {
             "help_str": "'<",
-            "desc": "cursor to the first CHAR of the line where highlighted area starts/started in the current buffer.",
+            "vim_desc": "cursor to the first CHAR of the line where highlighted area starts/started in the current buffer.",
             "lhs": "'<"
         },
         {
             "help_str": "'>",
-            "desc": "cursor to the first CHAR of the line where highlighted area ends/ended in the current buffer.",
+            "vim_desc": "cursor to the first CHAR of the line where highlighted area ends/ended in the current buffer.",
             "lhs": "'>"
         },
         {
             "help_str": "'[",
-            "desc": "cursor to the first CHAR on the line of the start of last operated text or start of put text",
+            "vim_desc": "cursor to the first CHAR on the line of the start of last operated text or start of put text",
             "lhs": "'["
         },
         {
             "help_str": "']",
-            "desc": "cursor to the first CHAR on the line of the end of last operated text or end of put text",
+            "vim_desc": "cursor to the first CHAR on the line of the end of last operated text or end of put text",
             "lhs": "']"
         },
         {
             "help_str": "'{",
-            "desc": "cursor to the first CHAR on the line of the start of the current paragraph",
+            "vim_desc": "cursor to the first CHAR on the line of the start of the current paragraph",
             "lhs": "'{"
         },
         {
             "help_str": "'}",
-            "desc": "cursor to the first CHAR on the line of the end of the current paragraph",
+            "vim_desc": "cursor to the first CHAR on the line of the end of the current paragraph",
             "lhs": "'}"
         },
         {
             "help_str": "(",
-            "desc": "cursor N sentences backward",
+            "vim_desc": "cursor N sentences backward",
             "lhs": "("
         },
         {
             "help_str": ")",
-            "desc": "cursor N sentences forward",
+            "vim_desc": "cursor N sentences forward",
             "lhs": ")"
         },
         {
             "help_str": "star",
-            "desc": "search forward for the Nth occurrence of the ident under the cursor",
+            "vim_desc": "search forward for the Nth occurrence of the ident under the cursor",
             "lhs": "*"
         },
         {
             "help_str": "+",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "+"
         },
         {
             "help_str": ",",
-            "desc": "repeat latest f, t, F or T in opposite direction N times",
+            "vim_desc": "repeat latest f, t, F or T in opposite direction N times",
             "lhs": ","
         },
         {
             "help_str": "-",
-            "desc": "cursor to the first CHAR N lines higher",
+            "vim_desc": "cursor to the first CHAR N lines higher",
             "lhs": "-"
         },
         {
             "help_str": ".",
-            "desc": "repeat last change with count replaced with N",
+            "vim_desc": "repeat last change with count replaced with N",
             "lhs": "."
         },
         {
             "help_str": "/",
-            "desc": "search forward for the Nth occurrence of {pattern}",
+            "vim_desc": "search forward for the Nth occurrence of {pattern}",
             "lhs": "/{pattern}<CR>"
         },
         {
             "help_str": "/<CR>",
-            "desc": "search forward for {pattern} of last search",
+            "vim_desc": "search forward for {pattern} of last search",
             "lhs": "/<CR>"
         },
         {
             "help_str": "0",
-            "desc": "cursor to the first char of the line",
+            "vim_desc": "cursor to the first char of the line",
             "lhs": "0"
         },
         {
             "help_str": ":",
-            "desc": "start entering an Ex command",
+            "vim_desc": "start entering an Ex command",
             "lhs": ":"
         },
         {
             "help_str": "N:",
-            "desc": "start entering an Ex command with range from current line to N-1 lines down",
+            "vim_desc": "start entering an Ex command with range from current line to N-1 lines down",
             "lhs": "{count}:"
         },
         {
             "help_str": ";",
-            "desc": "repeat latest f, t, F or T N times",
+            "vim_desc": "repeat latest f, t, F or T N times",
             "lhs": ";"
         },
         {
             "help_str": "<",
-            "desc": "shift Nmove lines one 'shiftwidth' leftwards",
+            "vim_desc": "shift Nmove lines one 'shiftwidth' leftwards",
             "lhs": "<{motion}"
         },
         {
             "help_str": "<<",
-            "desc": "shift N lines one 'shiftwidth' leftwards",
+            "vim_desc": "shift N lines one 'shiftwidth' leftwards",
             "lhs": "<<"
         },
         {
             "help_str": "=",
-            "desc": "filter Nmove lines through \"indent\"",
+            "vim_desc": "filter Nmove lines through \"indent\"",
             "lhs": "={motion}"
         },
         {
             "help_str": "==",
-            "desc": "filter N lines through \"indent\"",
+            "vim_desc": "filter N lines through \"indent\"",
             "lhs": "=="
         },
         {
             "help_str": ">",
-            "desc": "shift Nmove lines one 'shiftwidth' rightwards",
+            "vim_desc": "shift Nmove lines one 'shiftwidth' rightwards",
             "lhs": ">{motion}"
         },
         {
             "help_str": ">>",
-            "desc": "shift N lines one 'shiftwidth' rightwards",
+            "vim_desc": "shift N lines one 'shiftwidth' rightwards",
             "lhs": ">>"
         },
         {
             "help_str": "?",
-            "desc": "search backward for the Nth previous occurrence of {pattern}",
+            "vim_desc": "search backward for the Nth previous occurrence of {pattern}",
             "lhs": "?{pattern}<CR>"
         },
         {
             "help_str": "?<CR>",
-            "desc": "search backward for {pattern} of last search",
+            "vim_desc": "search backward for {pattern} of last search",
             "lhs": "?<CR>"
         },
         {
             "help_str": "@",
-            "desc": "execute the contents of register {a-z} N times",
+            "vim_desc": "execute the contents of register {a-z} N times",
             "lhs": "@{a-z}"
         },
         {
             "help_str": "@:",
-            "desc": "repeat the previous \":\" command N times",
+            "vim_desc": "repeat the previous \":\" command N times",
             "lhs": "@:"
         },
         {
             "help_str": "@@",
-            "desc": "repeat the previous @{a-z} N times",
+            "vim_desc": "repeat the previous @{a-z} N times",
             "lhs": "@@"
         },
         {
             "help_str": "A",
-            "desc": "append text after the end of the line N times",
+            "vim_desc": "append text after the end of the line N times",
             "lhs": "A"
         },
         {
             "help_str": "B",
-            "desc": "cursor N WORDS backward",
+            "vim_desc": "cursor N WORDS backward",
             "lhs": "B"
         },
         {
             "help_str": "C",
-            "desc": "change from the cursor position to the end of the line, and N-1 more lines [into register x]; synonym for \"c$\"",
+            "vim_desc": "change from the cursor position to the end of the line, and N-1 more lines [into register x]; synonym for \"c$\"",
             "lhs": "C"
         },
         {
             "help_str": "D",
-            "desc": "delete the characters under the cursor until the end of the line and N-1 more lines [into register x]; synonym for \"d$\"",
+            "vim_desc": "delete the characters under the cursor until the end of the line and N-1 more lines [into register x]; synonym for \"d$\"",
             "lhs": "D"
         },
         {
             "help_str": "E",
-            "desc": "cursor forward to the end of WORD N",
+            "vim_desc": "cursor forward to the end of WORD N",
             "lhs": "E"
         },
         {
             "help_str": "F",
-            "desc": "cursor to the Nth occurrence of {char} to the left",
+            "vim_desc": "cursor to the Nth occurrence of {char} to the left",
             "lhs": "F{char}"
         },
         {
             "help_str": "G",
-            "desc": "cursor to line N, default last line",
+            "vim_desc": "cursor to line N, default last line",
             "lhs": "G"
         },
         {
             "help_str": "H",
-            "desc": "cursor to line N from top of screen",
+            "vim_desc": "cursor to line N from top of screen",
             "lhs": "H"
         },
         {
             "help_str": "I",
-            "desc": "insert text before the first CHAR on the line N times",
+            "vim_desc": "insert text before the first CHAR on the line N times",
             "lhs": "I"
         },
         {
             "help_str": "J",
-            "desc": "Join N lines; default is 2",
+            "vim_desc": "Join N lines; default is 2",
             "lhs": "J"
         },
         {
             "help_str": "K",
-            "desc": "lookup Keyword under the cursor with 'keywordprg'",
+            "vim_desc": "lookup Keyword under the cursor with 'keywordprg'",
             "lhs": "K"
         },
         {
             "help_str": "L",
-            "desc": "cursor to line N from bottom of screen",
+            "vim_desc": "cursor to line N from bottom of screen",
             "lhs": "L"
         },
         {
             "help_str": "M",
-            "desc": "cursor to middle line of screen",
+            "vim_desc": "cursor to middle line of screen",
             "lhs": "M"
         },
         {
             "help_str": "N",
-            "desc": "repeat the latest '/' or '?' N times in opposite direction",
+            "vim_desc": "repeat the latest '/' or '?' N times in opposite direction",
             "lhs": "N"
         },
         {
             "help_str": "O",
-            "desc": "begin a new line above the cursor and insert text, repeat N times",
+            "vim_desc": "begin a new line above the cursor and insert text, repeat N times",
             "lhs": "O"
         },
         {
             "help_str": "P",
-            "desc": "put the text [from register x] before the cursor N times",
+            "vim_desc": "put the text [from register x] before the cursor N times",
             "lhs": "P"
         },
         {
             "help_str": "R",
-            "desc": "enter replace mode: overtype existing characters, repeat the entered text N-1 times",
+            "vim_desc": "enter replace mode: overtype existing characters, repeat the entered text N-1 times",
             "lhs": "R"
         },
         {
             "help_str": "S",
-            "desc": "delete N lines [into register x] and start insert; synonym for \"cc\".",
+            "vim_desc": "delete N lines [into register x] and start insert; synonym for \"cc\".",
             "lhs": "S"
         },
         {
             "help_str": "T",
-            "desc": "cursor till after Nth occurrence of {char} to the left",
+            "vim_desc": "cursor till after Nth occurrence of {char} to the left",
             "lhs": "T{char}"
         },
         {
             "help_str": "U",
-            "desc": "undo all latest changes on one line",
+            "vim_desc": "undo all latest changes on one line",
             "lhs": "U"
         },
         {
             "help_str": "V",
-            "desc": "start linewise Visual mode",
+            "vim_desc": "start linewise Visual mode",
             "lhs": "V"
         },
         {
             "help_str": "W",
-            "desc": "cursor N WORDS forward",
+            "vim_desc": "cursor N WORDS forward",
             "lhs": "W"
         },
         {
             "help_str": "X",
-            "desc": "delete N characters before the cursor [into register x]",
+            "vim_desc": "delete N characters before the cursor [into register x]",
             "lhs": "X"
         },
         {
             "help_str": "Y\t\t[\"x]Y\t\t   yank N lines [into register x]; synonym for \"yy\" Note: Mapped to \"y$\" by default. default-mappings",
-            "desc": "yank N lines [into register x]; synonym for \"yy\" Note: Mapped to \"y$\" by default. |default-mappings|",
+            "vim_desc": "yank N lines [into register x]; synonym for \"yy\" Note: Mapped to \"y$\" by default. |default-mappings|",
             "lhs": "Y"
         },
         {
             "help_str": "ZZ",
-            "desc": "write if buffer changed and close window",
+            "vim_desc": "write if buffer changed and close window",
             "lhs": "ZZ"
         },
         {
             "help_str": "ZQ",
-            "desc": "close window without writing",
+            "vim_desc": "close window without writing",
             "lhs": "ZQ"
         },
         {
             "help_str": "[\t\t[{char}\t\t   square bracket command (see [",
-            "desc": "square bracket command (see |[| below)",
+            "vim_desc": "square bracket command (see |[| below)",
             "lhs": "[{char}"
         },
         {
             "help_str": "]\t\t]{char}\t\t   square bracket command (see ]",
-            "desc": "square bracket command (see |]| below)",
+            "vim_desc": "square bracket command (see |]| below)",
             "lhs": "]{char}"
         },
         {
             "help_str": "^",
-            "desc": "cursor to the first CHAR of the line",
+            "vim_desc": "cursor to the first CHAR of the line",
             "lhs": "^"
         },
         {
             "help_str": "_",
-            "desc": "cursor to the first CHAR N - 1 lines lower",
+            "vim_desc": "cursor to the first CHAR N - 1 lines lower",
             "lhs": "_"
         },
         {
             "help_str": "`",
-            "desc": "cursor to the mark {a-zA-Z0-9}",
+            "vim_desc": "cursor to the mark {a-zA-Z0-9}",
             "lhs": "`{a-zA-Z0-9}"
         },
         {
             "help_str": "`(",
-            "desc": "cursor to the start of the current sentence",
+            "vim_desc": "cursor to the start of the current sentence",
             "lhs": "`("
         },
         {
             "help_str": "`)",
-            "desc": "cursor to the end of the current sentence",
+            "vim_desc": "cursor to the end of the current sentence",
             "lhs": "`)"
         },
         {
             "help_str": "`<",
-            "desc": "cursor to the start of the highlighted area",
+            "vim_desc": "cursor to the start of the highlighted area",
             "lhs": "`<"
         },
         {
             "help_str": "`>",
-            "desc": "cursor to the end of the highlighted area",
+            "vim_desc": "cursor to the end of the highlighted area",
             "lhs": "`>"
         },
         {
             "help_str": "`[",
-            "desc": "cursor to the start of last operated text or start of putted text",
+            "vim_desc": "cursor to the start of last operated text or start of putted text",
             "lhs": "`["
         },
         {
             "help_str": "`]",
-            "desc": "cursor to the end of last operated text or end of putted text",
+            "vim_desc": "cursor to the end of last operated text or end of putted text",
             "lhs": "`]"
         },
         {
             "help_str": "``",
-            "desc": "cursor to the position before latest jump",
+            "vim_desc": "cursor to the position before latest jump",
             "lhs": "``"
         },
         {
             "help_str": "`{",
-            "desc": "cursor to the start of the current paragraph",
+            "vim_desc": "cursor to the start of the current paragraph",
             "lhs": "`{"
         },
         {
             "help_str": "`}",
-            "desc": "cursor to the end of the current paragraph",
+            "vim_desc": "cursor to the end of the current paragraph",
             "lhs": "`}"
         },
         {
             "help_str": "a",
-            "desc": "append text after the cursor N times",
+            "vim_desc": "append text after the cursor N times",
             "lhs": "a"
         },
         {
             "help_str": "b",
-            "desc": "cursor N words backward",
+            "vim_desc": "cursor N words backward",
             "lhs": "b"
         },
         {
             "help_str": "c",
-            "desc": "delete Nmove text [into register x] and start insert",
+            "vim_desc": "delete Nmove text [into register x] and start insert",
             "lhs": "c{motion}"
         },
         {
             "help_str": "cc",
-            "desc": "delete N lines [into register x] and start insert",
+            "vim_desc": "delete N lines [into register x] and start insert",
             "lhs": "cc"
         },
         {
             "help_str": "d",
-            "desc": "delete Nmove text [into register x]",
+            "vim_desc": "delete Nmove text [into register x]",
             "lhs": "d{motion}"
         },
         {
             "help_str": "dd",
-            "desc": "delete N lines [into register x]",
+            "vim_desc": "delete N lines [into register x]",
             "lhs": "dd"
         },
         {
             "help_str": "do",
-            "desc": "same as \":diffget\"",
+            "vim_desc": "same as \":diffget\"",
             "lhs": "do"
         },
         {
             "help_str": "dp",
-            "desc": "same as \":diffput\"",
+            "vim_desc": "same as \":diffput\"",
             "lhs": "dp"
         },
         {
             "help_str": "e",
-            "desc": "cursor forward to the end of word N",
+            "vim_desc": "cursor forward to the end of word N",
             "lhs": "e"
         },
         {
             "help_str": "f",
-            "desc": "cursor to Nth occurrence of {char} to the right",
+            "vim_desc": "cursor to Nth occurrence of {char} to the right",
             "lhs": "f{char}"
         },
         {
             "help_str": "g\t\tg{char}\t\t   extended commands, see g",
-            "desc": "extended commands, see |g| below",
+            "vim_desc": "extended commands, see |g| below",
             "lhs": "g{char}"
         },
         {
             "help_str": "h",
-            "desc": "cursor N chars to the left",
+            "vim_desc": "cursor N chars to the left",
             "lhs": "h"
         },
         {
             "help_str": "i",
-            "desc": "insert text before the cursor N times",
+            "vim_desc": "insert text before the cursor N times",
             "lhs": "i"
         },
         {
             "help_str": "j",
-            "desc": "cursor N lines downward",
+            "vim_desc": "cursor N lines downward",
             "lhs": "j"
         },
         {
             "help_str": "k",
-            "desc": "cursor N lines upward",
+            "vim_desc": "cursor N lines upward",
             "lhs": "k"
         },
         {
             "help_str": "l",
-            "desc": "cursor N chars to the right",
+            "vim_desc": "cursor N chars to the right",
             "lhs": "l"
         },
         {
             "help_str": "m",
-            "desc": "set mark {A-Za-z} at cursor position",
+            "vim_desc": "set mark {A-Za-z} at cursor position",
             "lhs": "m{A-Za-z}"
         },
         {
             "help_str": "n",
-            "desc": "repeat the latest '/' or '?' N times",
+            "vim_desc": "repeat the latest '/' or '?' N times",
             "lhs": "n"
         },
         {
             "help_str": "o",
-            "desc": "begin a new line below the cursor and insert text, repeat N times",
+            "vim_desc": "begin a new line below the cursor and insert text, repeat N times",
             "lhs": "o"
         },
         {
             "help_str": "p",
-            "desc": "put the text [from register x] after the cursor N times",
+            "vim_desc": "put the text [from register x] after the cursor N times",
             "lhs": "p"
         },
         {
             "help_str": "q",
-            "desc": "record typed characters into named register {0-9a-zA-Z\"} (uppercase to append)",
+            "vim_desc": "record typed characters into named register {0-9a-zA-Z\"} (uppercase to append)",
             "lhs": "q{0-9a-zA-Z\"}"
         },
         {
             "help_str": "q",
-            "desc": "(while recording) stops recording",
+            "vim_desc": "(while recording) stops recording",
             "lhs": "q"
         },
         {
             "help_str": "Q",
-            "desc": "replay last recorded macro",
+            "vim_desc": "replay last recorded macro",
             "lhs": "Q"
         },
         {
             "help_str": "q:",
-            "desc": "edit : command-line in command-line window",
+            "vim_desc": "edit : command-line in command-line window",
             "lhs": "q:"
         },
         {
             "help_str": "q/",
-            "desc": "edit / command-line in command-line window",
+            "vim_desc": "edit / command-line in command-line window",
             "lhs": "q/"
         },
         {
             "help_str": "q?",
-            "desc": "edit ? command-line in command-line window",
+            "vim_desc": "edit ? command-line in command-line window",
             "lhs": "q?"
         },
         {
             "help_str": "r",
-            "desc": "replace N chars with {char}",
+            "vim_desc": "replace N chars with {char}",
             "lhs": "r{char}"
         },
         {
             "help_str": "s",
-            "desc": "(substitute) delete N characters [into register x] and start insert",
+            "vim_desc": "(substitute) delete N characters [into register x] and start insert",
             "lhs": "s"
         },
         {
             "help_str": "t",
-            "desc": "cursor till before Nth occurrence of {char} to the right",
+            "vim_desc": "cursor till before Nth occurrence of {char} to the right",
             "lhs": "t{char}"
         },
         {
             "help_str": "u",
-            "desc": "undo changes",
+            "vim_desc": "undo changes",
             "lhs": "u"
         },
         {
             "help_str": "v",
-            "desc": "start charwise Visual mode",
+            "vim_desc": "start charwise Visual mode",
             "lhs": "v"
         },
         {
             "help_str": "w",
-            "desc": "cursor N words forward",
+            "vim_desc": "cursor N words forward",
             "lhs": "w"
         },
         {
             "help_str": "x",
-            "desc": "delete N characters under and after the cursor [into register x]",
+            "vim_desc": "delete N characters under and after the cursor [into register x]",
             "lhs": "x"
         },
         {
             "help_str": "y",
-            "desc": "yank Nmove text [into register x]",
+            "vim_desc": "yank Nmove text [into register x]",
             "lhs": "y{motion}"
         },
         {
             "help_str": "yy",
-            "desc": "yank N lines [into register x]",
+            "vim_desc": "yank N lines [into register x]",
             "lhs": "yy"
         },
         {
             "help_str": "z\t\tz{char}\t\t   commands starting with 'z', see z",
-            "desc": "commands starting with 'z', see |z| below",
+            "vim_desc": "commands starting with 'z', see |z| below",
             "lhs": "z{char}"
         },
         {
             "help_str": "{",
-            "desc": "cursor N paragraphs backward",
+            "vim_desc": "cursor N paragraphs backward",
             "lhs": "{"
         },
         {
             "help_str": "bar\t\t",
-            "desc": "cursor to column N",
+            "vim_desc": "cursor to column N",
             "lhs": "|"
         },
         {
             "help_str": "}",
-            "desc": "cursor N paragraphs forward",
+            "vim_desc": "cursor N paragraphs forward",
             "lhs": "}"
         },
         {
             "help_str": "~",
-            "desc": "'tildeop' off: switch case of N characters under cursor and move the cursor N characters to the right",
+            "vim_desc": "'tildeop' off: switch case of N characters under cursor and move the cursor N characters to the right",
             "lhs": "~"
         },
         {
             "help_str": "~",
-            "desc": "'tildeop' on: switch case of Nmove text",
+            "vim_desc": "'tildeop' on: switch case of Nmove text",
             "lhs": "~{motion}"
         },
         {
             "help_str": "<C-End>",
-            "desc": "same as \"G\"",
+            "vim_desc": "same as \"G\"",
             "lhs": "<C-End>"
         },
         {
             "help_str": "<C-Home>",
-            "desc": "same as \"gg\"",
+            "vim_desc": "same as \"gg\"",
             "lhs": "<C-Home>"
         },
         {
             "help_str": "<C-Left>",
-            "desc": "same as \"b\"",
+            "vim_desc": "same as \"b\"",
             "lhs": "<C-Left>"
         },
         {
             "help_str": "<C-LeftMouse>",
-            "desc": "\":ta\" to the keyword at the mouse click",
+            "vim_desc": "\":ta\" to the keyword at the mouse click",
             "lhs": "<C-LeftMouse>"
         },
         {
             "help_str": "<C-Right>",
-            "desc": "same as \"w\"",
+            "vim_desc": "same as \"w\"",
             "lhs": "<C-Right>"
         },
         {
             "help_str": "<C-RightMouse>",
-            "desc": "same as \"CTRL-T\"",
+            "vim_desc": "same as \"CTRL-T\"",
             "lhs": "<C-RightMouse>"
         },
         {
             "help_str": "<C-Tab>",
-            "desc": "same as \"g<Tab>\"",
+            "vim_desc": "same as \"g<Tab>\"",
             "lhs": "<C-Tab>"
         },
         {
             "help_str": "<Del>",
-            "desc": "same as \"x\"",
+            "vim_desc": "same as \"x\"",
             "lhs": "<Del>"
         },
         {
             "help_str": "N<Del>",
-            "desc": "remove the last digit from {count}",
+            "vim_desc": "remove the last digit from {count}",
             "lhs": "{count}<Del>"
         },
         {
             "help_str": "<Down>",
-            "desc": "same as \"j\"",
+            "vim_desc": "same as \"j\"",
             "lhs": "<Down>"
         },
         {
             "help_str": "<End>",
-            "desc": "same as \"$\"",
+            "vim_desc": "same as \"$\"",
             "lhs": "<End>"
         },
         {
             "help_str": "<F1>",
-            "desc": "same as <Help>",
+            "vim_desc": "same as <Help>",
             "lhs": "<F1>"
         },
         {
             "help_str": "<Help>",
-            "desc": "open a help window",
+            "vim_desc": "open a help window",
             "lhs": "<Help>"
         },
         {
             "help_str": "<Home>",
-            "desc": "same as \"0\"",
+            "vim_desc": "same as \"0\"",
             "lhs": "<Home>"
         },
         {
             "help_str": "<Insert>",
-            "desc": "same as \"i\"",
+            "vim_desc": "same as \"i\"",
             "lhs": "<Insert>"
         },
         {
             "help_str": "<Left>",
-            "desc": "same as \"h\"",
+            "vim_desc": "same as \"h\"",
             "lhs": "<Left>"
         },
         {
             "help_str": "<LeftMouse>",
-            "desc": "move cursor to the mouse click position",
+            "vim_desc": "move cursor to the mouse click position",
             "lhs": "<LeftMouse>"
         },
         {
             "help_str": "<MiddleMouse>",
-            "desc": "same as \"gP\" at the mouse click position",
+            "vim_desc": "same as \"gP\" at the mouse click position",
             "lhs": "<MiddleMouse>"
         },
         {
             "help_str": "<PageDown>",
-            "desc": "same as CTRL-F",
+            "vim_desc": "same as CTRL-F",
             "lhs": "<PageDown>"
         },
         {
             "help_str": "<PageUp>",
-            "desc": "same as CTRL-B",
+            "vim_desc": "same as CTRL-B",
             "lhs": "<PageUp>"
         },
         {
             "help_str": "<Right>",
-            "desc": "same as \"l\"",
+            "vim_desc": "same as \"l\"",
             "lhs": "<Right>"
         },
         {
             "help_str": "<RightMouse>",
-            "desc": "start Visual mode, move cursor to the mouse click position",
+            "vim_desc": "start Visual mode, move cursor to the mouse click position",
             "lhs": "<RightMouse>"
         },
         {
             "help_str": "<S-Down>",
-            "desc": "same as CTRL-F",
+            "vim_desc": "same as CTRL-F",
             "lhs": "<S-Down>"
         },
         {
             "help_str": "<S-Left>",
-            "desc": "same as \"b\"",
+            "vim_desc": "same as \"b\"",
             "lhs": "<S-Left>"
         },
         {
             "help_str": "<S-LeftMouse>",
-            "desc": "same as \"*\" at the mouse click position",
+            "vim_desc": "same as \"*\" at the mouse click position",
             "lhs": "<S-LeftMouse>"
         },
         {
             "help_str": "<S-Right>",
-            "desc": "same as \"w\"",
+            "vim_desc": "same as \"w\"",
             "lhs": "<S-Right>"
         },
         {
             "help_str": "<S-RightMouse>",
-            "desc": "same as \"#\" at the mouse click position",
+            "vim_desc": "same as \"#\" at the mouse click position",
             "lhs": "<S-RightMouse>"
         },
         {
             "help_str": "<S-Up>",
-            "desc": "same as CTRL-B",
+            "vim_desc": "same as CTRL-B",
             "lhs": "<S-Up>"
         },
         {
             "help_str": "<Undo>",
-            "desc": "same as \"u\"",
+            "vim_desc": "same as \"u\"",
             "lhs": "<Undo>"
         },
         {
             "help_str": "<Up>",
-            "desc": "same as \"k\" *<ScrollWheelDown>*\t<ScrollWheelDown>\tmove window three lines down *<S-ScrollWheelDown>*\t<S-ScrollWheelDown>\tmove window one page down *<ScrollWheelUp>*\t<ScrollWheelUp>\t\tmove window three lines up *<S-ScrollWheelUp>*\t<S-ScrollWheelUp>\tmove window one page up *<ScrollWheelLeft>*\t<ScrollWheelLeft>\tmove window six columns left *<S-ScrollWheelLeft>*\t<S-ScrollWheelLeft>\tmove window one page left *<ScrollWheelRight>*\t<ScrollWheelRight>\tmove window six columns right *<S-ScrollWheelRight>*\t<S-ScrollWheelRight>\tmove window one page right",
+            "vim_desc": "same as \"k\" *<ScrollWheelDown>*\t<ScrollWheelDown>\tmove window three lines down *<S-ScrollWheelDown>*\t<S-ScrollWheelDown>\tmove window one page down *<ScrollWheelUp>*\t<ScrollWheelUp>\t\tmove window three lines up *<S-ScrollWheelUp>*\t<S-ScrollWheelUp>\tmove window one page up *<ScrollWheelLeft>*\t<ScrollWheelLeft>\tmove window six columns left *<S-ScrollWheelLeft>*\t<S-ScrollWheelLeft>\tmove window one page left *<ScrollWheelRight>*\t<ScrollWheelRight>\tmove window six columns right *<S-ScrollWheelRight>*\t<S-ScrollWheelRight>\tmove window one page right",
             "lhs": "<Up>"
         },
         {
             "help_str": "[_CTRL-D",
-            "desc": "jump to first #define found in current and included files matching the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "jump to first #define found in current and included files matching the word under the cursor, start searching at beginning of current file",
             "lhs": "[<C-D>"
         },
         {
             "help_str": "[_CTRL-I",
-            "desc": "jump to first line in current and included files that contains the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "jump to first line in current and included files that contains the word under the cursor, start searching at beginning of current file",
             "lhs": "[<C-I>"
         },
         {
             "help_str": "[#",
-            "desc": "cursor to N previous unmatched #if, #else or #ifdef",
+            "vim_desc": "cursor to N previous unmatched #if, #else or #ifdef",
             "lhs": "[#"
         },
         {
             "help_str": "['",
-            "desc": "cursor to previous lowercase mark, on first non-blank",
+            "vim_desc": "cursor to previous lowercase mark, on first non-blank",
             "lhs": "['"
         },
         {
             "help_str": "[(",
-            "desc": "cursor N times back to unmatched '('",
+            "vim_desc": "cursor N times back to unmatched '('",
             "lhs": "[("
         },
         {
             "help_str": "[star",
-            "desc": "same as \"[/\"",
+            "vim_desc": "same as \"[/\"",
             "lhs": "[*"
         },
         {
             "help_str": "[`",
-            "desc": "cursor to previous lowercase mark",
+            "vim_desc": "cursor to previous lowercase mark",
             "lhs": "[`"
         },
         {
             "help_str": "[/",
-            "desc": "cursor to N previous start of a C comment",
+            "vim_desc": "cursor to N previous start of a C comment",
             "lhs": "[/"
         },
         {
             "help_str": "[D",
-            "desc": "list all defines found in current and included files matching the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "list all defines found in current and included files matching the word under the cursor, start searching at beginning of current file",
             "lhs": "[D"
         },
         {
             "help_str": "[I",
-            "desc": "list all lines found in current and included files that contain the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "list all lines found in current and included files that contain the word under the cursor, start searching at beginning of current file",
             "lhs": "[I"
         },
         {
             "help_str": "[P",
-            "desc": "same as \"[p\"",
+            "vim_desc": "same as \"[p\"",
             "lhs": "[P"
         },
         {
             "help_str": "[[",
-            "desc": "cursor N sections backward",
+            "vim_desc": "cursor N sections backward",
             "lhs": "[["
         },
         {
             "help_str": "[]",
-            "desc": "cursor N SECTIONS backward",
+            "vim_desc": "cursor N SECTIONS backward",
             "lhs": "[]"
         },
         {
             "help_str": "[c",
-            "desc": "cursor N times backwards to start of change",
+            "vim_desc": "cursor N times backwards to start of change",
             "lhs": "[c"
         },
         {
             "help_str": "[d",
-            "desc": "show first #define found in current and included files matching the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "show first #define found in current and included files matching the word under the cursor, start searching at beginning of current file",
             "lhs": "[d"
         },
         {
             "help_str": "[f",
-            "desc": "same as \"gf\"",
+            "vim_desc": "same as \"gf\"",
             "lhs": "[f"
         },
         {
             "help_str": "[i",
-            "desc": "show first line found in current and included files that contains the word under the cursor, start searching at beginning of current file",
+            "vim_desc": "show first line found in current and included files that contains the word under the cursor, start searching at beginning of current file",
             "lhs": "[i"
         },
         {
             "help_str": "[m",
-            "desc": "cursor N times back to start of member function",
+            "vim_desc": "cursor N times back to start of member function",
             "lhs": "[m"
         },
         {
             "help_str": "[p",
-            "desc": "like \"P\", but adjust indent to current line",
+            "vim_desc": "like \"P\", but adjust indent to current line",
             "lhs": "[p"
         },
         {
             "help_str": "[s",
-            "desc": "move to the previous misspelled word",
+            "vim_desc": "move to the previous misspelled word",
             "lhs": "[s"
         },
         {
             "help_str": "[z",
-            "desc": "move to start of open fold",
+            "vim_desc": "move to start of open fold",
             "lhs": "[z"
         },
         {
             "help_str": "[{",
-            "desc": "cursor N times back to unmatched '{'",
+            "vim_desc": "cursor N times back to unmatched '{'",
             "lhs": "[{"
         },
         {
             "help_str": "[<MiddleMouse>",
-            "desc": "same as \"[p\"",
+            "vim_desc": "same as \"[p\"",
             "lhs": "[<MiddleMouse>"
         },
         {
             "help_str": "]_CTRL-D",
-            "desc": "jump to first #define found in current and included files matching the word under the cursor, start searching at cursor position",
+            "vim_desc": "jump to first #define found in current and included files matching the word under the cursor, start searching at cursor position",
             "lhs": "]<C-D>"
         },
         {
             "help_str": "]_CTRL-I",
-            "desc": "jump to first line in current and included files that contains the word under the cursor, start searching at cursor position",
+            "vim_desc": "jump to first line in current and included files that contains the word under the cursor, start searching at cursor position",
             "lhs": "]<C-I>"
         },
         {
             "help_str": "]#",
-            "desc": "cursor to N next unmatched #endif or #else",
+            "vim_desc": "cursor to N next unmatched #endif or #else",
             "lhs": "]#"
         },
         {
             "help_str": "]'",
-            "desc": "cursor to next lowercase mark, on first non-blank",
+            "vim_desc": "cursor to next lowercase mark, on first non-blank",
             "lhs": "]'"
         },
         {
             "help_str": "])",
-            "desc": "cursor N times forward to unmatched ')'",
+            "vim_desc": "cursor N times forward to unmatched ')'",
             "lhs": "])"
         },
         {
             "help_str": "]star",
-            "desc": "same as \"]/\"",
+            "vim_desc": "same as \"]/\"",
             "lhs": "]*"
         },
         {
             "help_str": "]`",
-            "desc": "cursor to next lowercase mark",
+            "vim_desc": "cursor to next lowercase mark",
             "lhs": "]`"
         },
         {
             "help_str": "]/",
-            "desc": "cursor to N next end of a C comment",
+            "vim_desc": "cursor to N next end of a C comment",
             "lhs": "]/"
         },
         {
             "help_str": "]D",
-            "desc": "list all #defines found in current and included files matching the word under the cursor, start searching at cursor position",
+            "vim_desc": "list all #defines found in current and included files matching the word under the cursor, start searching at cursor position",
             "lhs": "]D"
         },
         {
             "help_str": "]I",
-            "desc": "list all lines found in current and included files that contain the word under the cursor, start searching at cursor position",
+            "vim_desc": "list all lines found in current and included files that contain the word under the cursor, start searching at cursor position",
             "lhs": "]I"
         },
         {
             "help_str": "]P",
-            "desc": "same as \"[p\"",
+            "vim_desc": "same as \"[p\"",
             "lhs": "]P"
         },
         {
             "help_str": "][",
-            "desc": "cursor N SECTIONS forward",
+            "vim_desc": "cursor N SECTIONS forward",
             "lhs": "]["
         },
         {
             "help_str": "]]",
-            "desc": "cursor N sections forward",
+            "vim_desc": "cursor N sections forward",
             "lhs": "]]"
         },
         {
             "help_str": "]c",
-            "desc": "cursor N times forward to start of change",
+            "vim_desc": "cursor N times forward to start of change",
             "lhs": "]c"
         },
         {
             "help_str": "]d",
-            "desc": "show first #define found in current and included files matching the word under the cursor, start searching at cursor position",
+            "vim_desc": "show first #define found in current and included files matching the word under the cursor, start searching at cursor position",
             "lhs": "]d"
         },
         {
             "help_str": "]f",
-            "desc": "same as \"gf\"",
+            "vim_desc": "same as \"gf\"",
             "lhs": "]f"
         },
         {
             "help_str": "]i",
-            "desc": "show first line found in current and included files that contains the word under the cursor, start searching at cursor position",
+            "vim_desc": "show first line found in current and included files that contains the word under the cursor, start searching at cursor position",
             "lhs": "]i"
         },
         {
             "help_str": "]m",
-            "desc": "cursor N times forward to end of member function",
+            "vim_desc": "cursor N times forward to end of member function",
             "lhs": "]m"
         },
         {
             "help_str": "]p",
-            "desc": "like \"p\", but adjust indent to current line",
+            "vim_desc": "like \"p\", but adjust indent to current line",
             "lhs": "]p"
         },
         {
             "help_str": "]s",
-            "desc": "move to next misspelled word",
+            "vim_desc": "move to next misspelled word",
             "lhs": "]s"
         },
         {
             "help_str": "]z",
-            "desc": "move to end of open fold",
+            "vim_desc": "move to end of open fold",
             "lhs": "]z"
         },
         {
             "help_str": "]}",
-            "desc": "cursor N times forward to unmatched '}'",
+            "vim_desc": "cursor N times forward to unmatched '}'",
             "lhs": "]}"
         },
         {
             "help_str": "]<MiddleMouse>",
-            "desc": "same as \"]p\"",
+            "vim_desc": "same as \"]p\"",
             "lhs": "]<MiddleMouse>"
         },
         {
             "help_str": "g#",
-            "desc": "like \"#\", but without using \"\\<\" and \"\\>\"",
+            "vim_desc": "like \"#\", but without using \"\\<\" and \"\\>\"",
             "lhs": "g#"
         },
         {
             "help_str": "g$",
-            "desc": "when 'wrap' off go to rightmost character of the current line that is on the screen; when 'wrap' on go to the rightmost character of the current screen line",
+            "vim_desc": "when 'wrap' off go to rightmost character of the current line that is on the screen; when 'wrap' on go to the rightmost character of the current screen line",
             "lhs": "g$"
         },
         {
             "help_str": "g&",
-            "desc": "repeat last \":s\" on all lines",
+            "vim_desc": "repeat last \":s\" on all lines",
             "lhs": "g&"
         },
         {
             "help_str": "g'\t\tg'{mark}\t   like '",
-            "desc": "like |'| but without changing the jumplist",
+            "vim_desc": "like |'| but without changing the jumplist",
             "lhs": "g'{mark}"
         },
         {
             "help_str": "g`\t\tg`{mark}\t   like `",
-            "desc": "like |`| but without changing the jumplist",
+            "vim_desc": "like |`| but without changing the jumplist",
             "lhs": "g`{mark}"
         },
         {
             "help_str": "gstar",
-            "desc": "like \"*\", but without using \"\\<\" and \"\\>\"",
+            "vim_desc": "like \"*\", but without using \"\\<\" and \"\\>\"",
             "lhs": "g*"
         },
         {
             "help_str": "g+",
-            "desc": "go to newer text state N times",
+            "vim_desc": "go to newer text state N times",
             "lhs": "g+"
         },
         {
             "help_str": "g,",
-            "desc": "go to N newer position in change list",
+            "vim_desc": "go to N newer position in change list",
             "lhs": "g,"
         },
         {
             "help_str": "g-",
-            "desc": "go to older text state N times",
+            "vim_desc": "go to older text state N times",
             "lhs": "g-"
         },
         {
             "help_str": "g0",
-            "desc": "when 'wrap' off go to leftmost character of the current line that is on the screen; when 'wrap' on go to the leftmost character of the current screen line",
+            "vim_desc": "when 'wrap' off go to leftmost character of the current line that is on the screen; when 'wrap' on go to the leftmost character of the current screen line",
             "lhs": "g0"
         },
         {
             "help_str": "g8",
-            "desc": "print hex value of bytes used in UTF-8 character under the cursor",
+            "vim_desc": "print hex value of bytes used in UTF-8 character under the cursor",
             "lhs": "g8"
         },
         {
             "help_str": "g;",
-            "desc": "go to N older position in change list",
+            "vim_desc": "go to N older position in change list",
             "lhs": "g;"
         },
         {
             "help_str": "g<",
-            "desc": "display previous command output",
+            "vim_desc": "display previous command output",
             "lhs": "g<"
         },
         {
             "help_str": "g?",
-            "desc": "Rot13 encoding operator",
+            "vim_desc": "Rot13 encoding operator",
             "lhs": "g?"
         },
         {
             "help_str": "g?g?",
-            "desc": "Rot13 encode current line",
+            "vim_desc": "Rot13 encode current line",
             "lhs": "g??"
         },
         {
             "help_str": "g?g?",
-            "desc": "Rot13 encode current line",
+            "vim_desc": "Rot13 encode current line",
             "lhs": "g?g?"
         },
         {
             "help_str": "gD",
-            "desc": "go to definition of word under the cursor in current file",
+            "vim_desc": "go to definition of word under the cursor in current file",
             "lhs": "gD"
         },
         {
             "help_str": "gE",
-            "desc": "go backwards to the end of the previous WORD",
+            "vim_desc": "go backwards to the end of the previous WORD",
             "lhs": "gE"
         },
         {
             "help_str": "gH",
-            "desc": "start Select line mode",
+            "vim_desc": "start Select line mode",
             "lhs": "gH"
         },
         {
             "help_str": "gI",
-            "desc": "like \"I\", but always start in column 1",
+            "vim_desc": "like \"I\", but always start in column 1",
             "lhs": "gI"
         },
         {
             "help_str": "gJ",
-            "desc": "join lines without inserting space",
+            "vim_desc": "join lines without inserting space",
             "lhs": "gJ"
         },
         {
             "help_str": "gN",
-            "desc": "1,   find the previous match with the last used search pattern and Visually select it",
+            "vim_desc": "1,   find the previous match with the last used search pattern and Visually select it",
             "lhs": "gN"
         },
         {
             "help_str": "gP",
-            "desc": "put the text [from register x] before the cursor N times, leave the cursor after it",
+            "vim_desc": "put the text [from register x] before the cursor N times, leave the cursor after it",
             "lhs": "gP"
         },
         {
             "help_str": "gQ",
-            "desc": "switch to \"Ex\" mode with Vim editing",
+            "vim_desc": "switch to \"Ex\" mode with Vim editing",
             "lhs": "gQ"
         },
         {
             "help_str": "gR",
-            "desc": "enter Virtual Replace mode",
+            "vim_desc": "enter Virtual Replace mode",
             "lhs": "gR"
         },
         {
             "help_str": "gT",
-            "desc": "go to the previous tab page",
+            "vim_desc": "go to the previous tab page",
             "lhs": "gT"
         },
         {
             "help_str": "gU",
-            "desc": "make Nmove text uppercase",
+            "vim_desc": "make Nmove text uppercase",
             "lhs": "gU{motion}"
         },
         {
             "help_str": "gV",
-            "desc": "don't reselect the previous Visual area when executing a mapping or menu in Select mode",
+            "vim_desc": "don't reselect the previous Visual area when executing a mapping or menu in Select mode",
             "lhs": "gV"
         },
         {
             "help_str": "g]",
-            "desc": ":tselect on the tag under the cursor",
+            "vim_desc": ":tselect on the tag under the cursor",
             "lhs": "g]"
         },
         {
             "help_str": "g^",
-            "desc": "when 'wrap' off go to leftmost non-white character of the current line that is on the screen; when 'wrap' on go to the leftmost non-white character of the current screen line",
+            "vim_desc": "when 'wrap' off go to leftmost non-white character of the current line that is on the screen; when 'wrap' on go to the leftmost non-white character of the current screen line",
             "lhs": "g^"
         },
         {
             "help_str": "ga",
-            "desc": "print ascii value of character under the cursor",
+            "vim_desc": "print ascii value of character under the cursor",
             "lhs": "ga"
         },
         {
             "help_str": "gd",
-            "desc": "go to definition of word under the cursor in current function",
+            "vim_desc": "go to definition of word under the cursor in current function",
             "lhs": "gd"
         },
         {
             "help_str": "ge",
-            "desc": "go backwards to the end of the previous word",
+            "vim_desc": "go backwards to the end of the previous word",
             "lhs": "ge"
         },
         {
             "help_str": "gf",
-            "desc": "start editing the file whose name is under the cursor",
+            "vim_desc": "start editing the file whose name is under the cursor",
             "lhs": "gf"
         },
         {
             "help_str": "gF",
-            "desc": "start editing the file whose name is under the cursor and jump to the line number following the filename.",
+            "vim_desc": "start editing the file whose name is under the cursor and jump to the line number following the filename.",
             "lhs": "gF"
         },
         {
             "help_str": "gg",
-            "desc": "cursor to line N, default first line",
+            "vim_desc": "cursor to line N, default first line",
             "lhs": "gg"
         },
         {
             "help_str": "gh",
-            "desc": "start Select mode",
+            "vim_desc": "start Select mode",
             "lhs": "gh"
         },
         {
             "help_str": "gi\t\tgi\t\t   like \"i\", but first move to the '^",
-            "desc": "like \"i\", but first move to the |'^| mark",
+            "vim_desc": "like \"i\", but first move to the |'^| mark",
             "lhs": "gi"
         },
         {
             "help_str": "gj",
-            "desc": "like \"j\", but when 'wrap' on go N screen lines down",
+            "vim_desc": "like \"j\", but when 'wrap' on go N screen lines down",
             "lhs": "gj"
         },
         {
             "help_str": "gk",
-            "desc": "like \"k\", but when 'wrap' on go N screen lines up",
+            "vim_desc": "like \"k\", but when 'wrap' on go N screen lines up",
             "lhs": "gk"
         },
         {
             "help_str": "gm",
-            "desc": "go to character at middle of the screenline",
+            "vim_desc": "go to character at middle of the screenline",
             "lhs": "gm"
         },
         {
             "help_str": "gM",
-            "desc": "go to character at middle of the text line",
+            "vim_desc": "go to character at middle of the text line",
             "lhs": "gM"
         },
         {
             "help_str": "gn",
-            "desc": "1,   find the next match with the last used search pattern and Visually select it",
+            "vim_desc": "1,   find the next match with the last used search pattern and Visually select it",
             "lhs": "gn"
         },
         {
             "help_str": "go",
-            "desc": "cursor to byte N in the buffer",
+            "vim_desc": "cursor to byte N in the buffer",
             "lhs": "go"
         },
         {
             "help_str": "gp",
-            "desc": "put the text [from register x] after the cursor N times, leave the cursor after it",
+            "vim_desc": "put the text [from register x] after the cursor N times, leave the cursor after it",
             "lhs": "gp"
         },
         {
             "help_str": "gq",
-            "desc": "format Nmove text",
+            "vim_desc": "format Nmove text",
             "lhs": "gq{motion}"
         },
         {
             "help_str": "gr",
-            "desc": "virtual replace N chars with {char}",
+            "vim_desc": "virtual replace N chars with {char}",
             "lhs": "gr{char}"
         },
         {
             "help_str": "gs",
-            "desc": "go to sleep for N seconds (default 1)",
+            "vim_desc": "go to sleep for N seconds (default 1)",
             "lhs": "gs"
         },
         {
             "help_str": "gt",
-            "desc": "go to the next tab page",
+            "vim_desc": "go to the next tab page",
             "lhs": "gt"
         },
         {
             "help_str": "gu",
-            "desc": "make Nmove text lowercase",
+            "vim_desc": "make Nmove text lowercase",
             "lhs": "gu{motion}"
         },
         {
             "help_str": "gv",
-            "desc": "reselect the previous Visual area",
+            "vim_desc": "reselect the previous Visual area",
             "lhs": "gv"
         },
         {
             "help_str": "gw",
-            "desc": "format Nmove text and keep cursor",
+            "vim_desc": "format Nmove text and keep cursor",
             "lhs": "gw{motion}"
         },
         {
             "help_str": "netrw-gx\tgx\t\t   execute application for file name under the cursor (only with netrw",
-            "desc": "execute application for file name under the cursor (only with |netrw| plugin)",
+            "vim_desc": "execute application for file name under the cursor (only with |netrw| plugin)",
             "lhs": "gx"
         },
         {
             "help_str": "g@",
-            "desc": "call 'operatorfunc'",
+            "vim_desc": "call 'operatorfunc'",
             "lhs": "g@{motion}"
         },
         {
             "help_str": "g~",
-            "desc": "swap case for Nmove text",
+            "vim_desc": "swap case for Nmove text",
             "lhs": "g~{motion}"
         },
         {
             "help_str": "g<Down>",
-            "desc": "same as \"gj\"",
+            "vim_desc": "same as \"gj\"",
             "lhs": "g<Down>"
         },
         {
             "help_str": "g<End>",
-            "desc": "same as \"g$\"",
+            "vim_desc": "same as \"g$\"",
             "lhs": "g<End>"
         },
         {
             "help_str": "g<Home>",
-            "desc": "same as \"g0\"",
+            "vim_desc": "same as \"g0\"",
             "lhs": "g<Home>"
         },
         {
             "help_str": "g<LeftMouse>",
-            "desc": "same as <C-LeftMouse> g<MiddleMouse>\t   same as <C-MiddleMouse>",
+            "vim_desc": "same as <C-LeftMouse> g<MiddleMouse>\t   same as <C-MiddleMouse>",
             "lhs": "g<LeftMouse>"
         },
         {
             "help_str": "g<RightMouse>",
-            "desc": "same as <C-RightMouse>",
+            "vim_desc": "same as <C-RightMouse>",
             "lhs": "g<RightMouse>"
         },
         {
             "help_str": "g<Tab>",
-            "desc": "go to last accessed tab page",
+            "vim_desc": "go to last accessed tab page",
             "lhs": "g<Tab>"
         },
         {
             "help_str": "g<Up>",
-            "desc": "same as \"gk\"",
+            "vim_desc": "same as \"gk\"",
             "lhs": "g<Up>"
         },
         {
             "help_str": "z<CR>",
-            "desc": "redraw, cursor line to top of window, cursor on first non-blank",
+            "vim_desc": "redraw, cursor line to top of window, cursor on first non-blank",
             "lhs": "z<CR>"
         },
         {
             "help_str": "zN<CR>",
-            "desc": "redraw, make window {height} lines high",
+            "vim_desc": "redraw, make window {height} lines high",
             "lhs": "z{height}<CR>"
         },
         {
             "help_str": "z+",
-            "desc": "cursor on line N (default line below window), otherwise like \"z<CR>\"",
+            "vim_desc": "cursor on line N (default line below window), otherwise like \"z<CR>\"",
             "lhs": "z+"
         },
         {
             "help_str": "z-",
-            "desc": "redraw, cursor line at bottom of window, cursor on first non-blank",
+            "vim_desc": "redraw, cursor line at bottom of window, cursor on first non-blank",
             "lhs": "z-"
         },
         {
             "help_str": "z.",
-            "desc": "redraw, cursor line to center of window, cursor on first non-blank",
+            "vim_desc": "redraw, cursor line to center of window, cursor on first non-blank",
             "lhs": "z."
         },
         {
             "help_str": "z=",
-            "desc": "give spelling suggestions",
+            "vim_desc": "give spelling suggestions",
             "lhs": "z="
         },
         {
             "help_str": "zA",
-            "desc": "open a closed fold or close an open fold recursively",
+            "vim_desc": "open a closed fold or close an open fold recursively",
             "lhs": "zA"
         },
         {
             "help_str": "zC",
-            "desc": "close folds recursively",
+            "vim_desc": "close folds recursively",
             "lhs": "zC"
         },
         {
             "help_str": "zD",
-            "desc": "delete folds recursively",
+            "vim_desc": "delete folds recursively",
             "lhs": "zD"
         },
         {
             "help_str": "zE",
-            "desc": "eliminate all folds",
+            "vim_desc": "eliminate all folds",
             "lhs": "zE"
         },
         {
             "help_str": "zF",
-            "desc": "create a fold for N lines",
+            "vim_desc": "create a fold for N lines",
             "lhs": "zF"
         },
         {
             "help_str": "zG",
-            "desc": "temporarily mark word as correctly spelled",
+            "vim_desc": "temporarily mark word as correctly spelled",
             "lhs": "zG"
         },
         {
             "help_str": "zH",
-            "desc": "when 'wrap' off scroll half a screenwidth to the right",
+            "vim_desc": "when 'wrap' off scroll half a screenwidth to the right",
             "lhs": "zH"
         },
         {
             "help_str": "zL",
-            "desc": "when 'wrap' off scroll half a screenwidth to the left",
+            "vim_desc": "when 'wrap' off scroll half a screenwidth to the left",
             "lhs": "zL"
         },
         {
             "help_str": "zM",
-            "desc": "set 'foldlevel' to zero",
+            "vim_desc": "set 'foldlevel' to zero",
             "lhs": "zM"
         },
         {
             "help_str": "zN",
-            "desc": "set 'foldenable'",
+            "vim_desc": "set 'foldenable'",
             "lhs": "zN"
         },
         {
             "help_str": "zO",
-            "desc": "open folds recursively",
+            "vim_desc": "open folds recursively",
             "lhs": "zO"
         },
         {
             "help_str": "zR",
-            "desc": "set 'foldlevel' to the deepest fold",
+            "vim_desc": "set 'foldlevel' to the deepest fold",
             "lhs": "zR"
         },
         {
             "help_str": "zW",
-            "desc": "temporarily mark word as incorrectly spelled",
+            "vim_desc": "temporarily mark word as incorrectly spelled",
             "lhs": "zW"
         },
         {
             "help_str": "zX",
-            "desc": "re-apply 'foldlevel'",
+            "vim_desc": "re-apply 'foldlevel'",
             "lhs": "zX"
         },
         {
             "help_str": "z^",
-            "desc": "cursor on line N (default line above window), otherwise like \"z-\"",
+            "vim_desc": "cursor on line N (default line above window), otherwise like \"z-\"",
             "lhs": "z^"
         },
         {
             "help_str": "za",
-            "desc": "open a closed fold, close an open fold",
+            "vim_desc": "open a closed fold, close an open fold",
             "lhs": "za"
         },
         {
             "help_str": "zb",
-            "desc": "redraw, cursor line at bottom of window",
+            "vim_desc": "redraw, cursor line at bottom of window",
             "lhs": "zb"
         },
         {
             "help_str": "zc",
-            "desc": "close a fold",
+            "vim_desc": "close a fold",
             "lhs": "zc"
         },
         {
             "help_str": "zd",
-            "desc": "delete a fold",
+            "vim_desc": "delete a fold",
             "lhs": "zd"
         },
         {
             "help_str": "ze",
-            "desc": "when 'wrap' off scroll horizontally to position the cursor at the end (right side) of the screen",
+            "vim_desc": "when 'wrap' off scroll horizontally to position the cursor at the end (right side) of the screen",
             "lhs": "ze"
         },
         {
             "help_str": "zf",
-            "desc": "create a fold for Nmove text",
+            "vim_desc": "create a fold for Nmove text",
             "lhs": "zf{motion}"
         },
         {
             "help_str": "zg",
-            "desc": "permanently mark word as correctly spelled",
+            "vim_desc": "permanently mark word as correctly spelled",
             "lhs": "zg"
         },
         {
             "help_str": "zh",
-            "desc": "when 'wrap' off scroll screen N characters to the right",
+            "vim_desc": "when 'wrap' off scroll screen N characters to the right",
             "lhs": "zh"
         },
         {
             "help_str": "zi",
-            "desc": "toggle 'foldenable'",
+            "vim_desc": "toggle 'foldenable'",
             "lhs": "zi"
         },
         {
             "help_str": "zj",
-            "desc": "move to the start of the next fold",
+            "vim_desc": "move to the start of the next fold",
             "lhs": "zj"
         },
         {
             "help_str": "zk",
-            "desc": "move to the end of the previous fold",
+            "vim_desc": "move to the end of the previous fold",
             "lhs": "zk"
         },
         {
             "help_str": "zl",
-            "desc": "when 'wrap' off scroll screen N characters to the left",
+            "vim_desc": "when 'wrap' off scroll screen N characters to the left",
             "lhs": "zl"
         },
         {
             "help_str": "zm",
-            "desc": "subtract one from 'foldlevel'",
+            "vim_desc": "subtract one from 'foldlevel'",
             "lhs": "zm"
         },
         {
             "help_str": "zn",
-            "desc": "reset 'foldenable'",
+            "vim_desc": "reset 'foldenable'",
             "lhs": "zn"
         },
         {
             "help_str": "zo",
-            "desc": "open fold",
+            "vim_desc": "open fold",
             "lhs": "zo"
         },
         {
             "help_str": "zp",
-            "desc": "paste in block-mode without trailing spaces",
+            "vim_desc": "paste in block-mode without trailing spaces",
             "lhs": "zp"
         },
         {
             "help_str": "zP",
-            "desc": "paste in block-mode without trailing spaces",
+            "vim_desc": "paste in block-mode without trailing spaces",
             "lhs": "zP"
         },
         {
             "help_str": "zr",
-            "desc": "add one to 'foldlevel'",
+            "vim_desc": "add one to 'foldlevel'",
             "lhs": "zr"
         },
         {
             "help_str": "zs",
-            "desc": "when 'wrap' off scroll horizontally to position the cursor at the start (left side) of the screen",
+            "vim_desc": "when 'wrap' off scroll horizontally to position the cursor at the start (left side) of the screen",
             "lhs": "zs"
         },
         {
             "help_str": "zt",
-            "desc": "redraw, cursor line at top of window",
+            "vim_desc": "redraw, cursor line at top of window",
             "lhs": "zt"
         },
         {
             "help_str": "zuw\t\tzuw\t\t   undo zw",
-            "desc": "undo |zw|",
+            "vim_desc": "undo |zw|",
             "lhs": "zuw"
         },
         {
             "help_str": "zug\t\tzug\t\t   undo zg",
-            "desc": "undo |zg|",
+            "vim_desc": "undo |zg|",
             "lhs": "zug"
         },
         {
             "help_str": "zuW\t\tzuW\t\t   undo zW",
-            "desc": "undo |zW|",
+            "vim_desc": "undo |zW|",
             "lhs": "zuW"
         },
         {
             "help_str": "zuG\t\tzuG\t\t   undo zG",
-            "desc": "undo |zG|",
+            "vim_desc": "undo |zG|",
             "lhs": "zuG"
         },
         {
             "help_str": "zv",
-            "desc": "open enough folds to view the cursor line",
+            "vim_desc": "open enough folds to view the cursor line",
             "lhs": "zv"
         },
         {
             "help_str": "zw",
-            "desc": "permanently mark word as incorrectly spelled",
+            "vim_desc": "permanently mark word as incorrectly spelled",
             "lhs": "zw"
         },
         {
             "help_str": "zx",
-            "desc": "re-apply 'foldlevel' and do \"zv\"",
+            "vim_desc": "re-apply 'foldlevel' and do \"zv\"",
             "lhs": "zx"
         },
         {
             "help_str": "zy",
-            "desc": "yank without trailing spaces",
+            "vim_desc": "yank without trailing spaces",
             "lhs": "zy"
         },
         {
             "help_str": "zz",
-            "desc": "redraw, cursor line at center of window",
+            "vim_desc": "redraw, cursor line at center of window",
             "lhs": "zz"
         },
         {
             "help_str": "z<Left>",
-            "desc": "same as \"zh\"",
+            "vim_desc": "same as \"zh\"",
             "lhs": "z<Left>"
         },
         {
             "help_str": "z<Right>",
-            "desc": "same as \"zl\"",
+            "vim_desc": "same as \"zl\"",
             "lhs": "z<Right>"
         },
         {
             "help_str": "'cedit'",
-            "desc": "default value for 'cedit': opens the",
+            "vim_desc": "default value for 'cedit': opens the",
             "lhs": "<C-F>"
         }
     ],
     "c": [
         {
             "help_str": "c_CTRL-R_CTRL-R",
-            "desc": "",
+            "vim_desc": "",
             "lhs": "<C-R><C-R>{regname}"
         },
         {
             "help_str": "c_CTRL-A",
-            "desc": "do completion on the pattern in front of the cursor and insert all matches",
+            "vim_desc": "do completion on the pattern in front of the cursor and insert all matches",
             "lhs": "<C-A>"
         },
         {
             "help_str": "c_CTRL-B",
-            "desc": "cursor to begin of command-line",
+            "vim_desc": "cursor to begin of command-line",
             "lhs": "<C-B>"
         },
         {
             "help_str": "c_CTRL-C",
-            "desc": "same as <Esc>",
+            "vim_desc": "same as <Esc>",
             "lhs": "<C-C>"
         },
         {
             "help_str": "c_CTRL-D",
-            "desc": "list completions that match the pattern in front of the cursor",
+            "vim_desc": "list completions that match the pattern in front of the cursor",
             "lhs": "<C-D>"
         },
         {
             "help_str": "c_CTRL-E",
-            "desc": "cursor to end of command-line",
+            "vim_desc": "cursor to end of command-line",
             "lhs": "<C-E>"
         },
         {
             "help_str": "c_CTRL-G",
-            "desc": "next match when 'incsearch' is active",
+            "vim_desc": "next match when 'incsearch' is active",
             "lhs": "<C-G>"
         },
         {
             "help_str": "c_<BS>",
-            "desc": "delete the character in front of the cursor",
+            "vim_desc": "delete the character in front of the cursor",
             "lhs": "<BS>"
         },
         {
             "help_str": "c_digraph",
-            "desc": "<BS> {char2} enter digraph when 'digraph' is on",
+            "vim_desc": "<BS> {char2} enter digraph when 'digraph' is on",
             "lhs": "{char1}"
         },
         {
             "help_str": "c_CTRL-H",
-            "desc": "same as <BS>",
+            "vim_desc": "same as <BS>",
             "lhs": "<C-H>"
         },
         {
             "help_str": "c_<Tab>",
-            "desc": "if 'wildchar' is <Tab>: Do completion on the pattern in front of the cursor",
+            "vim_desc": "if 'wildchar' is <Tab>: Do completion on the pattern in front of the cursor",
             "lhs": "<Tab>"
         },
         {
             "help_str": "c_<S-Tab>",
-            "desc": "same as CTRL-P",
+            "vim_desc": "same as CTRL-P",
             "lhs": "<S-Tab>"
         },
         {
             "help_str": "c_wildchar",
-            "desc": "Do completion on the pattern in front of the cursor (default: <Tab>)",
+            "vim_desc": "Do completion on the pattern in front of the cursor (default: <Tab>)",
             "lhs": "'wildchar'"
         },
         {
             "help_str": "c_CTRL-I",
-            "desc": "same as <Tab>",
+            "vim_desc": "same as <Tab>",
             "lhs": "<C-I>"
         },
         {
             "help_str": "c_<NL>",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<NL>"
         },
         {
             "help_str": "c_CTRL-J",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<C-J>"
         },
         {
             "help_str": "c_CTRL-K",
-            "desc": "{char2} enter digraph",
+            "vim_desc": "{char2} enter digraph",
             "lhs": "<C-K>{char1}"
         },
         {
             "help_str": "c_CTRL-L",
-            "desc": "do completion on the pattern in front of the cursor and insert the longest common part",
+            "vim_desc": "do completion on the pattern in front of the cursor and insert the longest common part",
             "lhs": "<C-L>"
         },
         {
             "help_str": "c_<CR>",
-            "desc": "execute entered command",
+            "vim_desc": "execute entered command",
             "lhs": "<CR>"
         },
         {
             "help_str": "c_CTRL-M",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<C-M>"
         },
         {
             "help_str": "c_CTRL-N",
-            "desc": "after using 'wildchar' with multiple matches: go to next match, otherwise: recall older command-line from history.",
+            "vim_desc": "after using 'wildchar' with multiple matches: go to next match, otherwise: recall older command-line from history.",
             "lhs": "<C-N>"
         },
         {
             "help_str": "c_CTRL-P",
-            "desc": "after using 'wildchar' with multiple matches: go to previous match, otherwise: recall older command-line from history.",
+            "vim_desc": "after using 'wildchar' with multiple matches: go to previous match, otherwise: recall older command-line from history.",
             "lhs": "<C-P>"
         },
         {
             "help_str": "c_CTRL-Q",
-            "desc": "same as CTRL-V, unless it's used for terminal control flow",
+            "vim_desc": "same as CTRL-V, unless it's used for terminal control flow",
             "lhs": "<C-Q>"
         },
         {
             "help_str": "c_CTRL-R",
-            "desc": "insert the contents of a register or object under the cursor as if typed",
+            "vim_desc": "insert the contents of a register or object under the cursor as if typed",
             "lhs": "<C-R>{regname}"
         },
         {
             "help_str": "c_CTRL-R_CTRL-O",
-            "desc": "insert the contents of a register or object under the cursor literally",
+            "vim_desc": "insert the contents of a register or object under the cursor literally",
             "lhs": "<C-R><C-O>{regname}"
         },
         {
             "help_str": "c_CTRL-T",
-            "desc": "previous match when 'incsearch' is active",
+            "vim_desc": "previous match when 'incsearch' is active",
             "lhs": "<C-T>"
         },
         {
             "help_str": "c_CTRL-U",
-            "desc": "remove all characters",
+            "vim_desc": "remove all characters",
             "lhs": "<C-U>"
         },
         {
             "help_str": "c_CTRL-V",
-            "desc": "insert next non-digit literally, insert three digit decimal number as a single byte.",
+            "vim_desc": "insert next non-digit literally, insert three digit decimal number as a single byte.",
             "lhs": "<C-V>"
         },
         {
             "help_str": "c_CTRL-W",
-            "desc": "delete the word in front of the cursor CTRL-Y\t\tcopy (yank) modeless selection",
+            "vim_desc": "delete the word in front of the cursor CTRL-Y\t\tcopy (yank) modeless selection",
             "lhs": "<C-W>"
         },
         {
             "help_str": "c_<Esc>",
-            "desc": "abandon command-line without executing it",
+            "vim_desc": "abandon command-line without executing it",
             "lhs": "<Esc>"
         },
         {
             "help_str": "c_CTRL-[",
-            "desc": "same as <Esc>",
+            "vim_desc": "same as <Esc>",
             "lhs": "<C-[>"
         },
         {
             "help_str": "c_CTRL-\\_CTRL-N",
-            "desc": "go to Normal mode, abandon command-line",
+            "vim_desc": "go to Normal mode, abandon command-line",
             "lhs": "<C-\\><C-N>"
         },
         {
             "help_str": "c_CTRL-\\_CTRL-G",
-            "desc": "go to Normal mode, abandon command-line CTRL-\\ a - d\treserved for extensions",
+            "vim_desc": "go to Normal mode, abandon command-line CTRL-\\ a - d\treserved for extensions",
             "lhs": "<C-\\><C-G>"
         },
         {
             "help_str": "c_CTRL-\\_e",
-            "desc": "replace the command line with the result of {expr} CTRL-\\ f - z\treserved for extensions",
+            "vim_desc": "replace the command line with the result of {expr} CTRL-\\ f - z\treserved for extensions",
             "lhs": "<C-\\>e{expr}"
         },
         {
             "help_str": "c_CTRL-]",
-            "desc": "trigger abbreviation",
+            "vim_desc": "trigger abbreviation",
             "lhs": "<C-]>"
         },
         {
             "help_str": "c_CTRL-^\tCTRL-^\t\ttoggle use of :lmap",
-            "desc": "toggle use of |:lmap| mappings",
+            "vim_desc": "toggle use of |:lmap| mappings",
             "lhs": "<C-^>"
         },
         {
             "help_str": "c_CTRL-_",
-            "desc": "when 'allowrevins' set: change language (Hebrew)",
+            "vim_desc": "when 'allowrevins' set: change language (Hebrew)",
             "lhs": "<C-_>"
         },
         {
             "help_str": "c_<Del>",
-            "desc": "delete the character under the cursor",
+            "vim_desc": "delete the character under the cursor",
             "lhs": "<Del>"
         },
         {
             "help_str": "c_<Left>",
-            "desc": "cursor left",
+            "vim_desc": "cursor left",
             "lhs": "<Left>"
         },
         {
             "help_str": "c_<S-Left>",
-            "desc": "cursor one word left",
+            "vim_desc": "cursor one word left",
             "lhs": "<S-Left>"
         },
         {
             "help_str": "c_<C-Left>",
-            "desc": "cursor one word left",
+            "vim_desc": "cursor one word left",
             "lhs": "<C-Left>"
         },
         {
             "help_str": "c_<Right>",
-            "desc": "cursor right",
+            "vim_desc": "cursor right",
             "lhs": "<Right>"
         },
         {
             "help_str": "c_<S-Right>",
-            "desc": "cursor one word right",
+            "vim_desc": "cursor one word right",
             "lhs": "<S-Right>"
         },
         {
             "help_str": "c_<C-Right>",
-            "desc": "cursor one word right",
+            "vim_desc": "cursor one word right",
             "lhs": "<C-Right>"
         },
         {
             "help_str": "c_<Up>",
-            "desc": "recall previous command-line from history that matches pattern in front of the cursor",
+            "vim_desc": "recall previous command-line from history that matches pattern in front of the cursor",
             "lhs": "<Up>"
         },
         {
             "help_str": "c_<S-Up>",
-            "desc": "recall previous command-line from history",
+            "vim_desc": "recall previous command-line from history",
             "lhs": "<S-Up>"
         },
         {
             "help_str": "c_<Down>",
-            "desc": "recall next command-line from history that matches pattern in front of the cursor",
+            "vim_desc": "recall next command-line from history that matches pattern in front of the cursor",
             "lhs": "<Down>"
         },
         {
             "help_str": "c_<S-Down>",
-            "desc": "recall next command-line from history",
+            "vim_desc": "recall next command-line from history",
             "lhs": "<S-Down>"
         },
         {
             "help_str": "c_<Home>",
-            "desc": "cursor to start of command-line",
+            "vim_desc": "cursor to start of command-line",
             "lhs": "<Home>"
         },
         {
             "help_str": "c_<End>",
-            "desc": "cursor to end of command-line",
+            "vim_desc": "cursor to end of command-line",
             "lhs": "<End>"
         },
         {
             "help_str": "c_<PageDown>",
-            "desc": "same as <S-Down>",
+            "vim_desc": "same as <S-Down>",
             "lhs": "<PageDown>"
         },
         {
             "help_str": "c_<PageUp>",
-            "desc": "same as <S-Up>",
+            "vim_desc": "same as <S-Up>",
             "lhs": "<PageUp>"
         },
         {
             "help_str": "c_<Insert>",
-            "desc": "toggle insert/overstrike mode",
+            "vim_desc": "toggle insert/overstrike mode",
             "lhs": "<Insert>"
         },
         {
             "help_str": "c_<LeftMouse>",
-            "desc": "cursor at mouse click",
+            "vim_desc": "cursor at mouse click",
             "lhs": "<LeftMouse>"
         }
     ],
     "i": [
         {
             "help_str": "i_CTRL-X_s",
-            "desc": "spelling suggestions",
+            "vim_desc": "spelling suggestions",
             "lhs": "<C-X>s"
         },
         {
             "help_str": "i_CTRL-X_CTRL-D",
-            "desc": "complete defined identifiers",
+            "vim_desc": "complete defined identifiers",
             "lhs": "<C-X><C-D>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-E",
-            "desc": "scroll up",
+            "vim_desc": "scroll up",
             "lhs": "<C-X><C-E>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-F",
-            "desc": "complete file names",
+            "vim_desc": "complete file names",
             "lhs": "<C-X><C-F>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-I",
-            "desc": "complete identifiers",
+            "vim_desc": "complete identifiers",
             "lhs": "<C-X><C-I>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-K",
-            "desc": "complete identifiers from dictionary",
+            "vim_desc": "complete identifiers from dictionary",
             "lhs": "<C-X><C-K>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-L",
-            "desc": "complete whole lines",
+            "vim_desc": "complete whole lines",
             "lhs": "<C-X><C-L>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-N",
-            "desc": "next completion",
+            "vim_desc": "next completion",
             "lhs": "<C-X><C-N>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-O",
-            "desc": "omni completion",
+            "vim_desc": "omni completion",
             "lhs": "<C-X><C-O>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-P",
-            "desc": "previous completion",
+            "vim_desc": "previous completion",
             "lhs": "<C-X><C-P>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-S",
-            "desc": "spelling suggestions",
+            "vim_desc": "spelling suggestions",
             "lhs": "<C-X><C-S>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-T",
-            "desc": "complete identifiers from thesaurus",
+            "vim_desc": "complete identifiers from thesaurus",
             "lhs": "<C-X><C-T>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-Y",
-            "desc": "scroll down",
+            "vim_desc": "scroll down",
             "lhs": "<C-X><C-Y>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-U",
-            "desc": "complete with 'completefunc'",
+            "vim_desc": "complete with 'completefunc'",
             "lhs": "<C-X><C-U>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-V",
-            "desc": "complete like in : command line",
+            "vim_desc": "complete like in : command line",
             "lhs": "<C-X><C-V>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-Z",
-            "desc": "stop completion, keeping the text as-is",
+            "vim_desc": "stop completion, keeping the text as-is",
             "lhs": "<C-X><C-Z>"
         },
         {
             "help_str": "i_CTRL-X_CTRL-]",
-            "desc": "complete tags",
+            "vim_desc": "complete tags",
             "lhs": "<C-X><C-]>"
         },
         {
             "help_str": "i_CTRL-X\tCTRL-X {mode}\tenter CTRL-X sub mode, see i_CTRL-X_index",
-            "desc": "enter CTRL-X sub mode, see |i_CTRL-X_index|",
+            "vim_desc": "enter CTRL-X sub mode, see |i_CTRL-X_index|",
             "lhs": "<C-X>{mode}"
         },
         {
             "help_str": "i_digraph",
-            "desc": "enter digraph (only when 'digraph' option set)",
+            "vim_desc": "enter digraph (only when 'digraph' option set)",
             "lhs": "{char1}<BS>{char2}"
         },
         {
             "help_str": "i_CTRL-SHIFT-Q  CTRL-SHIFT-Q {char} like CTRL-Q unless tui-modifyOtherKeys",
-            "desc": "like CTRL-Q unless |tui-modifyOtherKeys| is active",
+            "vim_desc": "like CTRL-Q unless |tui-modifyOtherKeys| is active",
             "lhs": "<C-Q>{char}"
         },
         {
             "help_str": "i_CTRL-@",
-            "desc": "insert previously inserted text and stop insert",
+            "vim_desc": "insert previously inserted text and stop insert",
             "lhs": "<C-@>"
         },
         {
             "help_str": "i_CTRL-A",
-            "desc": "insert previously inserted text",
+            "vim_desc": "insert previously inserted text",
             "lhs": "<C-A>"
         },
         {
             "help_str": "i_CTRL-C",
-            "desc": "quit insert mode, without checking for abbreviation",
+            "vim_desc": "quit insert mode, without checking for abbreviation",
             "lhs": "<C-C>"
         },
         {
             "help_str": "i_CTRL-D",
-            "desc": "delete one shiftwidth of indent in the current line",
+            "vim_desc": "delete one shiftwidth of indent in the current line",
             "lhs": "<C-D>"
         },
         {
             "help_str": "i_CTRL-E",
-            "desc": "insert the character which is below the cursor re-indent the current line)",
+            "vim_desc": "insert the character which is below the cursor re-indent the current line)",
             "lhs": "<C-E>"
         },
         {
             "help_str": "i_CTRL-G_j",
-            "desc": "line down, to column where inserting started",
+            "vim_desc": "line down, to column where inserting started",
             "lhs": "<C-G><C-J>"
         },
         {
             "help_str": "i_CTRL-G_j",
-            "desc": "line down, to column where inserting started",
+            "vim_desc": "line down, to column where inserting started",
             "lhs": "<C-G>j"
         },
         {
             "help_str": "i_CTRL-G_j",
-            "desc": "line down, to column where inserting started",
+            "vim_desc": "line down, to column where inserting started",
             "lhs": "<C-G><Down>"
         },
         {
             "help_str": "i_CTRL-G_k",
-            "desc": "line up, to column where inserting started",
+            "vim_desc": "line up, to column where inserting started",
             "lhs": "<C-G><C-K>"
         },
         {
             "help_str": "i_CTRL-G_k",
-            "desc": "line up, to column where inserting started",
+            "vim_desc": "line up, to column where inserting started",
             "lhs": "<C-G>k"
         },
         {
             "help_str": "i_CTRL-G_k",
-            "desc": "line up, to column where inserting started",
+            "vim_desc": "line up, to column where inserting started",
             "lhs": "<C-G><Up>"
         },
         {
             "help_str": "i_CTRL-G_u",
-            "desc": "start new undoable edit",
+            "vim_desc": "start new undoable edit",
             "lhs": "<C-G>u"
         },
         {
             "help_str": "i_CTRL-G_U",
-            "desc": "don't break undo with next cursor movement",
+            "vim_desc": "don't break undo with next cursor movement",
             "lhs": "<C-G>U"
         },
         {
             "help_str": "i_<BS>",
-            "desc": "delete character before the cursor",
+            "vim_desc": "delete character before the cursor",
             "lhs": "<BS>"
         },
         {
             "help_str": "i_CTRL-H",
-            "desc": "same as <BS>",
+            "vim_desc": "same as <BS>",
             "lhs": "<C-H>"
         },
         {
             "help_str": "i_<Tab>",
-            "desc": "insert a <Tab> character",
+            "vim_desc": "insert a <Tab> character",
             "lhs": "<Tab>"
         },
         {
             "help_str": "i_CTRL-I",
-            "desc": "same as <Tab>",
+            "vim_desc": "same as <Tab>",
             "lhs": "<C-I>"
         },
         {
             "help_str": "i_<NL>",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<NL>"
         },
         {
             "help_str": "i_CTRL-J",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<C-J>"
         },
         {
             "help_str": "i_CTRL-K",
-            "desc": "{char2} enter digraph",
+            "vim_desc": "{char2} enter digraph",
             "lhs": "<C-K>{char1}"
         },
         {
             "help_str": "i_<CR>",
-            "desc": "begin new line",
+            "vim_desc": "begin new line",
             "lhs": "<CR>"
         },
         {
             "help_str": "i_CTRL-M",
-            "desc": "same as <CR>",
+            "vim_desc": "same as <CR>",
             "lhs": "<C-M>"
         },
         {
             "help_str": "i_CTRL-N",
-            "desc": "find next match for keyword in front of the cursor",
+            "vim_desc": "find next match for keyword in front of the cursor",
             "lhs": "<C-N>"
         },
         {
             "help_str": "i_CTRL-O",
-            "desc": "execute a single command and return to insert mode",
+            "vim_desc": "execute a single command and return to insert mode",
             "lhs": "<C-O>"
         },
         {
             "help_str": "i_CTRL-P",
-            "desc": "find previous match for keyword in front of the cursor",
+            "vim_desc": "find previous match for keyword in front of the cursor",
             "lhs": "<C-P>"
         },
         {
             "help_str": "i_CTRL-Q",
-            "desc": "same as CTRL-V, unless used for terminal control flow",
+            "vim_desc": "same as CTRL-V, unless used for terminal control flow",
             "lhs": "<C-Q>"
         },
         {
             "help_str": "i_CTRL-SHIFT-Q  CTRL-SHIFT-Q {char} like CTRL-Q unless tui-modifyOtherKeys",
-            "desc": "like CTRL-Q unless |tui-modifyOtherKeys| is active",
+            "vim_desc": "like CTRL-Q unless |tui-modifyOtherKeys| is active",
             "lhs": "<C-Q>{char}"
         },
         {
             "help_str": "i_CTRL-R",
-            "desc": "insert the contents of a register",
+            "vim_desc": "insert the contents of a register",
             "lhs": "<C-R>{register}"
         },
         {
             "help_str": "i_CTRL-R_CTRL-R",
-            "desc": "insert the contents of a register literally",
+            "vim_desc": "insert the contents of a register literally",
             "lhs": "<C-R><C-R>{register}"
         },
         {
             "help_str": "i_CTRL-R_CTRL-O",
-            "desc": "insert the contents of a register literally and don't auto-indent",
+            "vim_desc": "insert the contents of a register literally and don't auto-indent",
             "lhs": "<C-R><C-O>{register}"
         },
         {
             "help_str": "i_CTRL-R_CTRL-P",
-            "desc": "insert the contents of a register literally and fix indent.",
+            "vim_desc": "insert the contents of a register literally and fix indent.",
             "lhs": "<C-R><C-P>{register}"
         },
         {
             "help_str": "i_CTRL-T",
-            "desc": "insert one shiftwidth of indent in current line",
+            "vim_desc": "insert one shiftwidth of indent in current line",
             "lhs": "<C-T>"
         },
         {
             "help_str": "i_CTRL-U",
-            "desc": "delete all entered characters in the current line",
+            "vim_desc": "delete all entered characters in the current line",
             "lhs": "<C-U>"
         },
         {
             "help_str": "i_CTRL-V",
-            "desc": "insert next non-digit literally",
+            "vim_desc": "insert next non-digit literally",
             "lhs": "<C-V>{char}"
         },
         {
             "help_str": "i_CTRL-SHIFT-V  CTRL-SHIFT-V {char} like CTRL-V unless tui-modifyOtherKeys",
-            "desc": "like CTRL-V unless |tui-modifyOtherKeys| is active",
+            "vim_desc": "like CTRL-V unless |tui-modifyOtherKeys| is active",
             "lhs": "<C-V>{char}"
         },
         {
             "help_str": "i_CTRL-V_digit",
-            "desc": "insert three digit decimal number as a single byte.",
+            "vim_desc": "insert three digit decimal number as a single byte.",
             "lhs": "<C-V>{number}"
         },
         {
             "help_str": "i_CTRL-W",
-            "desc": "delete word before the cursor",
+            "vim_desc": "delete word before the cursor",
             "lhs": "<C-W>"
         },
         {
             "help_str": "i_CTRL-Y",
-            "desc": "insert the character which is above the cursor",
+            "vim_desc": "insert the character which is above the cursor",
             "lhs": "<C-Y>"
         },
         {
             "help_str": "i_<Esc>",
-            "desc": "end insert mode",
+            "vim_desc": "end insert mode",
             "lhs": "<Esc>"
         },
         {
             "help_str": "i_CTRL-[",
-            "desc": "same as <Esc>",
+            "vim_desc": "same as <Esc>",
             "lhs": "<C-[>"
         },
         {
             "help_str": "i_CTRL-\\_CTRL-N",
-            "desc": "go to Normal mode",
+            "vim_desc": "go to Normal mode",
             "lhs": "<C-\\><C-N>"
         },
         {
             "help_str": "i_CTRL-\\_CTRL-G",
-            "desc": "go to Normal mode CTRL-\\ a - z\treserved for extensions",
+            "vim_desc": "go to Normal mode CTRL-\\ a - z\treserved for extensions",
             "lhs": "<C-\\><C-G>"
         },
         {
             "help_str": "i_CTRL-]",
-            "desc": "trigger abbreviation",
+            "vim_desc": "trigger abbreviation",
             "lhs": "<C-]>"
         },
         {
             "help_str": "i_CTRL-^\tCTRL-^\t\ttoggle use of :lmap",
-            "desc": "toggle use of |:lmap| mappings",
+            "vim_desc": "toggle use of |:lmap| mappings",
             "lhs": "<C-^>"
         },
         {
             "help_str": "i_CTRL-_",
-            "desc": "When 'allowrevins' set: change language (Hebrew)",
+            "vim_desc": "When 'allowrevins' set: change language (Hebrew)",
             "lhs": "<C-_>"
         },
         {
             "help_str": "i_0_CTRL-D",
-            "desc": "delete all indent in the current line",
+            "vim_desc": "delete all indent in the current line",
             "lhs": "0<C-D>"
         },
         {
             "help_str": "i_^_CTRL-D",
-            "desc": "delete all indent in the current line, restore it in the next line",
+            "vim_desc": "delete all indent in the current line, restore it in the next line",
             "lhs": "^<C-D>"
         },
         {
             "help_str": "i_<Del>",
-            "desc": "delete character under the cursor",
+            "vim_desc": "delete character under the cursor",
             "lhs": "<Del>"
         },
         {
             "help_str": "i_<Left>",
-            "desc": "cursor one character left",
+            "vim_desc": "cursor one character left",
             "lhs": "<Left>"
         },
         {
             "help_str": "i_<S-Left>",
-            "desc": "cursor one word left",
+            "vim_desc": "cursor one word left",
             "lhs": "<S-Left>"
         },
         {
             "help_str": "i_<C-Left>",
-            "desc": "cursor one word left",
+            "vim_desc": "cursor one word left",
             "lhs": "<C-Left>"
         },
         {
             "help_str": "i_<Right>",
-            "desc": "cursor one character right",
+            "vim_desc": "cursor one character right",
             "lhs": "<Right>"
         },
         {
             "help_str": "i_<S-Right>",
-            "desc": "cursor one word right",
+            "vim_desc": "cursor one word right",
             "lhs": "<S-Right>"
         },
         {
             "help_str": "i_<C-Right>",
-            "desc": "cursor one word right",
+            "vim_desc": "cursor one word right",
             "lhs": "<C-Right>"
         },
         {
             "help_str": "i_<Up>",
-            "desc": "cursor one line up",
+            "vim_desc": "cursor one line up",
             "lhs": "<Up>"
         },
         {
             "help_str": "i_<S-Up>",
-            "desc": "same as <PageUp>",
+            "vim_desc": "same as <PageUp>",
             "lhs": "<S-Up>"
         },
         {
             "help_str": "i_<Down>",
-            "desc": "cursor one line down",
+            "vim_desc": "cursor one line down",
             "lhs": "<Down>"
         },
         {
             "help_str": "i_<S-Down>",
-            "desc": "same as <PageDown>",
+            "vim_desc": "same as <PageDown>",
             "lhs": "<S-Down>"
         },
         {
             "help_str": "i_<Home>",
-            "desc": "cursor to start of line",
+            "vim_desc": "cursor to start of line",
             "lhs": "<Home>"
         },
         {
             "help_str": "i_<C-Home>",
-            "desc": "cursor to start of file",
+            "vim_desc": "cursor to start of file",
             "lhs": "<C-Home>"
         },
         {
             "help_str": "i_<End>",
-            "desc": "cursor past end of line",
+            "vim_desc": "cursor past end of line",
             "lhs": "<End>"
         },
         {
             "help_str": "i_<C-End>",
-            "desc": "cursor past end of file",
+            "vim_desc": "cursor past end of file",
             "lhs": "<C-End>"
         },
         {
             "help_str": "i_<PageUp>",
-            "desc": "one screenful backward",
+            "vim_desc": "one screenful backward",
             "lhs": "<PageUp>"
         },
         {
             "help_str": "i_<PageDown>",
-            "desc": "one screenful forward",
+            "vim_desc": "one screenful forward",
             "lhs": "<PageDown>"
         },
         {
             "help_str": "i_<F1>",
-            "desc": "same as <Help>",
+            "vim_desc": "same as <Help>",
             "lhs": "<F1>"
         },
         {
             "help_str": "i_<Help>",
-            "desc": "stop insert mode and display help window",
+            "vim_desc": "stop insert mode and display help window",
             "lhs": "<Help>"
         },
         {
             "help_str": "i_<Insert>",
-            "desc": "toggle Insert/Replace mode",
+            "vim_desc": "toggle Insert/Replace mode",
             "lhs": "<Insert>"
         },
         {
             "help_str": "i_<LeftMouse>",
-            "desc": "cursor at mouse click",
+            "vim_desc": "cursor at mouse click",
             "lhs": "<LeftMouse>"
         },
         {
             "help_str": "i_<ScrollWheelDown>",
-            "desc": "move window three lines down",
+            "vim_desc": "move window three lines down",
             "lhs": "<ScrollWheelDown>"
         },
         {
             "help_str": "i_<S-ScrollWheelDown>",
-            "desc": "move window one page down",
+            "vim_desc": "move window one page down",
             "lhs": "<S-ScrollWheelDown>"
         },
         {
             "help_str": "i_<ScrollWheelUp>",
-            "desc": "move window three lines up",
+            "vim_desc": "move window three lines up",
             "lhs": "<ScrollWheelUp>"
         },
         {
             "help_str": "i_<S-ScrollWheelUp>",
-            "desc": "move window one page up",
+            "vim_desc": "move window one page up",
             "lhs": "<S-ScrollWheelUp>"
         },
         {
             "help_str": "i_<ScrollWheelLeft>",
-            "desc": "move window six columns left",
+            "vim_desc": "move window six columns left",
             "lhs": "<ScrollWheelLeft>"
         },
         {
             "help_str": "i_<S-ScrollWheelLeft>",
-            "desc": "move window one page left",
+            "vim_desc": "move window one page left",
             "lhs": "<S-ScrollWheelLeft>"
         },
         {
             "help_str": "i_<ScrollWheelRight>",
-            "desc": "move window six columns right",
+            "vim_desc": "move window six columns right",
             "lhs": "<ScrollWheelRight>"
         },
         {
             "help_str": "i_<S-ScrollWheelRight>",
-            "desc": "move window one page right",
+            "vim_desc": "move window one page right",
             "lhs": "<S-ScrollWheelRight>"
         }
     ]

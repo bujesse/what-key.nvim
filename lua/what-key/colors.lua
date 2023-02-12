@@ -1,9 +1,6 @@
 local M = {}
 
 M.links = {
-  -- NoMapping = 'CurSearch',
-  -- UserMapping = 'CursorLine',
-  -- NestedMapping = 'IncSearch',
   NoMapping = 'String',
   UserMapping = 'Constant',
   VimMapping = 'Identifier',

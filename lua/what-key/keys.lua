@@ -80,6 +80,7 @@ function M._global_keys()
     ['<F10>'] = { shift = '<S-F10>', control = '<C-F10>', meta = nil },
     ['<F11>'] = { shift = '<S-F11>', control = '<C-F11>', meta = nil },
     ['<F12>'] = { shift = '<S-F12>', control = '<C-F12>', meta = nil },
+    ['<Esc>'] = { shift = '<S-Esc>', control = '<C-Esc>', meta = nil },
     -- TODO: add numpad, other nav cluster keys
   }
 end

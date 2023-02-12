@@ -2,6 +2,7 @@ local View = require('what-key.view')
 local Keys = require('what-key.keys')
 local Layout = require('what-key.layout')
 local Mappings = require('what-key.mappings')
+local Config = require('what-key.config')
 
 local M = {}
 
@@ -37,14 +38,13 @@ local function _get_current_key()
 end
 
 function M.setup(bufnr)
-  local what_key_leader = '<Space>'
   local augroup = vim.api.nvim_create_augroup('WhatKey', { clear = true })
 
   vim.api.nvim_create_autocmd({ 'BufWinEnter', 'BufEnter' }, {
     group = augroup,
     buffer = bufnr,
     callback = function()
-      vim.keymap.set('n', what_key_leader .. 's', function()
+      vim.keymap.set('n', Config.what_key_keymaps.toggle_shift, function()
         if View.mod_target == Keys.MOD_TARGET_SHIFT then
           View.mod_target = nil
         else
@@ -53,7 +53,7 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', what_key_leader .. 'm', function()
+      vim.keymap.set('n', Config.what_key_keymaps.change_mode, function()
         vim.ui.select({ '[n]ormal', '[v]isual', '[i]nsert', '[c]ommand' }, {
           prompt = 'Select mode:',
         }, function(choice, idx)
@@ -70,12 +70,7 @@ function M.setup(bufnr)
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', what_key_leader .. 'i', function()
-        View.mode = 'i'
-        View.render()
-      end, { buffer = bufnr })
-
-      vim.keymap.set('n', what_key_leader .. 'c', function()
+      vim.keymap.set('n', Config.what_key_keymaps.toggle_control, function()
         if View.mod_target == Keys.MOD_TARGET_CONTROL then
           View.mod_target = nil
         else
@@ -84,14 +79,16 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', what_key_leader .. 'p', function()
+      vim.keymap.set('n', Config.what_key_keymaps.enter_prefix, function()
         vim.ui.input({ prompt = 'Enter prefix (empty for no prefix): ' }, function(input)
-          View.prefix = input
-          View.render()
+          if input ~= nil and input ~= '' then
+            View.prefix = input
+            View.render()
+          end
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', '<CR>', function()
+      vim.keymap.set('n', Config.what_key_keymaps.append_prefix, function()
         local curr_key = _get_current_key()
         if curr_key ~= nil then
           View.prefix = View.prefix .. curr_key
@@ -99,7 +96,7 @@ function M.setup(bufnr)
         end
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', '<Backspace>', function()
+      vim.keymap.set('n', Config.what_key_keymaps.pop_prefix, function()
         if View.prefix ~= '' then
           local split_prefix = Mappings.split_keymap(View.prefix)
           table.remove(split_prefix)
@@ -112,7 +109,7 @@ function M.setup(bufnr)
 
   local curr_key_ns = vim.api.nvim_create_namespace('WhatKeyCurrentKey')
 
-  vim.api.nvim_create_autocmd({ 'CursorHold' }, {
+  vim.api.nvim_create_autocmd({ 'CursorMoved' }, {
     group = augroup,
     buffer = bufnr,
     callback = function()

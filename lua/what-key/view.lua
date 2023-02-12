@@ -44,7 +44,9 @@ function M.show()
   vim.api.nvim_win_set_option(M.win, 'foldmethod', 'manual')
   vim.api.nvim_win_set_option(M.win, 'winblend', 0)
 
-  M.render()
+  local layout = M.render()
+
+  vim.api.nvim_win_set_cursor(M.win, layout.cursor_pos)
 end
 
 function M.show_help(key)
@@ -114,9 +116,9 @@ function M.render()
     vim.api.nvim_buf_add_highlight(M.buf, -1, highlights.group, highlights.line_num, highlights.from, highlights.to)
   end
 
-  vim.api.nvim_win_set_cursor(M.win, layout.cursor_pos)
-
   vim.api.nvim_buf_set_option(M.buf, 'modifiable', false)
+
+  return layout
 end
 
 return M
