@@ -1,21 +1,20 @@
 local Mappings = require('what-key.mappings')
 local Keys = require('what-key.keys')
-local Colors = require('what-key.colors')
-local Config = require('what-key.config')
+local Config = require('what-key.config').options
 
 local M = {}
 
 local HL_GROUPS_FOR_MAP_TYPE = {
-  [Keys.USER_MAP] = Colors.links.UserMapping,
-  [Keys.VIM_MAP] = Colors.links.VimMapping,
-  [Keys.NO_MAP] = Colors.links.NoMapping,
+  [Keys.USER_MAP] = Config.highlights.UserMapping,
+  [Keys.VIM_MAP] = Config.highlights.VimMapping,
+  [Keys.NO_MAP] = Config.highlights.NoMapping,
 }
 
 ---Since padding is determined by the keyboard layout, it's calculated and returned here
 ---@return integer
 local function _render_keyboard(layout, highlights, mode, mod_target, prefix, window_width)
   local mappings = Mappings.get_filled_filtered_mapping(mode, mod_target, prefix)
-  local keyboard_layout = M.get_keyboard_layout()
+  local keyboard_layout = Config.keyboard_layouts[Config.default_keyboard_layout]
 
   local column_width = 14
 
@@ -53,7 +52,7 @@ local function _render_keyboard(layout, highlights, mode, mod_target, prefix, wi
       local target_key = Keys.get_modded_key(global_key_id, mod_target)
       -- FIXME:error handling needed here in case a key isn't on the global map, or a mod doesn't exist
       if mappings[target_key] == nil then
-        group = Colors.links.NoMapping
+        group = Config.highlights.NoMapping
       else
         local map_type = mappings[target_key].mapped
         if next(mappings[target_key].mappings) == nil then
@@ -62,7 +61,7 @@ local function _render_keyboard(layout, highlights, mode, mod_target, prefix, wi
             preview_text = ' ' .. map_type
           end
         else
-          group = Colors.links.NestedMapping
+          group = Config.highlights.NestedMapping
           preview_text = ' (' .. Mappings.count_nested_mappings(mappings[target_key].mappings) .. ')'
         end
       end
@@ -128,12 +127,12 @@ end
 local function _render_help_line(layout, highlights, window_width)
   local col_width = 35
   local keys = {
-    'Append Current to prefix: ' .. Config.what_key_keymaps.append_prefix,
-    'Pop from prefix: ' .. Config.what_key_keymaps.pop_prefix,
-    'Toggle Shift: ' .. Config.what_key_keymaps.toggle_shift,
-    'Toggle Control: ' .. Config.what_key_keymaps.toggle_control,
-    'Enter Prefix: ' .. Config.what_key_keymaps.enter_prefix,
-    'Change Mode: ' .. Config.what_key_keymaps.change_mode,
+    'Append Current to prefix: ' .. Config.keymaps.append_prefix,
+    'Pop from prefix: ' .. Config.keymaps.pop_prefix,
+    'Toggle Shift: ' .. Config.keymaps.toggle_shift,
+    'Toggle Control: ' .. Config.keymaps.toggle_control,
+    'Enter Prefix: ' .. Config.keymaps.enter_prefix,
+    'Change Mode: ' .. Config.keymaps.change_mode,
   }
   local line = ''
   for i, key in ipairs(keys) do
@@ -186,17 +185,6 @@ function M.transform_view_key(key)
     return lookup[key]
   end
   return key
-end
-
-function M.get_keyboard_layout()
-  return {
-    { '<Esc>', '<F1>', '<F2>', '<F3>', '<F4>', '<F5>', '<F6>', '<F7>', '<F8>', '<F9>', '<F10>', '<F11>', '<F12>' },
-    { '`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '<BS>', '<Del>' },
-    { '<Tab>', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\' },
-    { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '<CR>' },
-    { 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/' },
-    { ' ' },
-  }
 end
 
 function M.render_vertical_padding(layout, padding_amount)

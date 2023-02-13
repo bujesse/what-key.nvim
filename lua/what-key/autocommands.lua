@@ -2,7 +2,7 @@ local View = require('what-key.view')
 local Keys = require('what-key.keys')
 local Layout = require('what-key.layout')
 local Mappings = require('what-key.mappings')
-local Config = require('what-key.config')
+local Config = require('what-key.config').options
 
 local M = {}
 
@@ -44,7 +44,7 @@ function M.setup(bufnr)
     group = augroup,
     buffer = bufnr,
     callback = function()
-      vim.keymap.set('n', Config.what_key_keymaps.toggle_shift, function()
+      vim.keymap.set('n', Config.keymaps.toggle_shift, function()
         if View.mod_target == Keys.MOD_TARGET_SHIFT then
           View.mod_target = nil
         else
@@ -53,7 +53,7 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.what_key_keymaps.change_mode, function()
+      vim.keymap.set('n', Config.keymaps.change_mode, function()
         vim.ui.select({ '[n]ormal', '[v]isual', '[i]nsert', '[c]ommand' }, {
           prompt = 'Select mode:',
         }, function(choice, idx)
@@ -70,7 +70,7 @@ function M.setup(bufnr)
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.what_key_keymaps.toggle_control, function()
+      vim.keymap.set('n', Config.keymaps.toggle_control, function()
         if View.mod_target == Keys.MOD_TARGET_CONTROL then
           View.mod_target = nil
         else
@@ -79,7 +79,7 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.what_key_keymaps.enter_prefix, function()
+      vim.keymap.set('n', Config.keymaps.enter_prefix, function()
         vim.ui.input({ prompt = 'Enter prefix (empty for no prefix): ' }, function(input)
           if input ~= nil and input ~= '' then
             View.prefix = input
@@ -88,7 +88,7 @@ function M.setup(bufnr)
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.what_key_keymaps.append_prefix, function()
+      vim.keymap.set('n', Config.keymaps.append_prefix, function()
         local curr_key = _get_current_key()
         if curr_key ~= nil then
           View.prefix = View.prefix .. curr_key
@@ -96,7 +96,7 @@ function M.setup(bufnr)
         end
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.what_key_keymaps.pop_prefix, function()
+      vim.keymap.set('n', Config.keymaps.pop_prefix, function()
         if View.prefix ~= '' then
           local split_prefix = Mappings.split_keymap(View.prefix)
           table.remove(split_prefix)
@@ -117,7 +117,14 @@ function M.setup(bufnr)
       if curr_key ~= nil then
         local curr_key_pos = _get_current_key_pos()
         vim.api.nvim_buf_clear_namespace(bufnr, curr_key_ns, 0, -1)
-        vim.api.nvim_buf_add_highlight(bufnr, curr_key_ns, 'IncSearch', curr_key_pos.lnum, curr_key_pos.start, curr_key_pos.end_pos)
+        vim.api.nvim_buf_add_highlight(
+          bufnr,
+          curr_key_ns,
+          Config.highlights.HighlightCurrentKey,
+          curr_key_pos.lnum,
+          curr_key_pos.start,
+          curr_key_pos.end_pos
+        )
 
         View.show_help(curr_key)
       end
