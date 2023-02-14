@@ -135,6 +135,8 @@ M.defaults = {
 ---@type WhatKeyOptions
 M.options = {}
 
+M.what_key_root = ''
+
 ---@param options? WhatKeyOptions
 function M.setup(options)
   M.options = vim.tbl_deep_extend('force', {}, M.defaults, options or {})
@@ -150,6 +152,11 @@ function M.setup(options)
       M.options.global_key_presets[M.options.default_keyboard_layout]
     )
   end
+
+  local current_path = debug.getinfo(2, 'S').source:sub(2):match('(.*/)')
+  local split_path = vim.split(current_path, '/')
+  split_path = vim.list_slice(split_path, 1, #split_path - 3)
+  M.what_key_root = vim.fn.join(split_path, '/') .. '/'
 end
 
 return M

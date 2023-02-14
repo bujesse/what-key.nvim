@@ -1,7 +1,7 @@
 local M = {}
 
 local Keys = require('what-key.keys')
-local Utils = require('what-key.utils')
+local Config = require('what-key.config')
 
 M.cached_mapping = nil
 
@@ -133,8 +133,10 @@ function M.get_or_create_full_mapping()
       full_mapping[mode] = M.create_mapping(mode_mappings, Keys.USER_MAP)
 
       -- Vim mappings
-      local vim_mappings = M.create_mapping(vim_index[mode], Keys.VIM_MAP)
-      full_mapping[mode] = vim.tbl_deep_extend('keep', full_mapping[mode], vim_mappings)
+      if vim_index ~= nil then
+        local vim_mappings = M.create_mapping(vim_index[mode], Keys.VIM_MAP)
+        full_mapping[mode] = vim.tbl_deep_extend('keep', full_mapping[mode], vim_mappings)
+      end
     end
 
     M.cached_mapping = full_mapping
@@ -196,10 +198,12 @@ function M.count_nested_mappings(mapping)
 end
 
 function M.get_vim_index_from_json()
-  local file = io.open('vim_index_pp.json', 'rb')
+  local target_path = Config.what_key_root .. 'vim_index_pp.json'
+  local file = io.open(target_path, 'rb')
   if file ~= nil then
     return vim.json.decode(file:read('*all'))
   end
+  print("Couldn't find vim index at: " .. target_path)
   return nil
 end
 
