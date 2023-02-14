@@ -1,12 +1,13 @@
 local M = {}
 
 ---@class WhatKeyOptions
-local defaults = {
+M.defaults = {
   keymaps = {
     toggle_shift = '<Space>s',
     toggle_control = '<Space>c',
     enter_prefix = '<Space>p',
     change_mode = '<Space>m',
+    change_layout = '<Space>l',
     append_prefix = '<CR>',
     pop_prefix = '<Backspace>',
   },
@@ -26,6 +27,21 @@ local defaults = {
       { '<Tab>', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\' },
       { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '<CR>' },
       { 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/' },
+      { ' ' },
+    },
+    hhkb = {
+      { '<Esc>', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '\\', '`' },
+      { '<Tab>', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '<BS>' },
+      { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '<CR>' },
+      { 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/' },
+      { ' ' },
+    },
+    uk = {
+      { '<Esc>', '<F1>', '<F2>', '<F3>', '<F4>', '<F5>', '<F6>', '<F7>', '<F8>', '<F9>', '<F10>', '<F11>', '<F12>' },
+      { '`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '<BS>', '<Del>' },
+      { '<Tab>', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']' },
+      { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '#', '<CR>' },
+      { '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/' },
       { ' ' },
     },
   },
@@ -104,6 +120,16 @@ local defaults = {
     ['<Esc>'] = { shift = '<S-Esc>', control = '<C-Esc>', meta = '<M-Esc>' },
     -- TODO: add numpad, other nav cluster keys
   },
+
+  global_key_presets = {
+    uk = {
+      ['`'] = { shift = '¬' },
+      ['2'] = { shift = '"' },
+      ['3'] = { shift = '£' },
+      ["'"] = { shift = '@' },
+      ['#'] = { shift = '~' },
+    },
+  },
 }
 
 ---@type WhatKeyOptions
@@ -111,10 +137,18 @@ M.options = {}
 
 ---@param options? WhatKeyOptions
 function M.setup(options)
-  M.options = vim.tbl_deep_extend('force', {}, defaults, options or {})
+  M.options = vim.tbl_deep_extend('force', {}, M.defaults, options or {})
 
   for k, v in pairs(M.options.highlights) do
     vim.api.nvim_set_hl(0, 'WhatKey' .. k, { link = v, default = true })
+  end
+
+  if M.options.global_key_presets[M.options.default_keyboard_layout] ~= nil then
+    M.options.global_keys = vim.tbl_deep_extend(
+      'force',
+      M.options.global_keys,
+      M.options.global_key_presets[M.options.default_keyboard_layout]
+    )
   end
 end
 

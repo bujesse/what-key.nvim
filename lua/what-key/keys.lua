@@ -12,6 +12,19 @@ function M.init_key(mapped)
   return { mapped = mapped, mappings = {} }
 end
 
+---use if mod for a given key on the global map isn't defined
+---@param key string
+---@param mod_target 'shift' | 'control' | 'meta'
+local function create_modded_key(key, mod_target)
+  if mod_target == 'shift' then
+    return '<S-' .. key .. '>'
+  elseif mod_target == 'control' then
+    return '<C-' .. key .. '>'
+  elseif mod_target == 'meta' then
+    return '<M-' .. key .. '>'
+  end
+end
+
 ---Looks up by the global key ID and returns the key for the target mod. Returns nil if not found
 ---@param key string
 ---@param mod_target 'shift' | 'control' | 'meta'
@@ -23,6 +36,9 @@ function M.get_modded_key(key, mod_target)
 
   local globals = Config.global_keys
   if globals[key] ~= nil then
+    if globals[key][mod_target] == nil then
+      return create_modded_key(key, mod_target)
+    end
     return globals[key][mod_target]
   end
 

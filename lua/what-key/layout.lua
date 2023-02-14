@@ -4,6 +4,8 @@ local Config = require('what-key.config').options
 
 local M = {}
 
+M.current_selected_layout = nil
+
 local HL_GROUPS_FOR_MAP_TYPE = {
   [Keys.USER_MAP] = Config.highlights.UserMapping,
   [Keys.VIM_MAP] = Config.highlights.VimMapping,
@@ -14,7 +16,11 @@ local HL_GROUPS_FOR_MAP_TYPE = {
 ---@return integer
 local function _render_keyboard(layout, highlights, mode, mod_target, prefix, window_width)
   local mappings = Mappings.get_filled_filtered_mapping(mode, mod_target, prefix)
-  local keyboard_layout = Config.keyboard_layouts[Config.default_keyboard_layout]
+  if M.current_selected_layout == nil then
+    M.current_selected_layout = Config.default_keyboard_layout
+  end
+
+  local keyboard_layout = Config.keyboard_layouts[M.current_selected_layout]
 
   local column_width = 14
 
@@ -76,7 +82,7 @@ local function _render_keyboard(layout, highlights, mode, mod_target, prefix, wi
         .. view_key
         .. '|'
         .. preview_text
-        .. string.rep(' ', column_width - string.len(view_key) - 2 - string.len(preview_text))
+        .. string.rep(' ', column_width - vim.fn.strcharlen(view_key) - 2 - string.len(preview_text))
 
       if kl_col_i == #kl_row then
         table.insert(layout, line)
@@ -109,6 +115,7 @@ local function _render_status_line(layout, highlights, mode, mod_target, prefix,
     'Mode: ' .. mode,
     'Mods: ' .. (mod_target or 'None'),
     'Prefix: ' .. view_prefix,
+    'Layout: ' .. M.current_selected_layout,
   }
   local line = ''
   for i, status in ipairs(statuses) do
@@ -133,6 +140,7 @@ local function _render_help_line(layout, highlights, window_width)
     'Toggle Control: ' .. Config.keymaps.toggle_control,
     'Enter Prefix: ' .. Config.keymaps.enter_prefix,
     'Change Mode: ' .. Config.keymaps.change_mode,
+    'Change Layout: ' .. Config.keymaps.change_layout,
   }
   local line = ''
   for i, key in ipairs(keys) do

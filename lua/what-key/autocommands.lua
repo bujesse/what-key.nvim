@@ -2,7 +2,8 @@ local View = require('what-key.view')
 local Keys = require('what-key.keys')
 local Layout = require('what-key.layout')
 local Mappings = require('what-key.mappings')
-local Config = require('what-key.config').options
+local Config = require('what-key.config')
+local ConfigOptions = Config.options
 
 local M = {}
 
@@ -44,7 +45,7 @@ function M.setup(bufnr)
     group = augroup,
     buffer = bufnr,
     callback = function()
-      vim.keymap.set('n', Config.keymaps.toggle_shift, function()
+      vim.keymap.set('n', ConfigOptions.keymaps.toggle_shift, function()
         if View.mod_target == Keys.MOD_TARGET_SHIFT then
           View.mod_target = nil
         else
@@ -53,7 +54,7 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.keymaps.change_mode, function()
+      vim.keymap.set('n', ConfigOptions.keymaps.change_mode, function()
         vim.ui.select({ '[n]ormal', '[v]isual', '[i]nsert', '[c]ommand' }, {
           prompt = 'Select mode:',
         }, function(choice, idx)
@@ -70,7 +71,27 @@ function M.setup(bufnr)
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.keymaps.toggle_control, function()
+      local keyboard_layouts = {}
+      for layout in pairs(ConfigOptions.keyboard_layouts) do
+        table.insert(keyboard_layouts, layout)
+      end
+      vim.keymap.set('n', ConfigOptions.keymaps.change_layout, function()
+        vim.ui.select(keyboard_layouts, {
+          prompt = 'Select layout:',
+        }, function(layout)
+          Layout.current_selected_layout = layout
+
+          ConfigOptions.global_keys = Config.defaults.global_keys
+          if ConfigOptions.global_key_presets[layout] ~= nil then
+            ConfigOptions.global_keys =
+              vim.tbl_deep_extend('force', ConfigOptions.global_keys, ConfigOptions.global_key_presets[layout])
+          end
+
+          View.render()
+        end)
+      end, { buffer = bufnr })
+
+      vim.keymap.set('n', ConfigOptions.keymaps.toggle_control, function()
         if View.mod_target == Keys.MOD_TARGET_CONTROL then
           View.mod_target = nil
         else
@@ -79,7 +100,7 @@ function M.setup(bufnr)
         View.render()
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.keymaps.enter_prefix, function()
+      vim.keymap.set('n', ConfigOptions.keymaps.enter_prefix, function()
         vim.ui.input({ prompt = 'Enter prefix (empty for no prefix): ' }, function(input)
           if input ~= nil and input ~= '' then
             View.prefix = input
@@ -88,7 +109,7 @@ function M.setup(bufnr)
         end)
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.keymaps.append_prefix, function()
+      vim.keymap.set('n', ConfigOptions.keymaps.append_prefix, function()
         local curr_key = _get_current_key()
         if curr_key ~= nil then
           View.prefix = View.prefix .. curr_key
@@ -96,7 +117,7 @@ function M.setup(bufnr)
         end
       end, { buffer = bufnr })
 
-      vim.keymap.set('n', Config.keymaps.pop_prefix, function()
+      vim.keymap.set('n', ConfigOptions.keymaps.pop_prefix, function()
         if View.prefix ~= '' then
           local split_prefix = Mappings.split_keymap(View.prefix)
           table.remove(split_prefix)
@@ -120,7 +141,7 @@ function M.setup(bufnr)
         vim.api.nvim_buf_add_highlight(
           bufnr,
           curr_key_ns,
-          Config.highlights.HighlightCurrentKey,
+          ConfigOptions.highlights.HighlightCurrentKey,
           curr_key_pos.lnum,
           curr_key_pos.start,
           curr_key_pos.end_pos
