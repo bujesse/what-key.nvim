@@ -2,6 +2,8 @@
 
 **WhatKey** is a lua plugin for Neovim that displays a keyboard layout you can use to either browse your existing mappings or see _what key_ is available to be mapped!
 
+![image](https://github.com/user-attachments/assets/617d4ad4-a8c4-4112-a106-1329149ce8cd)
+
 ### Motivation
 
 In order to find a home for a new mapping, I typically have some sort of thought process like this:
